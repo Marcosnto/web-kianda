@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Rasputin";
+  src: url("/fonts/Rasputin.otf");
+  font-weight: normal;
+  font-style: normal;
+}
