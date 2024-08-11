@@ -1,18 +1,20 @@
 "use client";
 
-import { Drawer } from "antd";
-import useHeader from "./header-hook";
-import { MenuOutlined } from "@ant-design/icons";
+import useHeader from "./header.hook";
+import { AiOutlineMenu } from "react-icons/ai";
 
 export default function Header() {
   const { menuOptions, open, setOpen, showDrawer, onClose } = useHeader();
 
   return (
-    <div className="flex h-20 w-full items-center justify-center bg-k_header_bg p-4 align-middle font-raspudin text-white">
+    <div className="font-rasputin bg-k_brown flex h-20 w-full items-center justify-center p-4 align-middle text-white">
       <h1 className="grow text-center text-4xl">kianda</h1>
       <div className="grow-0">
-        <MenuOutlined className="text-4xl" onClick={() => setOpen((e) => !e)} />
-        <Drawer
+        <AiOutlineMenu
+          className="text-4xl"
+          onClick={() => setOpen((e) => !e)}
+        />
+        {/* <Drawer
           title="Kianda - Menu"
           placement="right"
           closable={true}
@@ -27,7 +29,7 @@ export default function Header() {
               </p>
             ))}
           </div>
-        </Drawer>
+        </Drawer> */}
       </div>
     </div>
   );
