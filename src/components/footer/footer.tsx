@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer className={`flex flex-col gap-5 bg-k_beige p-10 pb-2 text-k_brown`}>
-      <BoldTitle className="w-10/12">
+      <BoldTitle className="w-10/12 text-xl/7">
         <h1>Receba nossos conteúdos por email</h1>
       </BoldTitle>
 
@@ -24,7 +24,7 @@ export default function Footer() {
         />
       </div>
 
-      <BoldTitle className="mb-[3.188rem] flex flex-col gap-7">
+      <BoldTitle className="mb-[3.188rem] flex flex-col gap-7 text-xl/7">
         <Link href="www.google.com">Instagram</Link>
         <Link href="www.google.com">Facebook</Link>
         <Link href="www.google.com">Youtube</Link>
@@ -32,7 +32,7 @@ export default function Footer() {
       </BoldTitle>
 
       <form className="mb-10 flex flex-col gap-2">
-        <BoldTitle>
+        <BoldTitle className="text-xl/7">
           <h1>Entre em contato</h1>
         </BoldTitle>
 
