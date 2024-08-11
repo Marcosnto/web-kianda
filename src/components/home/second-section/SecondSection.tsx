@@ -9,7 +9,7 @@ export function SecondSection() {
   return (
     <section className="mb-14">
       <span className="text-center">
-        <ItalicTitle className="p-6 text-xl">Como a Kianda atua</ItalicTitle>
+        <ItalicTitle className="p-8 text-xl">Como a Kianda atua</ItalicTitle>
       </span>
       <div className="ml-2 mr-2 flex flex-col items-center gap-7">
         {whatKiandaDoCards.map((card) => (

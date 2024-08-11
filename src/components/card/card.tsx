@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { BoldTitle } from "../general";
 
-type CardType = {
+export type CardType = {
   id?: string;
   label: string;
   summary: string;
@@ -12,6 +12,7 @@ type CardType = {
   url?: URL;
   createdData?: Date;
   className?: string;
+  bodyClassName?: string;
 };
 
 export function Card(props: CardType) {
@@ -24,23 +25,35 @@ export function Card(props: CardType) {
     url = "",
     createdData,
     className = "",
+    bodyClassName = "",
   } = props;
 
   return (
-    <div className={`w-80 ${className}`.trim()}>
+    <div className={`mb-8 flex flex-col gap-6 ${className}`.trim()}>
       <Image
-        className="mb-7"
         alt={imageAlt}
         src={imageURL}
-        // style={{ width: "100%", height: "auto" }}
+        style={{ width: "100%", height: "auto" }}
       />
-      {createdData && <span>{String(createdData)}</span>}
-      <Link href={url}>
-        <BoldTitle className="mb-4 text-[1.6875rem] leading-10">
-          <h1>{label}</h1>
-        </BoldTitle>
-      </Link>
-      <p>{summary}</p>
+      {createdData && (
+        <span className={`${bodyClassName}`.trim()}>
+          {String(
+            createdData.getDate() +
+              "/" +
+              createdData.getMonth() +
+              "/" +
+              createdData.getFullYear(),
+          )}
+        </span>
+      )}
+      <span className={`flex flex-col gap-2 ${bodyClassName}`.trim()}>
+        <Link href={url}>
+          <BoldTitle className="text-[1.6875rem] leading-10">
+            <h1>{label}</h1>
+          </BoldTitle>
+        </Link>
+        <p>{summary}</p>
+      </span>
     </div>
   );
 }
