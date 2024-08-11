@@ -10,8 +10,8 @@ export default function Footer() {
   const {} = useFooter();
 
   return (
-    <footer className={`bg-k_beige text-k_brown flex flex-col gap-5 p-10 pb-2`}>
-      <FooterTitle className="w-9/12">
+    <footer className={`flex flex-col gap-5 bg-k_beige p-10 pb-2 text-k_brown`}>
+      <FooterTitle className="w-10/12">
         <h1>Receba nossos conteúdos por email</h1>
       </FooterTitle>
 
