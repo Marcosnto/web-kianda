@@ -1,35 +1,53 @@
 "use client";
 
 import useHeader from "./header.hook";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 
 export default function Header() {
-  const { menuOptions, open, setOpen, showDrawer, onClose } = useHeader();
+  const { menuOptions } = useHeader();
 
   return (
-    <div className="font-rasputin bg-k_brown flex h-20 w-full items-center justify-center p-4 align-middle text-white">
+    <div className="flex h-20 w-full items-center justify-center bg-k_brown p-4 align-middle font-rasputin text-white">
       <h1 className="grow text-center text-4xl">kianda</h1>
       <div className="grow-0">
-        <AiOutlineMenu
-          className="text-4xl"
-          onClick={() => setOpen((e) => !e)}
-        />
-        {/* <Drawer
-          title="Kianda - Menu"
-          placement="right"
-          closable={true}
-          onClose={onClose}
-          open={open}
-          key="right"
-        >
-          <div className="flex flex-col items-center gap-10 pt-4">
-            {menuOptions.map((option) => (
-              <p className="w-auto hover:bg-k_brown_light" key={option}>
-                {option}
-              </p>
-            ))}
-          </div>
-        </Drawer> */}
+        <Drawer direction="right" shouldScaleBackground>
+          <DrawerTrigger>
+            <AiOutlineMenu className="text-4xl" />
+          </DrawerTrigger>
+          <DrawerContent className="p-2">
+            <div className="flex w-auto justify-end pr-1 text-gray-400">
+              <DrawerClose>
+                <AiOutlineClose />
+              </DrawerClose>
+            </div>
+            <DrawerHeader>
+              <DrawerTitle className="text-k_brown">Kianda Menu</DrawerTitle>
+
+              <DrawerDescription>Escolha uma sessão</DrawerDescription>
+            </DrawerHeader>
+
+            <div className="flex flex-col gap-10 p-5">
+              {menuOptions.map((option) => (
+                <DrawerDescription
+                  className="hover:bg-k_brown_light w-auto text-base text-k_brown"
+                  key={option}
+                >
+                  {option}
+                </DrawerDescription>
+              ))}
+            </div>
+          </DrawerContent>
+        </Drawer>
       </div>
     </div>
   );

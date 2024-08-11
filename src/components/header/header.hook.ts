@@ -1,10 +1,6 @@
 "use client";
 
-import { useState } from "react";
-
 export default function useHeader() {
-  const [open, setOpen] = useState(false);
-
   const menuOptions = [
     "Blog",
     "Cursos e Aulas",
@@ -13,19 +9,7 @@ export default function useHeader() {
     "Sobre",
   ];
 
-  const showDrawer = () => {
-    setOpen(true);
-  };
-
-  const onClose = () => {
-    setOpen(false);
-  };
-
   return {
     menuOptions,
-    open,
-    setOpen,
-    showDrawer,
-    onClose,
   };
 }
