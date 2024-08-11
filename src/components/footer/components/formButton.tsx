@@ -1,0 +1,29 @@
+import { Button } from "@/components/ui/button";
+import { Libre_Baskerville } from "next/font/google";
+
+type FormButtonProps = {
+  label: string;
+  className?: string;
+  onClick: () => void;
+};
+
+const baskervilleFont = Libre_Baskerville({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: "normal",
+});
+
+export default function FormButton({
+  label,
+  className,
+  onClick,
+}: FormButtonProps) {
+  return (
+    <Button
+      className={`${baskervilleFont.className} bg-k_brown text-k_off_white w-6/12 rounded-none italic ${className}`.trim()}
+      onClick={onClick}
+    >
+      {label}
+    </Button>
+  );
+}
