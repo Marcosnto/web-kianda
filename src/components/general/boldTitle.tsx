@@ -9,7 +9,7 @@ const syneFont = Syne({
   subsets: ["latin"],
 });
 
-export default function FooterTitle({ children, className }: FooterTitleProps) {
+export default function BoldTitle({ children, className }: FooterTitleProps) {
   return (
     <div
       className={`${syneFont.className} text-xl/7 font-bold tracking-wider ${className}`.trim()}

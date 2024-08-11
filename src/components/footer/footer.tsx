@@ -3,17 +3,17 @@
 import useFooter from "./footer.hook";
 import Link from "next/link";
 import FormButton from "./components/formButton";
-import FooterTitle from "./components/footerTitle";
 import FormInput from "./components/formInput";
+import BoldTitle from "../general/boldTitle";
 
 export default function Footer() {
   const {} = useFooter();
 
   return (
     <footer className={`flex flex-col gap-5 bg-k_beige p-10 pb-2 text-k_brown`}>
-      <FooterTitle className="w-10/12">
+      <BoldTitle className="w-10/12">
         <h1>Receba nossos conteúdos por email</h1>
-      </FooterTitle>
+      </BoldTitle>
 
       <div className="mb-[3.188rem] flex flex-col gap-2">
         <FormInput label="Email" isRequired type="email" id="newsLetter" />
@@ -24,17 +24,17 @@ export default function Footer() {
         />
       </div>
 
-      <FooterTitle className="mb-[3.188rem] flex flex-col gap-7">
+      <BoldTitle className="mb-[3.188rem] flex flex-col gap-7">
         <Link href="www.google.com">Instagram</Link>
         <Link href="www.google.com">Facebook</Link>
         <Link href="www.google.com">Youtube</Link>
         <Link href="www.google.com">TikTok</Link>
-      </FooterTitle>
+      </BoldTitle>
 
       <form className="mb-10 flex flex-col gap-2">
-        <FooterTitle>
+        <BoldTitle>
           <h1>Entre em contato</h1>
-        </FooterTitle>
+        </BoldTitle>
 
         <FormInput label="Nome" isRequired type="text" id="contactName" />
         <FormInput label="Email" isRequired type="email" id="contactEmail" />
