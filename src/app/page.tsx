@@ -1,5 +1,10 @@
 "use client";
-import { FirstSection, SecondSection, ThirdSection } from "@/components/home";
+import {
+  FirstSection,
+  ForthSection,
+  SecondSection,
+  ThirdSection,
+} from "@/components/home";
 
 export default function Home() {
   return (
@@ -7,6 +12,7 @@ export default function Home() {
       <FirstSection />
       <SecondSection />
       <ThirdSection />
+      <ForthSection />
     </main>
   );
 }
