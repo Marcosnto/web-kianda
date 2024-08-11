@@ -9,6 +9,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Georgia";
+  src: url('/fonts/georgia.ttf') format('ttf'),
+       url('/fonts/georgiab.ttf') format('ttf'),
+       url('/fonts/georgiai.ttf') format('ttf'),
+       url('/fonts/georgiaz.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
   
   :root {

@@ -20,6 +20,7 @@ const config = {
     extend: {
       fontFamily: {
         rasputin: ["Rasputin", "sans-serif"],
+        georgia: ["Georgia", "sans-serif"],
       },
       colors: {
         transparent: "transparent",
