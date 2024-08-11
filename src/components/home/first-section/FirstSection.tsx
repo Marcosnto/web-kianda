@@ -4,7 +4,7 @@ import { BoldTitle } from "@/components/general";
 
 export function FirstSection() {
   return (
-    <div className="mb-8">
+    <section>
       <Image
         alt="Homem negro com óculos conversa com mulher negra com óculos em frente ao computador"
         src={home_1}
@@ -17,6 +17,6 @@ export function FirstSection() {
         <span>•</span>
         <BoldTitle>Acolhimento</BoldTitle>
       </div>
-    </div>
+    </section>
   );
 }
