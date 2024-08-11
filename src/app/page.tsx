@@ -1,3 +1,9 @@
+import HomeFirstSection from "@/components/home/first-section/homeFirstSection";
+
 export default function Home() {
-  return <main className="">Hello World </main>;
+  return (
+    <main className="">
+      <HomeFirstSection />
+    </main>
+  );
 }
