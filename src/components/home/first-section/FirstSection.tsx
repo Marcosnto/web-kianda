@@ -1,10 +1,10 @@
 import Image from "next/image";
 import home_1 from "@/../public/imgs/home_1.jpg";
-import BoldTitle from "@/components/general/boldTitle";
+import { BoldTitle } from "@/components/general";
 
-export default function HomeFirstSection() {
+export function FirstSection() {
   return (
-    <div>
+    <div className="mb-8">
       <Image
         alt="Homem negro com óculos conversa com mulher negra com óculos em frente ao computador"
         src={home_1}

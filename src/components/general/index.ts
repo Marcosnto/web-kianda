@@ -1,1 +1,2 @@
-export * from "./boldTitle";
+export { BoldTitle } from "./boldTitle";
+export { ItalicTitle } from "./italicTitle";

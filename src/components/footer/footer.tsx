@@ -4,7 +4,7 @@ import useFooter from "./footer.hook";
 import Link from "next/link";
 import FormButton from "./components/formButton";
 import FormInput from "./components/formInput";
-import BoldTitle from "../general/boldTitle";
+import { BoldTitle } from "../general";
 
 export default function Footer() {
   const {} = useFooter();

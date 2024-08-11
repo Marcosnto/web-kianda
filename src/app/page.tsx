@@ -1,9 +1,10 @@
-import HomeFirstSection from "@/components/home/first-section/homeFirstSection";
+import { FirstSection, SecondSection } from "@/components/home";
 
 export default function Home() {
   return (
     <main className="">
-      <HomeFirstSection />
+      <FirstSection />
+      <SecondSection />
     </main>
   );
 }
