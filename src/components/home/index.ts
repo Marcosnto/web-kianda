@@ -1,2 +1,3 @@
-export { FirstSection } from "./first-section/FirstSection";
-export { SecondSection } from "./second-section/SecondSection";
+export { FirstSection } from "./first-section/firstSection";
+export { SecondSection } from "./second-section/secondSection";
+export { ThirdSection } from "./third-section/third-section";
