@@ -1,5 +1,6 @@
 "use client";
 import {
+  FifthSection,
   FirstSection,
   ForthSection,
   SecondSection,
@@ -13,6 +14,7 @@ export default function Home() {
       <SecondSection />
       <ThirdSection />
       <ForthSection />
+      <FifthSection />
     </main>
   );
 }
