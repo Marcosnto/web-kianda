@@ -3,7 +3,7 @@ import home_1 from "@/../public/imgs/home_1.jpg";
 import { BoldTitle } from "@/components/general";
 
 export function FirstSection() {
-  const responsiveCSS = "sm:text-2xl md:text-3xl md:p-12  ";
+  const responsiveCSS = "sm:text-2xl md:text-3xl md:p-6";
   const minResponsiveCssForSmallDevices =
     "vs:text-s vs:gap-[0.5rem] ms:text-[1.160rem]";
 
