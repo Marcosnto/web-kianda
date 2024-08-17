@@ -3,8 +3,9 @@ import home_1 from "@/../public/imgs/home_1.jpg";
 import { BoldTitle } from "@/components/general";
 
 export function FirstSection() {
-  const responsiveCSS =
-    "sm:justify-center sm:gap-8 sm:text-2xl lg:p-10 lg:text-3xl";
+  const responsiveCSS = "sm:text-2xl md:text-3xl md:p-12  ";
+  const minResponsiveCssForSmallDevices =
+    "vs:text-s vs:gap-[0.5rem] ms:text-[1.160rem]";
 
   return (
     <section>
@@ -14,11 +15,13 @@ export function FirstSection() {
         style={{ width: "100%", height: "auto" }}
       />
       <div
-        className={`flex h-20 w-full items-center justify-between bg-k_vivid_orange pl-6 pr-6 text-lg text-k_brown shadow-inner ${responsiveCSS}`}
+        className={`flex h-20 w-full flex-wrap items-center justify-center gap-3 bg-k_vivid_orange pl-1 pr-1 text-xl text-k_brown shadow-inner ${responsiveCSS} ${minResponsiveCssForSmallDevices}`}
       >
         <BoldTitle>Diversidade</BoldTitle>
         <span>•</span>
-        <p className="text-xl sm:text-2xl lg:text-3xl">Cuidado</p>
+        <p className="vs:text-s ms:text-[1.160rem] text-xl sm:text-2xl md:text-3xl">
+          Cuidado
+        </p>
         <span>•</span>
         <BoldTitle>Acolhimento</BoldTitle>
       </div>
