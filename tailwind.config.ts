@@ -22,6 +22,15 @@ const config = {
         rasputin: ["Rasputin", "sans-serif"],
         georgia: ["Georgia", "sans-serif"],
       },
+      fontSize: {
+        s: "0.9rem",
+      },
+      screens: {
+        //very-small
+        vs: "329px",
+        //medium-small
+        ms: "400px",
+      },
       colors: {
         transparent: "transparent",
         current: "currentColor",
