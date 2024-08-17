@@ -54,8 +54,8 @@ export function Card(props: CardType) {
             <h1>{label}</h1>
           </BoldTitle>
         </Link>
-        <p>{summary}</p>
       </span>
+      <p>{summary}</p>
     </div>
   );
 }
