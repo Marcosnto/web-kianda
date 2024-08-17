@@ -13,6 +13,7 @@ export type CardType = {
   createdData?: Date;
   className?: string;
   bodyClassName?: string;
+  imageClassname?: string;
 };
 
 export function Card(props: CardType) {
@@ -26,14 +27,15 @@ export function Card(props: CardType) {
     createdData,
     className = "",
     bodyClassName = "",
+    imageClassname = "w-full h-auto",
   } = props;
 
   return (
     <div className={`mb-8 flex flex-col gap-6 ${className}`.trim()}>
       <Image
+        className={`${imageClassname}`.trim()}
         alt={imageAlt}
         src={imageURL}
-        style={{ width: "100%", height: "auto" }}
       />
       {createdData && (
         <span className={`${bodyClassName}`.trim()}>
