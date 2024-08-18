@@ -12,7 +12,7 @@ export function ThirdSection() {
   const responsiveCSS = "";
 
   return (
-    <section className="bg-k_beige pb-16 md:pb-0 xl:max-h-[47.25] xl:min-w-[90rem]">
+    <section className="bg-k_beige pb-16 md:pb-0">
       <div className="flex flex-col md:flex-row-reverse">
         <div className="flex grow md:w-5/12 lg:grow-0 xl:max-h-[47rem]">
           <Image
