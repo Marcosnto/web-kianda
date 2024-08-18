@@ -13,7 +13,9 @@ export type CardType = {
   createdData?: Date;
   className?: string;
   bodyClassName?: string;
-  imageClassname?: string;
+  imageClassName?: string;
+  summaryClassName?: string;
+  showFooterLine?: boolean;
 };
 
 export function Card(props: CardType) {
@@ -27,13 +29,15 @@ export function Card(props: CardType) {
     createdData,
     className = "",
     bodyClassName = "",
-    imageClassname = "w-full h-auto",
+    imageClassName = "w-full h-auto",
+    summaryClassName = "",
+    showFooterLine = false,
   } = props;
 
   return (
     <div className={`mb-8 flex flex-col gap-6 ${className}`.trim()}>
       <Image
-        className={`${imageClassname}`.trim()}
+        className={`${imageClassName}`.trim()}
         alt={imageAlt}
         src={imageURL}
       />
@@ -55,7 +59,8 @@ export function Card(props: CardType) {
           </BoldTitle>
         </Link>
       </span>
-      <p>{summary}</p>
+      <p className={`${summaryClassName}`}>{summary}</p>
+      {showFooterLine && <hr className="mb-2 ml-2 mr-2 border-stone-500" />}
     </div>
   );
 }

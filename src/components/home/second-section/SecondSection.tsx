@@ -22,7 +22,7 @@ export function SecondSection() {
           <Card
             key={card.id}
             className="pl-3 pr-3 md:w-[30ch]"
-            imageClassname="md:max-w-none w-full"
+            imageClassName="md:max-w-none w-full"
             label={card.label}
             summary={card.summary}
             imageAlt={card.imageAlt}
