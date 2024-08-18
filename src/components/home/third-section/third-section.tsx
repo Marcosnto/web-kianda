@@ -13,17 +13,17 @@ export function ThirdSection() {
 
   return (
     <section className="bg-k_beige pb-16 md:pb-0">
-      <div className="flex flex-col md:flex-row-reverse">
-        <div className="flex grow md:w-5/12 lg:grow-0 xl:max-h-[47rem]">
+      <div className="grid md:grid-cols-2">
+        <div className="md:col-span-1 lg:max-h-[60ch]">
           <Image
-            className="md:object-cover 2xl:object-contain"
+            className="md:object-cover"
             alt="adelmo"
             src={home_adelmo}
             quality={100}
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "100%", height: "100%" }}
           />
         </div>
-        <div className="p-10 text-justify text-k_brown md:flex md:w-7/12 md:flex-col md:p-20 md:align-middle">
+        <div className="md:p-15 p-10 text-justify text-k_brown md:col-start-1 md:row-start-1 md:align-middle">
           <span className="flex flex-col items-center">
             <h4
               className={`${syneFont.className} text-[2.5rem]/[3.85rem] leading-[2.9rem]`}
