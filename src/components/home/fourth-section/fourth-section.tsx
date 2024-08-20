@@ -16,9 +16,9 @@ export function ForthSection() {
       <div className="flex flex-wrap bg-k_beige text-k_brown md:justify-around md:bg-transparent lg:justify-around xl:justify-center xl:gap-12">
         {blogCards.map((card, index) => (
           <Card
-            className={`vs:w-full md: bg-k_beige md:w-[unset] lg:w-[20.375rem] xl:w-[24.375rem]`}
-            bodyClassName="pl-2 pr-2 max-w-[37ch]"
-            summaryClassName="pl-2 pr-2 max-w-[34ch]"
+            className={`vs:w-full md:w-[unset] md:rounded md:bg-k_beige md:shadow-md lg:w-[20.375rem] xl:w-[24.375rem]`}
+            bodyClassName=""
+            summaryClassName="text-sm/relaxed"
             key={card.id}
             label={card.label}
             summary={card.summary}
