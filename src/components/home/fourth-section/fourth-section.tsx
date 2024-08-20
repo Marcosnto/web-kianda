@@ -1,6 +1,6 @@
 "use client";
 import { ItalicTitle } from "@/components/general";
-import { useForthSection } from "./fourthSection.hook";
+import { useForthSection } from "./fourth-section.hook";
 import { Card } from "@/components/card";
 
 export function ForthSection() {

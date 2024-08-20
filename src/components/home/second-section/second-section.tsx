@@ -1,6 +1,6 @@
 "use client";
 import { ItalicTitle } from "@/components/general";
-import { useSecondSection } from "./secondSection.hook";
+import { useSecondSection } from "./second-section.hook";
 import { Card } from "@/components/card";
 
 export function SecondSection() {

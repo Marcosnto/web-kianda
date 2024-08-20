@@ -1,6 +1,6 @@
 "use client";
 import { BoldTitle } from "@/components/general";
-import { useFifthSection } from "./fifthSection.hook";
+import { useFifthSection } from "./fifth-section.hook";
 import insta from "@/../public/imgs/insta.png";
 import Image from "next/image";
 import Link from "next/link";
