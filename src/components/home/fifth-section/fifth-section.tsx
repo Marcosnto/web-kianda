@@ -13,7 +13,7 @@ export function FifthSection() {
       <BoldTitle className="text-center text-[2.5rem] leading-[2.5rem] text-white">
         Kianda <br /> no #insta
       </BoldTitle>
-      <div className="grid grid-cols-2 gap-3 pl-4 pr-4 sm:grid-cols-4 md:gap-1 lg:grid-cols-6">
+      <div className="grid grid-cols-2 gap-3 pl-2 pr-2 sm:grid-cols-4 sm:pl-4 sm:pr-4 md:gap-1 lg:grid-cols-6">
         {data.length === 0 ? (
           <Image alt="alt" src={insta} quality={100} />
         ) : (
