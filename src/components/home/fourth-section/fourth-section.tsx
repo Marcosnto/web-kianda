@@ -17,7 +17,8 @@ export function ForthSection() {
         {blogCards.map((card, index) => (
           <Card
             className={`vs:w-full md:w-[unset] md:rounded md:bg-k_beige md:shadow-md lg:w-[20.375rem] xl:w-[24.375rem]`}
-            bodyClassName=""
+            bodyClassName="pl-[17.3px] pr-[17.3px] "
+            imageClassName="h-72 w-full"
             summaryClassName="text-sm/relaxed"
             key={card.id}
             label={card.label}

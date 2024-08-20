@@ -37,30 +37,38 @@ export function Card(props: CardType) {
   return (
     <div className={`mb-8 flex flex-col gap-6 ${className}`.trim()}>
       <Image
-        className={`${imageClassName}`.trim()}
+        className={`object-cover ${imageClassName}`.trim()}
         alt={imageAlt}
         src={imageURL}
       />
-      {createdData && (
-        <span className={`${bodyClassName}`.trim()}>
-          {String(
-            createdData.getDate() +
-              "/" +
-              createdData.getMonth() +
-              "/" +
-              createdData.getFullYear(),
-          )}
-        </span>
-      )}
-      <span className={`flex flex-col gap-2 ${bodyClassName}`.trim()}>
+      <span
+        className={`flex max-w-none flex-col gap-2 md:max-w-[41ch] ${bodyClassName}`.trim()}
+      >
+        {createdData && (
+          <time
+            dateTime="2022-10-10"
+            className={`block text-xs text-k_brown`.trim()}
+          >
+            {String(
+              createdData.getDate() +
+                "/" +
+                createdData.getMonth() +
+                "/" +
+                createdData.getFullYear(),
+            )}
+          </time>
+        )}
+
         <Link href={url}>
           <BoldTitle className="text-[1.6875rem] leading-10">
             <h1>{label}</h1>
           </BoldTitle>
         </Link>
+
+        <p className={`${summaryClassName}`}>{summary}</p>
+
+        {showFooterLine && <hr className="mb-6 border-stone-500 opacity-35" />}
       </span>
-      <p className={`${summaryClassName}`}>{summary}</p>
-      {showFooterLine && <hr className="mb-2 ml-2 mr-2 border-stone-500" />}
     </div>
   );
 }

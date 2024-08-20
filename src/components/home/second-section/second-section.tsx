@@ -16,13 +16,13 @@ export function SecondSection() {
         </ItalicTitle>
       </span>
       <div
-        className={`ml-2 mr-2 flex flex-wrap justify-center gap-4 ${responsiveBodyCSS}`}
+        className={`flex flex-wrap justify-center gap-4 ${responsiveBodyCSS}`}
       >
         {whatKiandaDoCards.map((card) => (
           <Card
             key={card.id}
-            className="pl-3 pr-3 md:w-[30ch]"
-            imageClassName="md:max-w-none w-full"
+            className="pl-4 pr-2"
+            imageClassName="md:max-w-none w-full h-92"
             label={card.label}
             summary={card.summary}
             imageAlt={card.imageAlt}
