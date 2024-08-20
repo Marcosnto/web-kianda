@@ -39,10 +39,10 @@ export function ThirdSection() {
           <span className="leading-6 xl:pl-16 xl:pr-16">
             <p>
               Sou um parágrafo. Aqui você pode adicionar seu próprio texto. É
-              fácil, é só clicar em "Editar texto" ou clicar duas vezes sobre
-              mim para editar seu conteúdo e alterar a fonte. Você também pode
-              me arrastar e soltar em qualquer lugar da página. Sou um ótimo
-              espaço para você compartilhar a sua história.
+              fácil, ou clicar duas vezes sobre mim para editar seu conteúdo e
+              alterar a fonte. Você também pode me arrastar e soltar em qualquer
+              lugar da página. Sou um ótimo espaço para você compartilhar a sua
+              história.
             </p>
             <br />
             <p>
@@ -51,8 +51,7 @@ export function ThirdSection() {
               história de como você teve a ideia de criar essa empresa e o que o
               torna diferente de seus concorrentes. Você pode apresentar a sua
               equipe, seus projetos e metas. Faça com que a sua empresa se
-              destaque e mostre aos visitantes quem você é. Clique em "Editar
-              texto" para começar.
+              destaque e mostre aos visitantes quem você é.
             </p>
           </span>
         </div>

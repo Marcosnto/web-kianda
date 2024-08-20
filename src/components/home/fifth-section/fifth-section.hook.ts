@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 
 type InstagramFeedType = {
@@ -22,18 +22,18 @@ export function useFifthSection() {
   const fields = "media_url,media_type,thumbnail_url,permalink";
   const url = `https://graph.instagram.com/me/media?access_token=${token}&fields=${fields}&limit=12`;
 
-  const getInstaFeed = async () => {
+  const getInstaFeed = useCallback(async () => {
     axios
       .get<MetaData>(url)
       .then((response) => setData(response.data.data))
       .catch((error) =>
         console.log("Ocorreu um erro ao obter dados do Instagram"),
       );
-  };
+  }, [url]);
 
   useEffect(() => {
     getInstaFeed();
-  }, []);
+  }, [getInstaFeed]);
 
   return {
     data,
