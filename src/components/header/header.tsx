@@ -1,26 +1,27 @@
 "use client";
 
 import useHeader from "./header.hook";
+import kianda_name from "@/../public/imgs/kianda_name.svg";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import {
   Drawer,
   DrawerClose,
   DrawerContent,
   DrawerDescription,
-  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import Image from "next/image";
+import { SearchInput } from ".";
 
 export default function Header() {
   const { menuOptions } = useHeader();
 
   return (
-    <div className="flex h-20 w-full items-center justify-center bg-k_brown p-4 align-middle font-rasputin text-white">
-      <h1 className="grow text-center text-4xl">kianda</h1>
-      <div className="grow-0">
-        <Drawer direction="right" shouldScaleBackground>
+    <div className="flex h-20 w-full items-center bg-k_brown p-4 align-middle font-rasputin text-white">
+      <div className="flex items-center">
+        <Drawer direction="left" shouldScaleBackground>
           <DrawerTrigger>
             <AiOutlineMenu className="text-4xl" />
           </DrawerTrigger>
@@ -48,6 +49,14 @@ export default function Header() {
             </div>
           </DrawerContent>
         </Drawer>
+      </div>
+      <Image
+        className="h-6 flex-grow self-center md:h-8 lg:h-9 lg:pl-[17%] 2xl:h-10"
+        src={kianda_name}
+        alt="imagem svg escrita Kianda"
+      />
+      <div className="hidden w-[200px] text-white lg:block xl:w-[230px] 2xl:w-[267px]">
+        <SearchInput />
       </div>
     </div>
   );
