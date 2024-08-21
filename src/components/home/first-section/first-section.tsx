@@ -10,16 +10,16 @@ export function FirstSection() {
   return (
     <section>
       <Image
+        className="h-auto w-full object-cover md:h-[680px]"
         alt="Homem negro com óculos conversa com mulher negra com óculos em frente ao computador"
         src={home_1}
-        style={{ width: "100%", height: "auto" }}
       />
       <div
         className={`flex h-20 w-full flex-wrap items-center justify-center gap-3 bg-k_vivid_orange pl-1 pr-1 text-xl text-k_brown shadow-inner ${responsiveCSS} ${minResponsiveCssForSmallDevices}`}
       >
         <BoldTitle>Diversidade</BoldTitle>
         <span>•</span>
-        <p className="vs:text-s ms:text-[1.160rem] text-xl sm:text-2xl md:text-3xl">
+        <p className="text-xl vs:text-s ms:text-[1.160rem] sm:text-2xl md:text-3xl">
           Cuidado
         </p>
         <span>•</span>
