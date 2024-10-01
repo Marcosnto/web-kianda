@@ -1,4 +1,3 @@
-"use client";
 import { ItalicTitle } from "@/components/general";
 import { useForthSection } from "./fourth-section.hook";
 import { Card } from "@/components/card";
@@ -17,7 +16,7 @@ export function ForthSection() {
         {blogCards.map((card, index) => (
           <Card
             className={`vs:w-full md:w-[unset] md:rounded md:bg-k_beige md:shadow-md lg:w-[20.375rem] xl:w-[24.375rem]`}
-            bodyClassName="pl-[17.3px] pr-[17.3px] "
+            bodyClassName="pl-[17.3px] pr-[17.3px] max-w-none md:max-w-[41ch]"
             imageClassName="h-72 w-full"
             summaryClassName="text-sm/relaxed"
             key={card.id}
