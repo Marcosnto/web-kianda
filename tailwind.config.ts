@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      gridTemplateColumns: {
+        blogCards: "repeat(auto-fit, minmax(300px, 1fr))",
+      },
       fontFamily: {
         rasputin: ["Rasputin", "sans-serif"],
         georgia: ["Georgia", "sans-serif"],
@@ -27,7 +30,7 @@ const config = {
       },
       screens: {
         //very-small
-        vs: "329px",
+        vs: "320px",
         //medium-small
         ms: "400px",
       },

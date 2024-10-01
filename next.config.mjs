@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: "scontent.cdninstagram.com",
         port: "",
       },
+      {
+        protocol: "http",
+        hostname: "tns-back.local",
+        port: "",
+      },
     ],
   },
 };
