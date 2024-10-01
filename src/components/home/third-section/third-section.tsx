@@ -1,5 +1,4 @@
 import home_adelmo from "@/../public/imgs/home_adelmo.png";
-import { BoldTitle, ItalicTitle } from "@/components/general";
 import Image from "next/image";
 
 import { Syne } from "next/font/google";
@@ -9,17 +8,17 @@ const syneFont = Syne({
 });
 
 export function ThirdSection() {
-  const responsiveCSS = "";
-
   return (
-    <section className="bg-k_beige pb-16 md:pb-0">
+    <section id="about" className="bg-k_beige pb-16 md:pb-0">
       <div className="grid md:grid-cols-2">
         <div className="md:col-span-1 lg:max-h-[60ch]">
           <Image
             className="md:object-cover"
             alt="adelmo"
             src={home_adelmo}
-            quality={100}
+            quality={75}
+            width={389}
+            height={517}
             style={{ width: "100%", height: "100%" }}
           />
         </div>

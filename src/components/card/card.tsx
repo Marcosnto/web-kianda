@@ -1,4 +1,3 @@
-"use client";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { BoldTitle } from "../general";
@@ -9,11 +8,12 @@ export type CardType = {
   summary: string;
   imageURL: string | StaticImageData;
   imageAlt: string;
-  url?: URL;
+  url?: string;
   createdData?: Date;
   className?: string;
   bodyClassName?: string;
   imageClassName?: string;
+  titleClassName?: string;
   summaryClassName?: string;
   showFooterLine?: boolean;
 };
@@ -30,6 +30,7 @@ export function Card(props: CardType) {
     className = "",
     bodyClassName = "",
     imageClassName = "w-full h-auto",
+    titleClassName = "",
     summaryClassName = "",
     showFooterLine = false,
   } = props;
@@ -38,12 +39,12 @@ export function Card(props: CardType) {
     <div className={`mb-8 flex flex-col gap-6 ${className}`.trim()}>
       <Image
         className={`object-cover ${imageClassName}`.trim()}
+        width={800}
+        height={600}
         alt={imageAlt}
         src={imageURL}
       />
-      <span
-        className={`flex max-w-none flex-col gap-2 md:max-w-[41ch] ${bodyClassName}`.trim()}
-      >
+      <span className={`flex flex-col gap-2 ${bodyClassName}`.trim()}>
         {createdData && (
           <time
             dateTime="2022-10-10"
@@ -60,7 +61,9 @@ export function Card(props: CardType) {
         )}
 
         <Link href={url}>
-          <BoldTitle className="text-[1.6875rem] leading-10">
+          <BoldTitle
+            className={`min-h-[4ch] text-[1.6875rem] leading-10 ${titleClassName}`.trim()}
+          >
             <h1>{label}</h1>
           </BoldTitle>
         </Link>

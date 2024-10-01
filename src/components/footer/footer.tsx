@@ -1,16 +1,14 @@
 "use client";
 
-import useFooter from "./footer.hook";
 import Link from "next/link";
 import FormButton from "./components/formButton";
-import FormInput from "./components/formInput";
 import { BoldTitle } from "../general";
+import { FormInput } from "./components";
 
 export default function Footer() {
-  const {} = useFooter();
-
   return (
     <footer
+      id="contact"
       className={`grid gap-12 bg-k_beige p-10 text-k_brown md:grid-cols-3 md:gap-10 lg:gap-0`}
     >
       <div className="flex flex-col gap-4 md:col-span-2 lg:col-span-1">
