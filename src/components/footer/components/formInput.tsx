@@ -8,7 +8,7 @@ type FormInputProps = {
   className?: string;
 };
 
-export default function FormInput({
+export function FormInput({
   label,
   type,
   id,
@@ -20,7 +20,7 @@ export default function FormInput({
       {label}
       {isRequired ? "*" : null}
       <Input
-        className="b-1 bg-k_off_white h-9 rounded-none border-black"
+        className="b-1 h-9 rounded-none border-black bg-k_off_white"
         type={type}
         id={id}
       />
