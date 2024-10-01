@@ -15,7 +15,7 @@ export function FirstSection() {
         src={home_1}
       />
       <div
-        className={`flex h-20 w-full flex-wrap items-center justify-center gap-3 bg-k_vivid_orange pl-1 pr-1 text-xl text-k_brown shadow-inner ${responsiveCSS} ${minResponsiveCssForSmallDevices}`}
+        className={`flex h-20 w-full flex-wrap items-center justify-center gap-3 bg-k_vivid_orange px-1 text-xl text-k_brown shadow-inner ${responsiveCSS} ${minResponsiveCssForSmallDevices}`}
       >
         <BoldTitle>Diversidade</BoldTitle>
         <span>•</span>
