@@ -1,0 +1,12 @@
+.content-post{
+  @media(min-width: 1024px){
+    img {
+      max-height: 384px;
+    }
+  }
+
+  p:has(img){
+    display: flex;
+    justify-content: center;
+  }
+};
