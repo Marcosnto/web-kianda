@@ -7,18 +7,20 @@ export function useForthSection() {
   const blogCards: CardType[] = [
     {
       id: "1",
-      label: "Título do post de blog",
+      label: "Donec orci lectus aliquam ut asdadsdsdsdad",
+      author: "Marcos Neto",
       summary:
-        "Crie um subtítulo que resuma de forma curta e atraente o seu post do blog para que seus visitantes queiram ler…",
+        "Donec orci lectus aliquam utDonec orci lectus aliquam utDonec orci lectus aliquam ut",
       imageURL: blog_1,
       imageAlt: "Alt descricao 1",
       createdData: new Date("10/31/2022"),
     },
     {
       id: "2",
-      label: "Título do post de blog",
+      label: "Nunc interdum lacus sit amet falling love",
+      author: "Marcos Neto",
       summary:
-        "Crie um subtítulo que resuma de forma curta e atraente o seu post do blog para que seus visitantes queiram ler…",
+        "Etiam feugiat lorem non metus. Phasellus dolor. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Proin sapien ipsum, porta a, auctor .",
       imageURL: blog_2,
       imageAlt: "Alt descricao 2",
       createdData: new Date("10/31/2022"),
@@ -26,6 +28,7 @@ export function useForthSection() {
     {
       id: "3",
       label: "Título do post de blog",
+      author: "Marcos Neto",
       summary:
         "Crie um subtítulo que resuma de forma curta e atraente o seu post do blog para que seus visitantes queiram ler…",
       imageURL: blog_3,

@@ -5,6 +5,7 @@ import { BoldTitle } from "../general";
 export type CardType = {
   id?: string;
   label: string;
+  author?: string;
   summary: string;
   imageURL: string | StaticImageData;
   imageAlt: string;
@@ -22,6 +23,7 @@ export function Card(props: CardType) {
   const {
     id,
     label,
+    author,
     summary,
     imageAlt,
     imageURL,
@@ -36,7 +38,7 @@ export function Card(props: CardType) {
   } = props;
 
   return (
-    <div className={`mb-8 flex flex-col gap-6 ${className}`.trim()}>
+    <div className={`${className}`.trim()}>
       <Image
         className={`object-cover ${imageClassName}`.trim()}
         width={800}
@@ -44,33 +46,38 @@ export function Card(props: CardType) {
         alt={imageAlt}
         src={imageURL}
       />
-      <span className={`flex flex-col gap-2 ${bodyClassName}`.trim()}>
-        {createdData && (
-          <time
-            dateTime="2022-10-10"
-            className={`block text-xs text-k_brown`.trim()}
-          >
-            {String(
-              createdData.getDate() +
-                "/" +
-                createdData.getMonth() +
-                "/" +
-                createdData.getFullYear(),
-            )}
-          </time>
-        )}
+      <span className={`flex flex-col gap-4 pb-4 pt-4 ${bodyClassName}`.trim()}>
+        <span className="flex">
+          {author && (
+            <span className={`block text-xs text-k_brown`.trim()}>
+              Por {author} em&nbsp;
+            </span>
+          )}
+          {createdData && (
+            <time
+              dateTime="2022-10-10"
+              className={`block text-xs text-k_brown`.trim()}
+            >
+              {String(
+                createdData.getDate() +
+                  "/" +
+                  createdData.getMonth() +
+                  "/" +
+                  createdData.getFullYear(),
+              )}
+            </time>
+          )}
+        </span>
 
         <Link href={url}>
           <BoldTitle
-            className={`min-h-[4ch] text-[1.6875rem] leading-10 ${titleClassName}`.trim()}
+            className={`line-clamp-2 text-[1.6875rem] leading-7 ${titleClassName}`.trim()}
           >
             <h1>{label}</h1>
           </BoldTitle>
         </Link>
 
-        <p className={`${summaryClassName}`}>{summary}</p>
-
-        {showFooterLine && <hr className="mb-6 border-stone-500 opacity-35" />}
+        <p className={`line-clamp-3 ${summaryClassName}`}>{summary}</p>
       </span>
     </div>
   );

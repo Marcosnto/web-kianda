@@ -12,8 +12,8 @@ export function ForthSection() {
           Blog e Artigos
         </ItalicTitle>
       </span>
-      <div className="flex flex-wrap bg-k_beige text-k_brown md:justify-around md:bg-transparent lg:justify-around xl:justify-center xl:gap-12">
-        {blogCards.map((card, index) => (
+      <div className="flex flex-wrap gap-8 bg-k_beige text-k_brown md:mb-4 md:justify-around md:bg-transparent lg:justify-around xl:justify-center xl:gap-12">
+        {blogCards.map((card) => (
           <Card
             className={`vs:w-full md:w-[unset] md:rounded md:bg-k_beige md:shadow-md lg:w-[20.375rem] xl:w-[24.375rem]`}
             bodyClassName="pl-[17.3px] pr-[17.3px] max-w-none md:max-w-[41ch]"
@@ -22,10 +22,10 @@ export function ForthSection() {
             key={card.id}
             label={card.label}
             summary={card.summary}
+            author={card.author}
             createdData={card.createdData}
             imageAlt={card.imageAlt}
             imageURL={card.imageURL}
-            showFooterLine={true}
           />
         ))}
       </div>

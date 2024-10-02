@@ -31,29 +31,25 @@ export default function Posts() {
     })();
   }, []);
 
-  const t =
-    "Crie um subtítulo que resuma de forma curta e atraente o seu post do blog para que seus visitantes queiram ler mais.";
-
   return (
     <section>
       <IntraPageHeader name="Blog" />
-      <div className="grid-cols-blogCards grid gap-10 px-3 py-6 sm:gap-7 sm:px-6 lg:px-32 lg:py-16">
+      <div className="grid-cols-blogCards grid gap-10 px-3 py-6 sm:gap-10 sm:px-6 lg:px-32 lg:py-16">
         <Suspense fallback="carregando...">
           {posts.length > 0 &&
             posts.map((post) => (
               <Card
-                className="row-[span_3] grid grid-rows-subgrid gap-1"
+                className="row-[span_3] grid grid-rows-subgrid gap-1 border-b-2 border-gray-100"
                 titleClassName="text-lg"
                 imageClassName="h-[234px] w-full object-fill"
-                bodyClassName="max-w-full basis-[12ch] max-h-[12ch]"
+                bodyClassName="max-w-full"
                 url={`${currentPath + "/" + post.id}`}
                 key={post.id}
                 id={post.id}
-                label="Eu sou um titulo Grande, olha só! Como sou Grande."
-                summary={t}
+                label={post.title}
+                summary={post.description}
                 imageURL={post.main_image_link ? post.main_image_link : blog_1}
                 imageAlt={post.imageDescription}
-                showFooterLine
               />
             ))}
         </Suspense>
