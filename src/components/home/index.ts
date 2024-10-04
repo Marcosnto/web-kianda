@@ -1,5 +1,5 @@
-export { FirstSection } from "./first-section/first-section";
-export { SecondSection } from "./second-section/second-section";
-export { ThirdSection } from "./third-section/third-section";
-export { ForthSection } from "./fourth-section/fourth-section";
-export { FifthSection } from "./fifth-section/fifth-section";
+export { FirstSection } from "./image-and-banner-section/first-section";
+export { SecondSection } from "./how-kianda-act-section/second-section";
+export { ThirdSection } from "./about-adelmo-section/third-section";
+export { ForthSection } from "./blog-and-articles-section/fourth-section";
+export { FifthSection } from "./instagram-section/fifth-section";
