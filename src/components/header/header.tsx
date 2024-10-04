@@ -16,24 +16,24 @@ import { SearchInput } from ".";
 import Link from "next/link";
 
 export default function Header() {
-  const { menuOptions, isOpen, setIsOpen } = useHeader();
+  const { menuOptions, isOpen, toggleMenu, moveToSection } = useHeader();
 
   return (
     <div className="flex h-20 w-full items-center bg-k_brown p-4 align-middle font-rasputin text-white">
       <div className="z-50 flex items-center">
         <Drawer direction="left" shouldScaleBackground open={isOpen}>
-          <DrawerTrigger asChild onClick={() => setIsOpen(true)}>
+          <DrawerTrigger asChild onClick={toggleMenu}>
             <AiOutlineMenu className="text-4xl" />
           </DrawerTrigger>
           <DrawerContent
             className="p-2"
             autoFocus
             onEscapeKeyDown={() => console.log("Pressed ESC")}
-            onPointerDownOutside={() => setIsOpen(false)}
-            onInteractOutside={() => setIsOpen(false)}
+            onPointerDownOutside={toggleMenu}
+            onInteractOutside={toggleMenu}
           >
             <div className="mr-auto pr-1 text-gray-400">
-              <DrawerClose onClick={() => setIsOpen(false)}>
+              <DrawerClose onClick={toggleMenu}>
                 <AiOutlineClose />
               </DrawerClose>
             </div>
@@ -49,7 +49,9 @@ export default function Header() {
                   className="hover:bg-k_brown_light w-auto text-base text-k_brown"
                   key={option.path}
                 >
-                  <Link href={option.path}>{option.label}</Link>
+                  <a onClick={() => moveToSection(option.path)}>
+                    {option.label}
+                  </a>
                 </DrawerDescription>
               ))}
             </div>

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type OptionsTypes = {
   label: string;
@@ -9,10 +9,20 @@ type OptionsTypes = {
 export default function useHeader() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  function moveToSection(id: string) {
+    toggleMenu();
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }, 400);
+  }
+
   const menuOptions: OptionsTypes[] = [
     {
       label: "Como a Kianda Atua",
-      path: "#aboutKianda",
+      path: "aboutKianda",
     },
     {
       label: "Blog e Artigos",
@@ -20,21 +30,22 @@ export default function useHeader() {
     },
     {
       label: "Redes Sociais",
-      path: "#socialMedias",
+      path: "socialMedias",
     },
     {
       label: "Sobre",
-      path: "#about",
+      path: "about",
     },
     {
       label: "Contato",
-      path: "#contact",
+      path: "contact",
     },
   ];
 
   return {
     menuOptions,
     isOpen,
-    setIsOpen,
+    toggleMenu,
+    moveToSection,
   };
 }
