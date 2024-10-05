@@ -49,6 +49,8 @@ export default function Posts() {
                 key={post.id}
                 id={post.id}
                 label={post.title}
+                author={post.author}
+                createdData={new Date(post.createdData)}
                 summary={post.description}
                 imageURL={post.main_image_link ? post.main_image_link : blog_1}
                 imageAlt={post.imageDescription}
