@@ -49,9 +49,15 @@ export default function Header() {
                   className="hover:bg-k_brown_light w-auto text-base text-k_brown"
                   key={option.path}
                 >
-                  <a onClick={() => moveToSection(option.path)}>
-                    {option.label}
-                  </a>
+                  {option.isPage ? (
+                    <Link href={option.path} onClick={toggleMenu}>
+                      {option.label}
+                    </Link>
+                  ) : (
+                    <a onClick={() => moveToSection(option.path)}>
+                      {option.label}
+                    </a>
+                  )}
                 </DrawerDescription>
               ))}
             </div>

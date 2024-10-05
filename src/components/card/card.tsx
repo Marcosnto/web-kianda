@@ -34,7 +34,6 @@ export function Card(props: CardType) {
     imageClassName = "w-full h-auto",
     titleClassName = "",
     summaryClassName = "",
-    showFooterLine = false,
   } = props;
 
   return (
