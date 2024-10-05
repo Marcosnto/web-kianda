@@ -4,10 +4,12 @@ import { Suspense, useEffect, useState } from "react";
 import blog_1 from "@/../public/imgs/blog_1.png";
 import { IntraPageHeader } from "@/components/general";
 import { usePathname } from "next/navigation";
+import { BASE_API_URL } from "@/utils/envs";
 
-type PostType = {
+export type PostType = {
   id: string;
   images: null;
+  createdData: string;
   title: string;
   status: string;
   author: string;
@@ -25,7 +27,7 @@ export default function Posts() {
   useEffect(() => {
     (async () => {
       const posts: PostType[] = await fetch(
-        "http://tns-back.local/wp-json/api/v1/articles",
+        `${BASE_API_URL}/wp-json/api/v1/articles`,
       ).then((data) => data.json());
       setPosts(posts);
     })();

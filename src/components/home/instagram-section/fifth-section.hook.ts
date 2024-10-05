@@ -1,5 +1,6 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
+import { INSTA_API_URL } from "@/utils/envs";
 import axios from "axios";
 
 type InstagramFeedType = {
@@ -18,7 +19,7 @@ type MetaData = {
 export function useFifthSection() {
   const [data, setData] = useState<InstagramFeedType[]>([]);
 
-  const token = process.env.NEXT_PUBLIC_API_INSTAGRAM;
+  const token = INSTA_API_URL;
   const fields = "media_url,media_type,thumbnail_url,permalink";
   const url = `https://graph.instagram.com/me/media?access_token=${token}&fields=${fields}&limit=12`;
 

@@ -1,26 +1,14 @@
 "use client";
+import { BASE_API_URL } from "@/utils/envs";
 import { useEffect, useState } from "react";
-
-type PostTypes = {
-  id: string;
-  images: any;
-  title: string;
-  status: string;
-  author: string;
-  content: string;
-  description: string;
-  imageDescription: string;
-  imageSub: string;
-};
+import { PostType } from "./page";
 
 export function usePosts() {
-  const [posts, setPosts] = useState<PostTypes[]>([]);
+  const [posts, setPosts] = useState<PostType[]>([]);
 
   const getPosts = async () => {
-    const response = await fetch(
-      "http://tns-back.local/wp-json/api/v1/articles",
-    );
-    const posts: PostTypes[] = await response.json();
+    const response = await fetch(`${BASE_API_URL}/wp-json/api/v1/articles`);
+    const posts: PostType[] = await response.json();
 
     setPosts(posts);
   };
