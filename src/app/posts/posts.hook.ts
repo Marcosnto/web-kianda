@@ -7,7 +7,7 @@ export function usePosts() {
   const [posts, setPosts] = useState<PostType[]>([]);
 
   const getPosts = async () => {
-    const response = await fetch(`${BASE_API_URL}/wp-json/api/v1/articles`);
+    const response = await fetch(`${BASE_API_URL}/articles`);
     const posts: PostType[] = await response.json();
 
     setPosts(posts);

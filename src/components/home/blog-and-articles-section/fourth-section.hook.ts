@@ -10,7 +10,7 @@ export function useForthSection() {
   useEffect(() => {
     (async () => {
       const posts: PostType[] = await fetch(
-        `${BASE_API_URL}/wp-json/api/v1/articles?_limit=3`,
+        `${BASE_API_URL}/articles?_limit=3`,
       ).then((data) => data.json());
       setPosts(posts);
     })();

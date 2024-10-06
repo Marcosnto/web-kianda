@@ -26,9 +26,9 @@ export default function Posts() {
 
   useEffect(() => {
     (async () => {
-      const posts: PostType[] = await fetch(
-        `${BASE_API_URL}/wp-json/api/v1/articles`,
-      ).then((data) => data.json());
+      const posts: PostType[] = await fetch(`${BASE_API_URL}/articles`).then(
+        (data) => data.json(),
+      );
       setPosts(posts);
     })();
   }, []);

@@ -7,7 +7,7 @@ export const usePost = (post: string) => {
 
   useEffect(() => {
     (async () =>
-      await fetch(`${BASE_API_URL}/wp-json/api/v1/article/${post}`)
+      await fetch(`${BASE_API_URL}/article/${post}`)
         .then((response) => response.json())
         .then((info) => setData(info)))();
   }, [post]);
