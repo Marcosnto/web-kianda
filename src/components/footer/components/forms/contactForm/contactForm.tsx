@@ -55,6 +55,23 @@ export const ContactForm = () => {
         />
         <FormField
           control={form.control}
+          name="subject"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Título*</FormLabel>
+              <FormControl>
+                <Input
+                  type="text"
+                  {...field}
+                  className="b-1 h-9 rounded-none border-black bg-k_off_white"
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
           name="message"
           render={({ field }) => (
             <FormItem>
