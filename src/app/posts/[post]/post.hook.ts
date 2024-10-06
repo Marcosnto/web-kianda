@@ -12,6 +12,7 @@ export const usePost = (post: string) => {
         .then((info) => setData(info)))();
   }, [post]);
 
+  //@ts-ignore
   const date = new Date(data?.createdData);
 
   return {
