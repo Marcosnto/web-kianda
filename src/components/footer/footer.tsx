@@ -4,6 +4,9 @@ import Link from "next/link";
 import FormButton from "./components/formButton";
 import { BoldTitle } from "../general";
 import { FormInput } from "./components";
+import { ContactForm } from "./components/forms/contactForm/contactForm";
+import { Button } from "../ui/button";
+import { NewsletterForm } from "./components/forms/newsletter/newsletterForm";
 
 export default function Footer() {
   return (
@@ -17,18 +20,15 @@ export default function Footer() {
         </BoldTitle>
 
         <div className="flex flex-col gap-2">
-          <FormInput label="Email" isRequired type="email" id="newsLetter" />
-
-          <FormButton
-            label="Assinar"
-            onClick={() => console.log("enviar email")}
-          />
+          <NewsletterForm />
         </div>
       </div>
 
       <div className="row-span-2 md:flex md:items-center md:justify-end lg:items-start lg:justify-center">
         <BoldTitle className="flex flex-col gap-7 text-xl/7">
-          <Link href="www.google.com">Instagram</Link>
+          <Link href="https://www.instagram.com/kiandadiversidade/">
+            Instagram
+          </Link>
           <Link href="www.google.com">Facebook</Link>
           <Link href="www.google.com">Youtube</Link>
           <Link href="www.google.com">TikTok</Link>
@@ -36,25 +36,11 @@ export default function Footer() {
       </div>
 
       <div className="flex flex-col gap-4 md:col-span-2 lg:col-start-3">
-        <form className="flex flex-col gap-4">
-          <BoldTitle className="text-xl/7">
-            <h1>Entre em contato</h1>
-          </BoldTitle>
+        <BoldTitle className="text-xl/7">
+          <h1>Entre em contato</h1>
+        </BoldTitle>
 
-          <FormInput label="Nome" isRequired type="text" id="contactName" />
-          <FormInput label="Email" isRequired type="email" id="contactEmail" />
-          <FormInput
-            label="Mensagem"
-            type="text"
-            id="contactMessage"
-            className="mb-6"
-          />
-
-          <FormButton
-            label="Enviar"
-            onClick={() => console.log("enviar contato")}
-          />
-        </form>
+        <ContactForm />
       </div>
 
       <div className="mb-7 flex flex-col gap-3 md:col-span-3">
