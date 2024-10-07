@@ -11,7 +11,12 @@ export type PostType = {
   author: string;
   content: string;
   description: string;
-  main_image_link: string;
+  main_image: {
+    id: string | number;
+    url: string;
+    file_name: string;
+    type: string;
+  };
   imageDescription: string;
   imageSub: string;
 };

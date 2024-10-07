@@ -8,8 +8,6 @@ export function ForthSection() {
   const { posts, isGetPostsLoading, isGetPostsError, currentPath } =
     useForthSection();
 
-  console.log({ posts });
-
   if (isGetPostsLoading) {
     return <h1>carregando</h1>;
   }
@@ -28,7 +26,7 @@ export function ForthSection() {
       <div className="flex flex-wrap gap-8 bg-k_beige text-k_brown md:mb-4 md:justify-around md:bg-transparent lg:justify-around xl:justify-center xl:gap-12">
         {posts.map((post: PostType) => (
           <Card
-            className={`vs:w-full md:w-[unset] md:rounded md:bg-k_beige md:shadow-md lg:w-[20.375rem] xl:w-[24.375rem]`}
+            className={`vs:w-full md:w-96 md:rounded md:bg-k_beige md:shadow-md lg:w-[20.375rem] xl:w-[24.375rem]`}
             bodyClassName="pl-[17.3px] pr-[17.3px] max-w-none md:max-w-[41ch]"
             imageClassName="h-72 w-full"
             summaryClassName="text-sm/relaxed"
@@ -38,7 +36,7 @@ export function ForthSection() {
             author={post.author}
             createdData={new Date(post.createdData)}
             imageAlt={post.imageDescription}
-            imageURL={blog_1}
+            imageURL={post.main_image.url ? post.main_image.url : blog_1}
             url={`${currentPath + "posts" + "/" + post.id}`}
           />
         ))}

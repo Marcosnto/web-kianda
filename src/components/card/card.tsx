@@ -21,7 +21,6 @@ export type CardType = {
 
 export function Card(props: CardType) {
   const {
-    id,
     label,
     author,
     summary,

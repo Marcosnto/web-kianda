@@ -35,7 +35,7 @@ export default function Posts() {
             <Card
               className="row-[span_3] grid grid-rows-subgrid gap-1 border-b-2 border-gray-100"
               titleClassName="text-lg"
-              imageClassName="h-[234px] w-full object-fill"
+              imageClassName="h-[234px] w-full"
               bodyClassName="max-w-full"
               url={`${currentPath + "/" + post.id}`}
               key={post.id}
@@ -44,7 +44,7 @@ export default function Posts() {
               author={post.author}
               createdData={new Date(post.createdData)}
               summary={post.description}
-              imageURL={post.main_image_link ? post.main_image_link : blog_1}
+              imageURL={post.main_image.url ? post.main_image.url : blog_1}
               imageAlt={post.imageDescription}
             />
           ))}
