@@ -16,15 +16,18 @@ export type PostType = {
   imageSub: string;
 };
 
-export function useGetPosts() {
+export function useGetPosts(limit?: number) {
   const {
     data: posts,
     isLoading: isGetPostsLoading,
     error: isGetPostsError,
   } = useQuery({
     queryKey: ["posts"],
+    staleTime: 0,
     queryFn: () =>
-      axios.get(`${BASE_API_URL}/articles`).then(({ data }) => data),
+      axios
+        .get(`${BASE_API_URL}/articles${limit ? "?_limit=" + limit : ""}`)
+        .then(({ data }) => data),
   });
 
   return { posts, isGetPostsLoading, isGetPostsError };

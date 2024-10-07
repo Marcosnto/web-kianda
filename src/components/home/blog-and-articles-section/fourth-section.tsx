@@ -2,10 +2,21 @@ import { ItalicTitle } from "@/components/general";
 import blog_1 from "@/../public/imgs/blog_1.png";
 import { useForthSection } from "./fourth-section.hook";
 import { Card } from "@/components/card";
-import { usePathname } from "next/navigation";
+import { PostType } from "@/api/blog";
 
 export function ForthSection() {
-  const { posts, currentPath } = useForthSection();
+  const { posts, isGetPostsLoading, isGetPostsError, currentPath } =
+    useForthSection();
+
+  console.log({ posts });
+
+  if (isGetPostsLoading) {
+    return <h1>carregando</h1>;
+  }
+
+  if (isGetPostsError) {
+    return <h1>Algo deu errado!</h1>;
+  }
 
   return (
     <section>
@@ -15,7 +26,7 @@ export function ForthSection() {
         </ItalicTitle>
       </span>
       <div className="flex flex-wrap gap-8 bg-k_beige text-k_brown md:mb-4 md:justify-around md:bg-transparent lg:justify-around xl:justify-center xl:gap-12">
-        {posts.map((post) => (
+        {posts.map((post: PostType) => (
           <Card
             className={`vs:w-full md:w-[unset] md:rounded md:bg-k_beige md:shadow-md lg:w-[20.375rem] xl:w-[24.375rem]`}
             bodyClassName="pl-[17.3px] pr-[17.3px] max-w-none md:max-w-[41ch]"
