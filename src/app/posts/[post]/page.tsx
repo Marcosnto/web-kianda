@@ -37,9 +37,17 @@ function createMarkup(content: string) {
 const questrialFont = Questrial({ weight: "400", subsets: ["latin"] });
 
 export default function Post({ params }: ParamsTypes) {
-  const { data, date } = usePost(params.post);
+  const { post, isGetPostLoading, isGetPostError, date } = usePost(params.post);
 
-  if (!data) {
+  if (isGetPostLoading) {
+    return (
+      <div className="grid-cols-blogCards grid gap-10 px-3 py-6 sm:gap-10 sm:px-6 lg:px-32 lg:py-16">
+        <h1>Carregando...</h1>
+      </div>
+    );
+  }
+
+  if (isGetPostError) {
     return <h1>Something went wrong</h1>;
   }
 
@@ -48,13 +56,13 @@ export default function Post({ params }: ParamsTypes) {
       className={`flex flex-col vs:p-8 md:px-24 md:py-10 ${questrialFont.className} text-[#050505]`}
     >
       <BoldTitle className="pb-4 text-[1.75rem] lg:text-[2.5rem]">
-        {data?.title}
+        {post?.title}
       </BoldTitle>
-      <p className="pb-4 text-[0.938rem] text-[#4f5257]">{data?.description}</p>
+      <p className="pb-4 text-[0.938rem] text-[#4f5257]">{post?.description}</p>
       <div className="flex flex-col pb-4 text-[#4f5257]">
-        {data?.author && (
+        {post?.author && (
           <span className={`text-[0.875rem] font-bold`.trim()}>
-            Por {data.author} em&nbsp;
+            Por {post.author} em&nbsp;
           </span>
         )}
         {date && (
@@ -68,7 +76,7 @@ export default function Post({ params }: ParamsTypes) {
       <span
         className="content-post text-[1.125rem]"
         dangerouslySetInnerHTML={createMarkup(
-          data?.content ? data?.content : "",
+          post?.content ? post?.content : "",
         )}
       />
     </div>

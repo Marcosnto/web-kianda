@@ -1,22 +1,10 @@
-import { useEffect, useState } from "react";
-import { Article, ParamsTypes } from "./page";
-import { BASE_API_URL } from "@/utils/envs";
+import { useGetPost } from "@/api/blog";
 
-export const usePost = (post: string) => {
-  const [data, setData] = useState<Article>();
-
-  useEffect(() => {
-    (async () =>
-      await fetch(`${BASE_API_URL}/article/${post}`)
-        .then((response) => response.json())
-        .then((info) => setData(info)))();
-  }, [post]);
+export const usePost = (articleID: string) => {
+  const { post, isGetPostLoading, isGetPostError } = useGetPost(articleID);
 
   //@ts-ignore
-  const date = new Date(data?.createdData);
+  const date = new Date(post?.createdData);
 
-  return {
-    data,
-    date,
-  };
+  return { post, isGetPostLoading, isGetPostError, date };
 };
