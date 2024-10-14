@@ -12,7 +12,7 @@ const syneFont = Syne({
 export function BoldTitle({ children, className }: FooterTitleProps) {
   return (
     <div
-      className={`${syneFont.className} font-bold tracking-wider ${className}`.trim()}
+      className={`${syneFont.className} break-words font-bold tracking-wider ${className}`.trim()}
     >
       {children}
     </div>

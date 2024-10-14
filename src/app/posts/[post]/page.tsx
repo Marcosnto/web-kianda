@@ -41,7 +41,7 @@ export default function Post({ params }: ParamsTypes) {
 
   if (isGetPostLoading) {
     return (
-      <div className="grid-cols-blogCards grid gap-10 px-3 py-6 sm:gap-10 sm:px-6 lg:px-32 lg:py-16">
+      <div className="grid grid-cols-blogCards gap-10 px-3 py-6 sm:gap-10 sm:px-6 lg:px-32 lg:py-16">
         <h1>Carregando...</h1>
       </div>
     );
@@ -53,7 +53,7 @@ export default function Post({ params }: ParamsTypes) {
 
   return (
     <div
-      className={`flex flex-col vs:p-8 md:px-24 md:py-10 ${questrialFont.className} text-[#050505]`}
+      className={`mx-[20%] flex flex-col vs:my-[10%] sm:my-[3%] ${questrialFont.className} text-[#050505]`}
     >
       <BoldTitle className="pb-4 text-[1.75rem] lg:text-[2.5rem]">
         {post?.title}

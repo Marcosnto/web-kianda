@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <Header />
-          {children}
+          <div className="vs:min-h-[50svh] md:min-h-[50vh]">{children}</div>
           <Footer />
         </Providers>
       </body>
