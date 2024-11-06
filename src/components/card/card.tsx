@@ -17,6 +17,8 @@ export type CardType = {
   titleClassName?: string;
   summaryClassName?: string;
   showFooterLine?: boolean;
+  imageWidth?: number;
+  imageHeigth?: number;
 };
 
 export function Card(props: CardType) {
@@ -33,14 +35,16 @@ export function Card(props: CardType) {
     imageClassName = "w-full h-auto",
     titleClassName = "",
     summaryClassName = "",
+    imageWidth = 800,
+    imageHeigth = 600,
   } = props;
 
   return (
     <div className={`${className}`.trim()}>
       <Image
         className={`object-cover ${imageClassName}`.trim()}
-        width={800}
-        height={600}
+        width={imageWidth}
+        height={imageHeigth}
         alt={imageAlt}
         src={imageURL}
       />

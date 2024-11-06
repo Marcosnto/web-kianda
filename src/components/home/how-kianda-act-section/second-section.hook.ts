@@ -1,6 +1,6 @@
-import home_card_1 from "@/../public/imgs/home_card_1.png";
-import home_card_2 from "@/../public/imgs/home_card_2.png";
-import home_card_3 from "@/../public/imgs/home_card_3.png";
+import home_card_1 from "@/../public/imgs/home_card_1.jpg";
+import home_card_2 from "@/../public/imgs/home_card_2.jpg";
+import home_card_3 from "@/../public/imgs/home_card_3.jpg";
 import { CardType } from "@/components/card/card";
 
 export function useSecondSection() {

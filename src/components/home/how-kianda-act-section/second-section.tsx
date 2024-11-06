@@ -22,11 +22,13 @@ export function SecondSection() {
             key={card.id}
             className="pl-4 pr-2"
             bodyClassName="max-w-none md:max-w-[41ch]"
-            imageClassName="md:max-w-none w-full h-92"
+            imageClassName="md:max-w-none h-[413px]"
             label={card.label}
             summary={card.summary}
             imageAlt={card.imageAlt}
             imageURL={card.imageURL}
+            imageHeigth={413}
+            imageWidth={413}
           />
         ))}
       </div>
