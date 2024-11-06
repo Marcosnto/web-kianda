@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { useState } from "react";
 
 type OptionsTypes = {
   label: string;
@@ -9,15 +10,30 @@ type OptionsTypes = {
 
 export default function useHeader() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathName = usePathname();
+  const router = useRouter();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  function moveToSection(id: string) {
-    toggleMenu();
+  function moveToEspecificElementOnPage(id: string, time: number = 400) {
     setTimeout(() => {
       const element = document.getElementById(id);
       element?.scrollIntoView({ behavior: "smooth" });
-    }, 400);
+    }, time);
+  }
+
+  function moveToSection(id: string) {
+    toggleMenu();
+
+    if (pathName !== "/") {
+      router.push("/");
+
+      moveToEspecificElementOnPage(id);
+
+      return;
+    }
+
+    moveToEspecificElementOnPage(id);
   }
 
   const menuOptions: OptionsTypes[] = [

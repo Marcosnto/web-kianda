@@ -54,7 +54,10 @@ export default function Header() {
                       {option.label}
                     </Link>
                   ) : (
-                    <a onClick={() => moveToSection(option.path)}>
+                    <a
+                      style={{ cursor: "pointer" }}
+                      onClick={() => moveToSection(option.path)}
+                    >
                       {option.label}
                     </a>
                   )}
