@@ -7,6 +7,10 @@ import Link from "next/link";
 export function FifthSection() {
   const { data } = useFifthSection();
 
+  if (!data) {
+    return <h1>error</h1>;
+  }
+
   return (
     <section
       className="flex flex-col items-center gap-6 bg-[#283618] pb-20 pt-10"
@@ -16,7 +20,9 @@ export function FifthSection() {
         Kianda <br /> no #insta
       </BoldTitle>
       <div className="grid grid-cols-2 gap-3 pl-2 pr-2 sm:grid-cols-4 sm:pl-4 sm:pr-4 md:gap-1 lg:grid-cols-6">
-        {data.length === 0 ? (
+        <Image alt="alt" src={insta} quality={100} />
+
+        {/* {data?.length === 0 ? (
           <Image alt="alt" src={insta} quality={100} />
         ) : (
           data.map((item, index) => (
@@ -39,7 +45,7 @@ export function FifthSection() {
               </div>
             </Link>
           ))
-        )}
+        )} */}
       </div>
     </section>
   );
