@@ -78,7 +78,7 @@ export default function Header() {
       </div>
 
       <div className="ml-auto hidden w-[200px] text-white lg:block xl:w-[230px] 2xl:w-[267px]">
-        <SearchInput />
+        {/* <SearchInput /> */}
       </div>
     </div>
   );
