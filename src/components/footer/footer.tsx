@@ -44,8 +44,8 @@ export default function Footer() {
       </div>
 
       <div className="mb-7 flex flex-col gap-3 md:col-span-3">
-        <p>Política de Privicidade</p>
-        <p>Política de Cookies</p>
+        <Link href="/privacy-police">Política de Privicidade</Link>
+        <Link href="/cookies-police">Política de Cookies</Link>
       </div>
 
       <div className="flex justify-center text-sm md:col-span-3">
