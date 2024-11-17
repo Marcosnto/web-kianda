@@ -10,8 +10,8 @@ export function FirstSection() {
   return (
     <section>
       <Image
-        className="h-auto w-full object-cover md:h-[680px]"
-        alt="Homem negro com óculos conversa com mulher negra com óculos em frente ao computador"
+        className="h-auto w-full object-cover md:max-h-[680px]"
+        alt="Mulheres negras conversando em uma mesa em um escritório"
         src={home_1}
       />
       <div
