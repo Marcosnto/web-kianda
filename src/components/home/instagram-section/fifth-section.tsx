@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { BoldTitle } from "@/components/general";
 import { useFifthSection } from "./fifth-section.hook";
 import insta from "@/../public/imgs/insta.png";
@@ -20,9 +21,7 @@ export function FifthSection() {
         Kianda <br /> no #insta
       </BoldTitle>
       <div className="grid grid-cols-2 gap-3 pl-2 pr-2 sm:grid-cols-4 sm:pl-4 sm:pr-4 md:gap-1 lg:grid-cols-6">
-        <Image alt="alt" src={insta} quality={100} />
-
-        {/* {data?.length === 0 ? (
+        {data?.length === 0 ? (
           <Image alt="alt" src={insta} quality={100} />
         ) : (
           data.map((item, index) => (
@@ -45,7 +44,7 @@ export function FifthSection() {
               </div>
             </Link>
           ))
-        )} */}
+        )}
       </div>
     </section>
   );

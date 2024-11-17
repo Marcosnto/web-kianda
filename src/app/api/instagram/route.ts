@@ -24,7 +24,7 @@ export async function GET() {
   //TODO: understand why return all request json, not only the data
   const instaFeed = await axios
     .get<MetaData>(url)
-    .then((response) => console.log(response))
+    .then((response) => response.data.data)
     .catch((error) => {
       console.log("Ocorreu um erro ao obter dados do Instagram", error);
     });
