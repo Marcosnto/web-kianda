@@ -44,25 +44,33 @@ export default function Header() {
             </DrawerHeader>
 
             <div className="flex flex-col gap-10 p-5">
-              {menuOptions.map((option) => (
-                <DrawerDescription
-                  className="hover:bg-k_brown_light w-auto text-base text-k_brown"
-                  key={option.path}
-                >
-                  {option.isPage ? (
-                    <Link href={option.path} onClick={toggleMenu}>
-                      {option.label}
-                    </Link>
-                  ) : (
-                    <a
-                      style={{ cursor: "pointer" }}
-                      onClick={() => moveToSection(option.path)}
+              {menuOptions.map((option) => {
+                if (option.isPage) {
+                  return (
+                    <Link
+                      href={option.path}
+                      onClick={toggleMenu}
+                      key={option.path}
                     >
+                      <DrawerDescription className="hover:bg-k_brown_light w-auto text-base text-k_brown">
+                        {option.label}
+                      </DrawerDescription>
+                    </Link>
+                  );
+                }
+
+                return (
+                  <a
+                    style={{ cursor: "pointer" }}
+                    onClick={() => moveToSection(option.path)}
+                    key={option.path}
+                  >
+                    <DrawerDescription className="hover:bg-k_brown_light w-auto text-base text-k_brown">
                       {option.label}
-                    </a>
-                  )}
-                </DrawerDescription>
-              ))}
+                    </DrawerDescription>
+                  </a>
+                );
+              })}
             </div>
           </DrawerContent>
         </Drawer>
