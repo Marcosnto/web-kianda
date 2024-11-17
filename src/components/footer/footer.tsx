@@ -1,12 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import FormButton from "./components/formButton";
 import { BoldTitle } from "../general";
-import { FormInput } from "./components";
 import { ContactForm } from "./components/forms/contactForm/contactForm";
-import { Button } from "../ui/button";
 import { NewsletterForm } from "./components/forms/newsletter/newsletterForm";
+import { AiOutlineInstagram } from "react-icons/ai";
 
 export default function Footer() {
   return (
@@ -27,11 +25,14 @@ export default function Footer() {
       <div className="row-span-2 md:flex md:items-center md:justify-end lg:items-start lg:justify-center">
         <BoldTitle className="flex flex-col gap-7 text-xl/7">
           <Link href="https://www.instagram.com/kiandadiversidade/">
-            Instagram
+            <span className="flex items-center justify-center gap-2">
+              <AiOutlineInstagram />
+              Instagram
+            </span>
           </Link>
-          <Link href="www.google.com">Facebook</Link>
+          {/* <Link href="www.google.com">Facebook</Link>
           <Link href="www.google.com">Youtube</Link>
-          <Link href="www.google.com">TikTok</Link>
+          <Link href="www.google.com">TikTok</Link> */}
         </BoldTitle>
       </div>
 
@@ -49,7 +50,12 @@ export default function Footer() {
       </div>
 
       <div className="flex justify-center text-sm md:col-span-3">
-        <p>© 2024 por Marcos Neto</p>
+        <p>
+          © 2024 por{" "}
+          <Link href="https://www.linkedin.com/in/marcosnto/" target="_blank">
+            Marcos Neto
+          </Link>
+        </p>
       </div>
     </footer>
   );
