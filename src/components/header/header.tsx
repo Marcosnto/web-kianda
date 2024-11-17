@@ -1,6 +1,6 @@
 "use client";
 import useHeader from "./header.hook";
-import kianda_name from "@/../public/imgs/kianda_name.svg";
+import KiandaLogo from "@/../public/imgs/kianda_name.svg";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import {
   Drawer,
@@ -19,7 +19,7 @@ export default function Header() {
   const { menuOptions, isOpen, toggleMenu, moveToSection } = useHeader();
 
   return (
-    <div className="flex h-20 w-full items-center bg-k_brown p-4 align-middle font-rasputin text-white">
+    <div className="flex h-20 w-full items-center bg-k_green_dark p-4 align-middle font-rasputin text-k_bronze">
       <div className="z-50 flex items-center">
         <Drawer direction="left" shouldScaleBackground open={isOpen}>
           <DrawerTrigger asChild onClick={toggleMenu}>
@@ -69,10 +69,9 @@ export default function Header() {
       </div>
       <div className="flex w-full items-center justify-center lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:transform">
         <Link href="/">
-          <Image
-            src={kianda_name}
+          <KiandaLogo
             alt="imagem svg escrita Kianda"
-            className="h-6 md:h-8 lg:h-9 2xl:h-10"
+            className="fill-k_bronze"
           />
         </Link>
       </div>
