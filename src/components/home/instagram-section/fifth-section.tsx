@@ -18,7 +18,7 @@ export function FifthSection() {
       id="socialMedias"
     >
       <BoldTitle className="text-center text-[2.5rem] leading-[2.5rem] text-k_bronze">
-        Kianda <br /> no #insta
+        Kianda <br /> no #insta!
       </BoldTitle>
       <div className="grid grid-cols-2 gap-3 pl-2 pr-2 sm:grid-cols-4 sm:pl-4 sm:pr-4 md:gap-1 lg:grid-cols-6">
         {data?.length === 0 ? (
