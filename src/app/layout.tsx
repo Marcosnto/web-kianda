@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>
+      <body className="font-sans">
         <Providers>
           <Header />
           <div className="vs:min-h-[50svh] md:min-h-[50vh]">{children}</div>

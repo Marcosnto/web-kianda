@@ -22,6 +22,7 @@ const config = {
         blogCards: "repeat(auto-fit, minmax(300px, 1fr))",
       },
       fontFamily: {
+        sans: ["General Sans", "sans-serif"],
         rasputin: ["Rasputin", "sans-serif"],
         georgia: ["Georgia", "sans-serif"],
       },
