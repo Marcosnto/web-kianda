@@ -19,6 +19,7 @@ export type CardType = {
   showFooterLine?: boolean;
   imageWidth?: number;
   imageHeigth?: number;
+  backgroundColor?: "greenDark" | "greenLight" | "cinnamon" | "orange";
 };
 
 export function Card(props: CardType) {

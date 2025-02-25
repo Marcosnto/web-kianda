@@ -1,33 +1,46 @@
-import home_card_1 from "@/../public/imgs/home_card_1.jpg";
-import home_card_2 from "@/../public/imgs/home_card_2.jpg";
-import home_card_3 from "@/../public/imgs/home_card_3.jpg";
-import { CardType } from "@/components/card/card";
+import home_card_1 from "@/../public/imgs/home_card_1.png";
+import home_card_2 from "@/../public/imgs/home_card_2.png";
+import home_card_3 from "@/../public/imgs/home_card_3.png";
+import home_card_4 from "@/../public/imgs/home_card_4.jpeg";
+import { StaticCardType } from "@/components/card/static-card/static-card";
 
 export function useSecondSection() {
-  const whatKiandaDoCards: CardType[] = [
+  const whatKiandaDoCards: StaticCardType[] = [
     {
       id: "1",
-      label: "Acompanhamento psicológico",
+      title: "Consultoria para</br>Empresas",
       summary:
-        "Crie um subtítulo que resuma de forma curta e atraente o seu post do blog para que seus visitantes queiram ler…",
+        "Serviço desenvolvido para identificar as necessidades do cliente e fornecer recursos para ações de melhoria no clima organizacional, promovendo um ambiente de trabalho mais inclusivo, saudável e diverso.",
       imageURL: home_card_1,
       imageAlt: "Alt descricao 1",
+      backgroundColor: "greenDark",
     },
     {
       id: "2",
-      label: "Consultoria empresarial",
+      title: "Eventos e</br>Workshop",
       summary:
-        "Crie um subtítulo que resuma de forma curta e atraente o seu post do blog para que seus visitantes queiram ler…",
+        "Encontros que visam promover um espaço de inclusão, conscientizar sobre equidade social e estimular a troca de experiências para criar ambientes que sejam mais diversos e desenvolvidos.",
       imageURL: home_card_2,
       imageAlt: "Alt descricao 2",
+      backgroundColor: "greenLight",
     },
     {
       id: "3",
-      label: "Eventos e Workshops",
+      title: "Acompanhamento</br>Psicológico",
       summary:
-        "Crie um subtítulo que resuma de forma curta e atraente o seu post do blog para que seus visitantes queiram ler…",
+        "Auxílio individual nos processos mentais e emocionais, realizado por profissionais experientes em diversidade, com o objetivo de oferecer cuidado e acolhimento a diferentes grupos sociais.",
       imageURL: home_card_3,
       imageAlt: "Alt descricao 3",
+      backgroundColor: "cinnamon",
+    },
+    {
+      id: "4",
+      title: "Grupos</br>Terapêuticos",
+      summary:
+        "Espaço coletivo para promoção da saúde mental, composto por um pequeno grupo de pessoas e um profissional facilitador, com o objetivo de compartilhar experiências e sentimentos comuns.",
+      imageURL: home_card_4,
+      imageAlt: "Alt descricao 4",
+      backgroundColor: "orange",
     },
   ];
 
