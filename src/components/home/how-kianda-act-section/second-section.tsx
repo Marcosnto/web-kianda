@@ -8,8 +8,8 @@ export function SecondSection() {
 
   return (
     <section id="aboutKianda" className="mb-14 flex flex-col items-center">
-      <span className="text-center">
-        <ItalicTitle className="p-8 text-xl sm:text-2xl md:text-3xl">
+      <span className="mt-[60px] w-[95%] border-t-2 border-k_green_dark text-start">
+        <ItalicTitle className="p-7 text-[34px]">
           Como a Kianda atua
         </ItalicTitle>
       </span>
