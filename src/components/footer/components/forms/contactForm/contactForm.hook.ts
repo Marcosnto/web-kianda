@@ -35,7 +35,9 @@ export const useContactForm = () => {
     },
   });
 
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+  const onSubmit = async (values: z.infer<typeof formSchema>, e?: Event) => {
+    e?.preventDefault();
+
     const { userName, email, message, subject } = values;
     const response = await axios.post(`${BASE_API_URL}/email/send`, {
       userName,

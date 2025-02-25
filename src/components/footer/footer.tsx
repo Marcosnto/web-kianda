@@ -30,9 +30,6 @@ export default function Footer() {
               Instagram
             </span>
           </Link>
-          {/* <Link href="www.google.com">Facebook</Link>
-          <Link href="www.google.com">Youtube</Link>
-          <Link href="www.google.com">TikTok</Link> */}
         </BoldTitle>
       </div>
 

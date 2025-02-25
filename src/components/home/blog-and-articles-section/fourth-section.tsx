@@ -9,10 +9,10 @@ export function ForthSection() {
     useForthSection();
 
   if (isGetPostsLoading) {
-    return <h1>carregando</h1>;
+    return <h1>carregando...</h1>;
   }
 
-  if (isGetPostsError) {
+  if (isGetPostsError || !posts) {
     return <h1>Algo deu errado!</h1>;
   }
 
