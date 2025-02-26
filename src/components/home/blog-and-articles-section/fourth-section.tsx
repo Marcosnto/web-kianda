@@ -5,8 +5,13 @@ import { Card } from "@/components/card";
 import { PostType } from "@/api/blog";
 
 export function ForthSection() {
-  const { posts, isGetPostsLoading, isGetPostsError, currentPath } =
-    useForthSection();
+  const {
+    posts,
+    isGetPostsLoading,
+    isGetPostsError,
+    currentPath,
+    backgroundColors,
+  } = useForthSection();
 
   if (isGetPostsLoading) {
     return <h1>carregando...</h1>;
@@ -17,19 +22,15 @@ export function ForthSection() {
   }
 
   return (
-    <section>
-      <span className="text-center">
-        <ItalicTitle className="p-8 text-xl text-k_brown sm:text-2xl md:text-3xl">
-          Blog e Artigos
-        </ItalicTitle>
-      </span>
-      <div className="flex flex-wrap gap-8 bg-k_beige text-k_brown md:mb-4 md:justify-around md:bg-transparent lg:justify-around xl:justify-center xl:gap-12">
-        {posts.map((post: PostType) => (
+    <section className="mb-14 flex flex-col items-center">
+      <ItalicTitle>Blog e Artigos</ItalicTitle>
+      <div className="flex flex-wrap gap-8 md:mb-4 md:justify-around lg:justify-around xl:justify-center xl:gap-12">
+        {posts.map((post: PostType, index: number) => (
           <Card
-            className={`vs:w-full md:w-96 md:rounded md:bg-k_beige md:shadow-md lg:w-[20.375rem] xl:w-[24.375rem]`}
-            bodyClassName="pl-[17.3px] pr-[17.3px] max-w-none md:max-w-[41ch]"
-            imageClassName="h-72 w-full"
-            summaryClassName="text-sm/relaxed"
+            className={`vs:w-full md:w-96 md:rounded md:shadow-md lg:w-[20.375rem] xl:w-[24.375rem]`}
+            bodyClassName={`pl-[17.3px] pr-[17.3px] bg-${backgroundColors[index]} ${index === 2 ? "text-black" : "text-k_yellow_light"}`}
+            imageClassName="max-h-[372.33px] max-w-[569.56px] mb-2"
+            summaryClassName="text-[1.313rem]"
             key={post.id}
             label={post.title}
             summary={post.description}

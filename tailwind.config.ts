@@ -48,6 +48,7 @@ const config = {
         k_orange: "rgb(var(--color-orange-kianda))", // #FFB703
         k_vivid_orange: "rgb(var(--color-vivid-orange-kianda))", // #F9A528
         k_off_white: "rgb(var(--color-off-white-kianda))", // #F3F1E4
+        k_yellow_light: "rgb(var(--color-yellow-light))", // #FEFAE0
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",

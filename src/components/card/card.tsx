@@ -41,25 +41,27 @@ export function Card(props: CardType) {
   } = props;
 
   return (
-    <div className={`${className}`.trim()}>
+    <div className={`${""}`.trim()}>
       <Image
-        className={`object-cover ${imageClassName}`.trim()}
+        className={`object-cover ${imageClassName} rounded-[1.75rem]`.trim()}
         width={imageWidth}
         height={imageHeigth}
         alt={imageAlt}
         src={imageURL}
       />
-      <span className={`flex flex-col gap-4 pb-4 pt-4 ${bodyClassName}`.trim()}>
-        <span className="flex">
+      <span
+        className={`flex flex-col pb-4 pt-4 ${bodyClassName} rounded-[1.75rem]`.trim()}
+      >
+        <span className="mb-[1.938rem] flex">
           {author && (
-            <span className={`block text-xs text-k_brown`.trim()}>
+            <span className={`block text-[1.313rem]`.trim()}>
               Por {author} em&nbsp;
             </span>
           )}
           {createdData && (
             <time
               dateTime="2022-10-10"
-              className={`block text-xs text-k_brown`.trim()}
+              className={`block text-[1.313rem]`.trim()}
             >
               {String(
                 createdData.getDate() +
@@ -74,13 +76,15 @@ export function Card(props: CardType) {
 
         <Link href={url}>
           <BoldTitle
-            className={`line-clamp-2 text-[1.6875rem] leading-7 ${titleClassName}`.trim()}
+            className={`line-clamp-2 text-[2.125rem] leading-[2.869rem] ${titleClassName}`.trim()}
           >
             <h1>{label}</h1>
           </BoldTitle>
         </Link>
 
-        <p className={`line-clamp-3 ${summaryClassName}`}>{summary}</p>
+        <p className={`line-clamp-3 font-semibold ${summaryClassName}`}>
+          {summary}
+        </p>
       </span>
     </div>
   );
