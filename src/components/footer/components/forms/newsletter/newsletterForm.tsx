@@ -17,17 +17,17 @@ export const NewsletterForm = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="flex gap-6">
         <FormField
           control={form.control}
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email*</FormLabel>
               <FormControl>
                 <Input
                   {...field}
-                  className="b-1 h-9 rounded-none border-black bg-k_off_white"
+                  placeholder="exemplo@email.com"
+                  className="b-1 h-12 w-[603px] rounded-xl border-black bg-white placeholder:text-[21px] placeholder:font-normal placeholder:italic placeholder:text-[#AAAAAA]"
                 />
               </FormControl>
               <FormMessage />
@@ -37,7 +37,7 @@ export const NewsletterForm = () => {
 
         <Button
           type="submit"
-          className="w-6/12 rounded-none bg-k_brown text-[1rem] text-k_off_white"
+          className="text-k_yellow_light h-12 w-52 rounded-xl bg-k_green_dark text-[28.39px]"
         >
           Assinar
         </Button>

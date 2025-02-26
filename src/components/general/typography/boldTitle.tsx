@@ -5,9 +5,5 @@ type FooterTitleProps = {
   className?: string;
 };
 export function BoldTitle({ children, className }: FooterTitleProps) {
-  return (
-    <div className={`break-words font-semibold ${className}`.trim()}>
-      {children}
-    </div>
-  );
+  return <div className={`break-words ${className}`.trim()}>{children}</div>;
 }

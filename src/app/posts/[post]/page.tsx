@@ -55,7 +55,7 @@ export default function Post({ params }: ParamsTypes) {
     <div
       className={`mx-[20%] flex flex-col vs:my-[10%] sm:my-[3%] ${questrialFont.className} text-[#050505]`}
     >
-      <BoldTitle className="pb-4 text-[1.75rem] lg:text-[2.5rem]">
+      <BoldTitle className="pb-4 text-[1.75rem] font-semibold lg:text-[2.5rem]">
         {post?.title}
       </BoldTitle>
       <p className="pb-4 text-[0.938rem] text-[#4f5257]">{post?.description}</p>

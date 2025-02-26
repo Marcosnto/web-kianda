@@ -76,7 +76,7 @@ export function Card(props: CardType) {
 
         <Link href={url}>
           <BoldTitle
-            className={`line-clamp-2 text-[2.125rem] leading-[2.869rem] ${titleClassName}`.trim()}
+            className={`line-clamp-2 text-[2.125rem] font-semibold leading-[2.869rem] ${titleClassName}`.trim()}
           >
             <h1>{label}</h1>
           </BoldTitle>
