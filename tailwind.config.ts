@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "header-image": "url(/imgs/home_1.png)",
+      },
       gridTemplateColumns: {
         blogCards: "repeat(auto-fit, minmax(300px, 1fr))",
       },

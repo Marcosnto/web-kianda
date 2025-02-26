@@ -19,8 +19,8 @@ export default function Header() {
   const { menuOptions, isOpen, toggleMenu, moveToSection } = useHeader();
 
   return (
-    <div className="flex h-20 w-full items-center bg-k_green_dark p-4 align-middle font-rasputin text-k_bronze">
-      <div className="z-50 flex items-center">
+    <div className="">
+      {/* <div className="z-50 flex items-center">
         <Drawer direction="left" shouldScaleBackground open={isOpen}>
           <DrawerTrigger asChild onClick={toggleMenu}>
             <AiOutlineMenu className="text-4xl" />
@@ -74,19 +74,12 @@ export default function Header() {
             </div>
           </DrawerContent>
         </Drawer>
-      </div>
-      <div className="flex w-full items-center justify-center lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:transform">
-        <Link href="/">
-          <KiandaLogo
-            alt="imagem svg escrita Kianda"
-            className="fill-k_bronze"
-          />
-        </Link>
-      </div>
-
-      <div className="ml-auto hidden w-[200px] text-white lg:block xl:w-[230px] 2xl:w-[267px]">
-        {/* <SearchInput /> */}
-      </div>
+      </div> */}
+      {/* <menu className="flex w-full flex-row items-center justify-center gap-6">
+        {menuOptions.map((option) => (
+          <li key={option.label}>{option.label}</li>
+        ))}
+      </menu> */}
     </div>
   );
 }
