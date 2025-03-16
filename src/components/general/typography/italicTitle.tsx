@@ -3,7 +3,7 @@ import HalfMoon from "@/../public/imgs/half_moon.svg";
 
 type FooterTitleProps = {
   children: React.ReactNode;
-  iconType: "completeMoon" | "halfMoon";
+  iconType?: "completeMoon" | "halfMoon";
   className?: string;
 };
 

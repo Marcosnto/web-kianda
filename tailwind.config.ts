@@ -19,7 +19,7 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        "header-image": "url(/imgs/home_1.png)",
+        "header-image": "url(/imgs/menu_image.png)",
       },
       gridTemplateColumns: {
         blogCards: "repeat(auto-fit, minmax(300px, 1fr))",
