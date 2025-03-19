@@ -20,6 +20,7 @@ const config = {
     extend: {
       backgroundImage: {
         "header-image": "url(/imgs/menu_image.png)",
+        "header-image_mobile": "url(/imgs/home_mobile.png)",
       },
       gridTemplateColumns: {
         blogCards: "repeat(auto-fit, minmax(300px, 1fr))",
@@ -45,6 +46,7 @@ const config = {
         k_beige: "rgb(var(--color-beige-kianda))", // #E6D7C0
         k_green_dark: "rgb(var(--color-green-olive-dark-kianda))", // #273618
         k_green_light: "rgb(var(--color-green-olive-light-kianda))", // #606C38
+        k_green_medium: "rgb(var(--color-green-olive-medium-kianda))", // #4B5331
         k_amber: "rgb(var(--color-amber-kianda))", // #DCA05E
         k_bronze: "rgb(var(--color-bronze-kianda))", // #C98B31
         k_cinnamon: "rgb(var(--color-cinnamon-kianda))", // #BB6C25

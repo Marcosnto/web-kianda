@@ -1,6 +1,8 @@
 "use client";
 import useHeader from "./header.hook";
 import KiandaLogo from "@/../public/imgs/kianda_name.svg";
+import MenuHamburguer from "@/../public/imgs/menu_icon.svg";
+import { HiMenuAlt2 } from "react-icons/hi";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import {
   Drawer,
@@ -20,10 +22,17 @@ export default function Header() {
 
   return (
     <div className="">
-      {/* <div className="z-50 flex items-center">
+      <div className="z-50 mb-[6px] flex h-[72px] items-center justify-between bg-k_green_dark pr-[21px] text-k_yellow_light">
+        <span>
+          <KiandaLogo
+            alt="imagem svg escrita Kianda"
+            className="fill-k_bronze"
+            style={{ transform: "scale(0.59)", transformOrigin: "center" }}
+          />
+        </span>
         <Drawer direction="left" shouldScaleBackground open={isOpen}>
           <DrawerTrigger asChild onClick={toggleMenu}>
-            <AiOutlineMenu className="text-4xl" />
+            <MenuHamburguer />
           </DrawerTrigger>
           <DrawerContent
             className="p-2"
@@ -74,7 +83,7 @@ export default function Header() {
             </div>
           </DrawerContent>
         </Drawer>
-      </div> */}
+      </div>
       {/* <menu className="flex w-full flex-row items-center justify-center gap-6">
         {menuOptions.map((option) => (
           <li key={option.label}>{option.label}</li>

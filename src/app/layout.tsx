@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className="font-sans">
         <Providers>
           <Header />
-          <div className="vs:min-h-[50svh] md:min-h-[50vh]">{children}</div>
+          <div className="">{children}</div>
           <Footer />
         </Providers>
       </body>

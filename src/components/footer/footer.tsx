@@ -3,54 +3,57 @@
 import Link from "next/link";
 import { BoldTitle, ItalicTitle } from "../general";
 import { NewsletterForm } from "./components/forms/newsletter/newsletterForm";
-import { AiOutlineInstagram } from "react-icons/ai";
 import FooterSvg from "@/../public/imgs/footer.svg";
+import SocialMediaIcon from "./components/socialIcons/socialMediaIcon";
+import { socialMediaInfos } from "./utils/socialMediaInfos";
 
 export default function Footer() {
   return (
     <footer id="contact">
-      <div className={`grid grid-cols-[55%_45%] p-10 pb-0 text-k_brown`}>
-        <div className="flex flex-col gap-4 md:col-span-2 lg:col-span-1">
-          <svg width="995" height="794">
-            <FooterSvg />
-          </svg>
+      <div
+        className={`flex flex-col-reverse pb-0 text-k_yellow_light lg:grid lg:grid-cols-[55%_45%] lg:p-10 lg:text-k_brown`}
+      >
+        <div className="flex flex-col px-[36px] md:col-span-2 lg:col-span-1 lg:gap-4">
+          <FooterSvg />
 
           <div className="">
-            <BoldTitle className="text-[36px] font-normal leading-[48.6px]">
+            <BoldTitle className="mb-1 flex justify-center text-[13px] font-normal text-black lg:text-[36px] lg:leading-[48.6px]">
               <h1>Receba nossos conteúdos por email:</h1>
             </BoldTitle>
             <NewsletterForm />
           </div>
         </div>
 
-        <div className="row-span-2 flex flex-col place-content-between">
-          <div className="flex flex-col items-center gap-4 pt-[6.25rem]">
-            <BoldTitle className="flex flex-col items-center gap-7 text-[36px] font-medium leading-[48.6px]">
+        <div className="bg-k_green_medium row-span-2 flex h-[254px] flex-col place-content-between pb-[61px] pl-[29px] pr-[18px] pt-[22px]">
+          <div className="flex flex-col items-start gap-2 lg:items-center lg:gap-4 lg:pt-[6.25rem]">
+            <BoldTitle className="text-[18px] font-medium lg:text-[36px] lg:leading-[48.6px]">
               Canais para contato
             </BoldTitle>
 
-            <div className="">
-              <Link href="https://www.instagram.com/kiandadiversidade/">
-                <span className="flex h-[75px] w-[75px] gap-2 rounded-xl bg-black">
-                  <AiOutlineInstagram color="white" className="h-auto w-auto" />
-                </span>
-              </Link>
+            <div className="mb-[10px] w-[28ch] text-xs">
+              Não perca nenhuma novidade! Acompanhe nossas últimas notícias e
+              postagens.
             </div>
 
-            <BoldTitle className="flex flex-col items-center gap-7 text-[30px] font-medium leading-[40.5px]">
+            <div className="flex max-w-[19ch] flex-wrap gap-2">
+              {socialMediaInfos.map((icon) => (
+                <SocialMediaIcon key={icon.key} link={icon.link}>
+                  {icon.icon}
+                </SocialMediaIcon>
+              ))}
+            </div>
+
+            <BoldTitle className="hidden flex-col items-center gap-7 font-medium leading-[40.5px] lg:flex lg:text-[30px]">
               contato@kiandadiversidade.com
             </BoldTitle>
           </div>
-          <div className="flex flex-col items-end text-[21px]">
+          <div className="flex flex-col items-end text-[10px] lg:text-[21px]">
             <span className="">Salvador, BA</span>
-            <hr className="h-[2px] w-7 bg-black" />
+            <hr className="h-[2px] w-7 border-none bg-k_cinnamon" />
             <span>contato@kiandadiversidade.com</span>
           </div>
         </div>
       </div>
-      <ItalicTitle className="justify-self-center" iconType="completeMoon">
-        2025
-      </ItalicTitle>
 
       <div className="flex flex-col items-center justify-center text-sm md:col-span-3">
         <div className="flex gap-3 md:col-span-3">

@@ -7,9 +7,11 @@ export function FirstSection() {
   const { menuOptions } = useHeader();
 
   return (
-    <section className="relative">
-      <div className={`h-[1080px] bg-header-image bg-cover bg-center`}>
-        <div className="bg-k_green_dark p-4 text-white opacity-[75%]">
+    <section className="relative mb-[22px]">
+      <div
+        className={`bg-header-image_mobile mx-4 h-[400px] rounded-xl bg-cover bg-center lg:h-[1080px] lg:bg-header-image lg:bg-cover`}
+      >
+        <div className="hidden bg-k_green_dark p-4 text-white opacity-[75%] lg:block">
           <menu className="flex w-full flex-row items-center justify-center gap-6 text-[28px] font-medium leading-[37.8px] text-white">
             {menuOptions.map((option) => (
               <li key={option.label}>{option.label}</li>

@@ -14,11 +14,13 @@ export function ItalicTitle({
 }: FooterTitleProps) {
   return (
     <div
-      className={`mt-[60px] flex w-[95%] justify-between border-t-2 border-k_green_dark pb-7 text-start text-[34px] font-normal italic leading-[45.9px] ${className}`.trim()}
+      className={`flex w-full justify-between border-t-[1px] border-k_green_dark border-white text-start font-normal italic ${className}`.trim()}
     >
-      <span className="mt-4">{children}</span>
-      <span>
-        {iconType === "completeMoon" ? <CompleteMoon /> : <HalfMoon />}
+      <span className="flex w-full justify-between">
+        <span className="mt-[6px] text-[18px]">{children}</span>
+        <span className="mr-[6px] mt-[8px]">
+          {iconType === "completeMoon" ? <CompleteMoon /> : <HalfMoon />}
+        </span>
       </span>
     </div>
   );
