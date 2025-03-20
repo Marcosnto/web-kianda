@@ -5,6 +5,7 @@ type FooterTitleProps = {
   children: React.ReactNode;
   iconType?: "completeMoon" | "halfMoon";
   showDivider?: boolean;
+  borderColor?: string;
   className?: string;
 };
 
@@ -12,12 +13,14 @@ export function ItalicTitle({
   children,
   className,
   showDivider,
+  borderColor = "k_green_dark",
   iconType,
 }: FooterTitleProps) {
   const hasDivider = showDivider ? "border-t-[1px]" : "border-none";
+  const borderSelectedColor = `border-${borderColor}`;
   return (
     <div
-      className={`flex w-full justify-between ${hasDivider} border-k_green_dark border-white text-start font-normal italic ${className}`.trim()}
+      className={`flex w-full justify-between ${hasDivider} ${borderSelectedColor} text-start font-normal italic ${className}`.trim()}
     >
       <span className="flex w-full justify-between">
         <span className="mt-[6px] text-[18px]">{children}</span>

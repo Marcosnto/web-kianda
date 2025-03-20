@@ -22,8 +22,13 @@ export function ForthSection() {
   }
 
   return (
-    <section className="mb-14 flex flex-col items-center">
-      <ItalicTitle className="" iconType="halfMoon" showDivider>
+    <section className="mb-14 mt-[42px] flex flex-col items-center px-[16px]">
+      <ItalicTitle
+        className=""
+        iconType="halfMoon"
+        borderColor="black"
+        showDivider
+      >
         Blog e Artigos
       </ItalicTitle>
       <div className="flex flex-wrap gap-8 md:mb-4 md:justify-around lg:justify-around xl:justify-center xl:gap-12">
