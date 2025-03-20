@@ -8,7 +8,7 @@ export function SecondSection() {
 
   return (
     <section id="aboutKianda" className="mb-14 flex flex-col items-center">
-      <ItalicTitle className="" iconType="halfMoon">
+      <ItalicTitle className="" iconType="halfMoon" showDivider>
         Como a Kianda atua
       </ItalicTitle>
       <div className={`flex flex-wrap gap-12 ${responsiveBodyCSS}`}>

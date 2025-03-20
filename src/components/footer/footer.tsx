@@ -13,18 +13,18 @@ export default function Footer() {
       <div
         className={`flex flex-col-reverse pb-0 text-k_yellow_light lg:grid lg:grid-cols-[55%_45%] lg:p-10 lg:text-k_brown`}
       >
-        <div className="flex flex-col px-[36px] md:col-span-2 lg:col-span-1 lg:gap-4">
+        <div className="mb-6 flex flex-col-reverse px-[12px] md:col-span-2 lg:col-span-1 lg:gap-4">
           <FooterSvg />
 
           <div className="">
-            <BoldTitle className="mb-1 flex justify-center text-[13px] font-normal text-black lg:text-[36px] lg:leading-[48.6px]">
+            <BoldTitle className="mb-1 mt-[10px] flex justify-start text-[13px] font-normal text-black lg:text-[36px] lg:leading-[48.6px]">
               <h1>Receba nossos conteúdos por email:</h1>
             </BoldTitle>
             <NewsletterForm />
           </div>
         </div>
 
-        <div className="bg-k_green_medium row-span-2 flex h-[254px] flex-col place-content-between pb-[61px] pl-[29px] pr-[18px] pt-[22px]">
+        <div className="row-span-2 flex h-[254px] flex-col place-content-between bg-k_green_medium pb-[61px] pl-[29px] pr-[18px] pt-[22px]">
           <div className="flex flex-col items-start gap-2 lg:items-center lg:gap-4 lg:pt-[6.25rem]">
             <BoldTitle className="text-[18px] font-medium lg:text-[36px] lg:leading-[48.6px]">
               Canais para contato

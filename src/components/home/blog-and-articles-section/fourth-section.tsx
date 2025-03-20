@@ -23,7 +23,7 @@ export function ForthSection() {
 
   return (
     <section className="mb-14 flex flex-col items-center">
-      <ItalicTitle className="" iconType="halfMoon">
+      <ItalicTitle className="" iconType="halfMoon" showDivider>
         Blog e Artigos
       </ItalicTitle>
       <div className="flex flex-wrap gap-8 md:mb-4 md:justify-around lg:justify-around xl:justify-center xl:gap-12">

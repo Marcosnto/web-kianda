@@ -19,7 +19,7 @@ export const NewsletterForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="mb-[1rem] flex w-full flex-col items-center gap-1"
+        className="mb-[1rem] flex w-full items-center justify-center gap-10"
       >
         <FormField
           control={form.control}
@@ -30,7 +30,7 @@ export const NewsletterForm = () => {
                 <Input
                   {...field}
                   placeholder="exemplo@email.com"
-                  className="mb-[7px] h-[17px] w-full rounded-md border-black bg-white placeholder:font-normal placeholder:italic placeholder:text-[#AAAAAA] lg:h-12 lg:w-[90px] lg:placeholder:text-[21px]"
+                  className="h-[17px] w-[216px] rounded-md border-black bg-white placeholder:font-normal placeholder:italic placeholder:text-[#AAAAAA] lg:h-12 lg:w-[90px] lg:placeholder:text-[21px]"
                 />
               </FormControl>
               <FormMessage />

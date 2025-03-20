@@ -9,6 +9,7 @@ export function ThirdSection() {
       <ItalicTitle
         className="mb-[24px] justify-self-center text-k_yellow_light"
         iconType="halfMoon"
+        showDivider={false}
       >
         Sobre
       </ItalicTitle>

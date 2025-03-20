@@ -24,7 +24,7 @@ export default function FormButton({
       className={`${baskervilleFont.className} w-6/12 rounded-none bg-k_brown text-[1rem] text-k_off_white ${className}`.trim()}
       onClick={onClick}
     >
-      <ItalicTitle>{label}</ItalicTitle>
+      <ItalicTitle showDivider>{label}</ItalicTitle>
     </Button>
   );
 }
