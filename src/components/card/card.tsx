@@ -41,28 +41,25 @@ export function Card(props: CardType) {
   } = props;
 
   return (
-    <div className={`${""}`.trim()}>
+    <div
+      className={`${className} flex text-k_green_light hover:text-k_cinnamon`.trim()}
+    >
       <Image
-        className={`object-cover ${imageClassName} rounded-[1.75rem]`.trim()}
+        className={`object-cover pr-[9px] ${imageClassName} rounded-[1.30rem] lg:rounded-[1.75rem]`.trim()}
         width={imageWidth}
         height={imageHeigth}
         alt={imageAlt}
         src={imageURL}
       />
       <span
-        className={`flex flex-col pb-4 pt-4 ${bodyClassName} rounded-[1.75rem]`.trim()}
+        className={`flex flex-col lg:pb-4 lg:pt-4 ${bodyClassName} rounded-[1.75rem]`.trim()}
       >
-        <span className="mb-[1.938rem] flex">
+        {/* <span className="mb-[1.938rem] flex">
           {author && (
-            <span className={`block text-[1.313rem]`.trim()}>
-              Por {author} em&nbsp;
-            </span>
+            <span className={`hidden`.trim()}>Por {author} em&nbsp;</span>
           )}
           {createdData && (
-            <time
-              dateTime="2022-10-10"
-              className={`block text-[1.313rem]`.trim()}
-            >
+            <time dateTime="2022-10-10" className={`hidden`.trim()}>
               {String(
                 createdData.getDate() +
                   "/" +
@@ -72,17 +69,22 @@ export function Card(props: CardType) {
               )}
             </time>
           )}
-        </span>
+        </span> */}
+
+        <span className="mb-[6px] text-[10px] italic">Coluna Raça</span>
 
         <Link href={url}>
           <BoldTitle
-            className={`line-clamp-2 text-[2.125rem] font-semibold leading-[2.869rem] ${titleClassName}`.trim()}
+            className={`text-[20px] font-semibold lg:line-clamp-2 lg:text-[2.125rem] lg:leading-[2.869rem] ${titleClassName}`.trim()}
           >
-            <h1>{label}</h1>
+            {/* <h1>{label}</h1> */}
+            <h1>Preto, padro ou branco?</h1>
           </BoldTitle>
         </Link>
 
-        <p className={`line-clamp-3 font-semibold ${summaryClassName}`}>
+        <p
+          className={`line-clamp-3 text-[11px] font-semibold ${summaryClassName}`}
+        >
           {summary}
         </p>
       </span>

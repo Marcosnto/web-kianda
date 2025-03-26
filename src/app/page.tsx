@@ -4,6 +4,7 @@ import {
   ForthSection,
   SecondSection,
   ThirdSection,
+  CoursesAndClasses,
 } from "@/components/home";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
     <main className="">
       <FirstSection />
       <SecondSection />
+      <CoursesAndClasses />
       <ThirdSection />
       <ForthSection />
     </main>

@@ -34,10 +34,10 @@ export default function StaticCard({
 
   return (
     <div
-      className={`h-[513px] max-w-[20rem] rounded-[0.7rem] rounded-t-[30px] ${bgClass}`}
+      className={`h-[62ch] max-w-[20rem] rounded-[0.7rem] rounded-t-[30px] ${bgClass}`}
     >
       <Image
-        className={`rounded-[1.75rem] border-b-2 border-b-white object-cover lg:mb-6 ${imageClassName}`.trim()}
+        className={`h-[309.19px] rounded-[1.75rem] border-b-2 border-b-white object-cover lg:mb-6 ${imageClassName}`.trim()}
         width={imageWidth}
         height={imageHeigth}
         alt={imageAlt}

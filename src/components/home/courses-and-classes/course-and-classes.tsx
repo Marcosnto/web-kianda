@@ -1,10 +1,10 @@
 import { ItalicTitle } from "@/components/general";
 import blog_1 from "@/../public/imgs/blog_1.png";
-import { useForthSection } from "./fourth-section.hook";
+import { useForthSection } from "./courses-and-classes.hook";
 import { Card } from "@/components/card";
 import { PostType } from "@/api/blog";
 
-export function ForthSection() {
+export function CoursesAndClasses() {
   const {
     posts,
     isGetPostsLoading,
@@ -29,9 +29,9 @@ export function ForthSection() {
         borderColor="black"
         showDivider
       >
-        Artigos e Publicações
+        Cursos e Aulas
       </ItalicTitle>
-      <div className="flex flex-wrap gap-8 md:mb-4 md:justify-around lg:justify-around xl:justify-center xl:gap-12">
+      <div className="flex flex-wrap gap-8 rounded-[29px] rounded-tr-none border-[1px] border-k_green_light px-[14px] py-[11px] md:mb-4 md:justify-around lg:justify-around xl:justify-center xl:gap-12">
         {posts.map((post: PostType, index: number) => (
           <Card
             className={``}
