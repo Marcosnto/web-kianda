@@ -29,7 +29,7 @@ export function ForthSection() {
         borderColor="black"
         showDivider
       >
-        Blog e Artigos
+        Artigos e Publicações
       </ItalicTitle>
       <div className="flex flex-wrap gap-8 md:mb-4 md:justify-around lg:justify-around xl:justify-center xl:gap-12">
         {posts.map((post: PostType, index: number) => (

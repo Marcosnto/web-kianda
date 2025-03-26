@@ -33,23 +33,23 @@ export default function StaticCard({
   const bgClass = colorMap[backgroundColor];
 
   return (
-    <div className={`max-w-[24.75rem]`}>
+    <div
+      className={`h-[513px] max-w-[20rem] rounded-[0.7rem] rounded-t-[30px] ${bgClass}`}
+    >
       <Image
-        className={`mb-6 rounded-[1.75rem] object-cover ${imageClassName}`.trim()}
+        className={`rounded-[1.75rem] border-b-2 border-b-white object-cover lg:mb-6 ${imageClassName}`.trim()}
         width={imageWidth}
         height={imageHeigth}
         alt={imageAlt}
         src={imageURL}
       />
-      <div
-        className={`${bgClass} mb-[0.125rem] h-[37ch] w-[396px] rounded-xl text-center`}
-      >
+      <div className={`${bgClass} rounded-b-[15px] pb-8 text-center`}>
         <h1
-          className="border-b-2 border-b-white pt-[11.6px] text-[2.25rem] text-white"
+          className="pt-[10.23px] text-[1.57rem] font-medium text-white lg:border-b-2 lg:border-b-white"
           dangerouslySetInnerHTML={{ __html: title }}
         />
         <p
-          className={`${bgClass} rounded-xl px-[17px] py-[24.58px] text-left text-[1.313rem] leading-[28.35px] text-white`}
+          className={`${bgClass} rounded-xl px-[22px] py-[7px] text-left text-[0.94rem] text-white lg:text-[1.313rem] lg:leading-[28.35px]`}
         >
           {summary}
         </p>
