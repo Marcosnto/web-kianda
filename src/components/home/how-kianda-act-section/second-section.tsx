@@ -24,7 +24,10 @@ export function SecondSection() {
         Como a Kianda atua
       </ItalicTitle>
 
-      <Carousel plugins={[plugin.current]} className="mx-[11px] mb-[30px]">
+      <Carousel
+        plugins={[plugin.current]}
+        className="mx-[11px] mb-[30px] md:hidden"
+      >
         <CarouselContent>
           {whatKiandaDoCards.map((card) => (
             <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={card.id}>
@@ -42,6 +45,21 @@ export function SecondSection() {
           ))}
         </CarouselContent>
       </Carousel>
+
+      <div className="hidden flex-wrap justify-between md:flex">
+        {whatKiandaDoCards.map((card) => (
+          <StaticCard
+            key={card.id}
+            imageAlt={card.imageAlt}
+            imageURL={card.imageURL}
+            imageHeigth={413}
+            imageWidth={413}
+            title={card.title}
+            summary={card.summary}
+            backgroundColor={card.backgroundColor}
+          />
+        ))}
+      </div>
     </section>
   );
 }
