@@ -9,7 +9,7 @@ export function FirstSection() {
   return (
     <section className="relative mb-[22px]">
       <div
-        className={`bg-header-image_mobile mx-4 h-[400px] rounded-xl bg-cover bg-center lg:h-[1080px] lg:bg-header-image lg:bg-cover`}
+        className={`mx-4 h-[400px] rounded-xl bg-header-image_mobile bg-cover bg-center md:h-[936px] lg:h-[1080px] lg:bg-header-image lg:bg-cover`}
       >
         <div className="hidden bg-k_green_dark p-4 text-white opacity-[75%] lg:block">
           <menu className="flex w-full flex-row items-center justify-center gap-6 text-[28px] font-medium leading-[37.8px] text-white">
@@ -19,12 +19,6 @@ export function FirstSection() {
           </menu>
         </div>
       </div>
-      {/* <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-center">
-        <KiandaLogo alt="imagem svg escrita Kianda" className="fill-k_bronze" />
-        <p className="text-[36.75px] font-light text-white">
-          Tecer cuidado, promover acolhimento
-        </p>
-      </div> */}
     </section>
   );
 }

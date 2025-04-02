@@ -2,6 +2,7 @@
 import useHeader from "./header.hook";
 import KiandaLogo from "@/../public/imgs/kianda_name.svg";
 import MenuHamburguer from "@/../public/imgs/menu_icon.svg";
+import MenuHamburguer_2 from "@/../public/imgs/menu_icon_2.svg";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import {
@@ -22,17 +23,19 @@ export default function Header() {
 
   return (
     <div className="">
-      <div className="z-50 mb-[6px] flex h-[72px] items-center justify-between bg-k_green_dark pr-[21px] text-k_yellow_light">
-        <span>
+      <div className="z-50 mb-[6px] flex h-[72px] items-center justify-between bg-k_green_dark pr-[21px] text-k_yellow_light md:h-[132px] md:pr-[41px]">
+        <span className="flex items-center justify-center md:h-[72px] md:w-[357px]">
           <KiandaLogo
             alt="imagem svg escrita Kianda"
-            className="fill-k_bronze"
-            style={{ transform: "scale(0.59)", transformOrigin: "center" }}
+            className="scale-[0.59] fill-k_bronze md:scale-150"
           />
         </span>
         <Drawer direction="left" shouldScaleBackground open={isOpen}>
           <DrawerTrigger asChild onClick={toggleMenu}>
-            <MenuHamburguer />
+            <span>
+              <MenuHamburguer className="md:hidden" />
+              <MenuHamburguer_2 />
+            </span>
           </DrawerTrigger>
           <DrawerContent
             className="p-2"
