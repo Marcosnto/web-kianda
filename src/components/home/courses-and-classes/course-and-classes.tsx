@@ -31,12 +31,13 @@ export function CoursesAndClasses() {
       >
         Cursos e Aulas
       </ItalicTitle>
-      <div className="flex flex-wrap gap-8 rounded-[29px] rounded-tr-none border-[1px] border-k_green_light px-[14px] py-[11px] md:mb-4 md:justify-around lg:justify-around xl:justify-center xl:gap-12">
+      <div className="flex flex-wrap gap-8 rounded-[29px] rounded-tr-none border-[1px] border-k_green_light px-[14px] py-[11px] md:mb-4 md:flex-row md:flex-nowrap md:justify-around md:border-0 md:p-0 lg:justify-around xl:justify-center xl:gap-12">
+        {/*TODO: Create one copy of this to course  */}
         {posts.map((post: PostType, index: number) => (
           <Card
-            className={``}
-            bodyClassName={`mt-[10px] lg:pl-[17.3px] lg:pr-[17.3px] lg:bg-${backgroundColors[index]} lg:${index === 2 ? "text-black" : "text-k_yellow_light"}`}
-            imageClassName="max-w-[144px] max-h-[134px] lg:max-h-[372.33px] lg:max-w-[569.56px]"
+            className={`md:flex-col md:justify-between md:rounded-[1.30rem] md:border md:border-k_green_light`}
+            bodyClassName={` mt-[10px] lg:pl-[17.3px] lg:pr-[17.3px] lg:bg-${backgroundColors[index]} lg:${index === 2 ? "text-black" : "text-k_yellow_light"}`}
+            imageClassName="max-w-[144px] max-h-[134px] md:max-w-full md:max-h-[228.43px]  lg:max-h-[372.33px] lg:max-w-[569.56px] md:p-0"
             summaryClassName="text-[1.313rem]"
             key={post.id}
             label={post.title}
