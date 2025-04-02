@@ -4,20 +4,25 @@ import { ItalicTitle } from "@/components/general";
 import AboutImage from "@/../public/imgs/about-image.svg";
 
 export function ThirdSection() {
+  const isNotMobileScreen = window.innerWidth > 767;
+
   return (
-    <section id="about" className="bg-k_green_light px-[16px] pt-[0.5rem]">
+    <section
+      id="about"
+      className="bg-k_green_light px-[16px] pt-[0.5rem] md:bg-transparent"
+    >
       <ItalicTitle
-        className="mb-[24px] justify-self-center text-k_yellow_light"
+        className="mb-[24px] justify-self-center text-k_yellow_light md:text-[24px] md:text-k_green_dark"
         iconType="halfMoon"
-        showDivider={false}
+        showDivider={isNotMobileScreen}
       >
         Sobre
       </ItalicTitle>
-      <div className="grid items-center bg-k_green_light pb-14 md:grid-cols-[38%_62%] lg:ml-[50px] lg:mr-[50px] lg:rounded-2xl lg:p-[5.8rem]">
+      <div className="grid items-center bg-k_green_light pb-14 md:flex md:grid-cols-[38%_62%] md:rounded-xl lg:ml-[50px] lg:mr-[50px] lg:rounded-2xl lg:p-[5.8rem]">
         <span className="hidden w-[620px] lg:inline">
           <About />
         </span>
-        <section className="text-justify text-[16px] font-normal text-k_yellow_light lg:text-[36px]">
+        <section className="text-justify text-[16px] font-normal text-k_yellow_light md:px-[13px] md:pt-[37px] md:text-[22.69px] md:text-white lg:text-[36px]">
           <p>
             A <b>KIANDA</b> é uma empresa comprometida em tornar os ambientes
             empresariais e educacionais mais{" "}
