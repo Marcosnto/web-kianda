@@ -11,6 +11,20 @@ body {
   background-color: rgba(254, 250, 224, 1);
 }
 
+@layer utilities {
+  .grid-about-area-layout {
+    display: grid;
+    align-items: center;
+    grid-template-areas:
+      "figure text"
+      "figure text_2"
+      "figure text_2";
+  }
+  .area-figure { grid-area: figure; }
+  .area-text { grid-area: text; }
+  .area-text_2 { grid-area: text; }
+}
+
 @layer base {
   
   :root {

@@ -7,6 +7,7 @@ import AboutImage from "@/../public/imgs/about-image.svg";
 import AboutImageMedium from "@/../public/imgs/about_image_medium.png";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import HomePageSection from "@/components/home-page-section/home-page-section";
 
 export function ThirdSection() {
   const [isNotMobileScreen, setIsNotMobileScreen] = useState(false);
@@ -16,23 +17,20 @@ export function ThirdSection() {
   }, []);
 
   return (
-    <section
+    <HomePageSection
       id="about"
-      className="bg-k_green_light px-[16px] pt-[0.5rem] md:bg-transparent"
+      className="mb-14 bg-k_green_light md:bg-transparent"
     >
       <ItalicTitle
-        className="mb-[24px] justify-self-center text-k_yellow_light md:text-[24px] md:text-k_green_dark"
+        className="justify-self-center text-k_yellow_light md:text-[24px] md:text-k_green_dark"
         iconType="halfMoon"
         showDivider={isNotMobileScreen}
       >
         Sobre
       </ItalicTitle>
-      <div className="grid items-center bg-k_green_light pb-14 md:flex md:grid-cols-[38%_62%] md:rounded-xl lg:ml-[50px] lg:mr-[50px] lg:rounded-2xl lg:p-[5.8rem]">
-        <span className="hidden w-[620px] lg:inline">
-          <About />
-        </span>
-        <section className="text-justify text-[16px] font-normal text-k_yellow_light md:px-[13px] md:pt-[37px] md:text-[22.69px] md:text-white lg:text-[36px]">
-          <p>
+      <div className="grid items-center bg-k_green_light pb-14 md:flex md:grid-cols-[38%_62%] md:rounded-xl lg:rounded-2xl lg:px-[50px] 2xl:p-[5.8rem]">
+        <section className="lg:grid-about-area-layout text-justify text-[16px] font-normal text-k_yellow_light md:px-[13px] md:pt-[37px] md:text-[22.69px] md:text-white lg:gap-x-10 lg:pt-[50px] xl:text-[36px]">
+          <p className="lg:area-text">
             A <b>KIANDA</b> é uma empresa comprometida em tornar os ambientes
             empresariais e educacionais mais{" "}
             <b>diversos, inclusivos e saudáveis.</b> Em um contexto de
@@ -45,15 +43,11 @@ export function ThirdSection() {
               permanência.
             </i>
           </p>
-          <AboutImage
-            className="hidden"
-            style={{ height: "19rem", width: "fit-content" }}
-          />
-          <span className="my-5 flex h-[431px] w-full justify-center">
+          <span className="area-figure my-5 flex h-[431px] w-full justify-center">
             <Image src={AboutImageMedium} alt="" className="h-full" />
           </span>
           <br />
-          <p>
+          <p className="lg:area-text2">
             Por isso, a KIANDA foi criada para oferecer serviços que garantam a
             permanência e o desenvolvimento desses grupos, promovendo cuidado,
             saúde mental e bem-estar. Nossos serviços incluem consultorias e
@@ -63,6 +57,6 @@ export function ThirdSection() {
           </p>
         </section>
       </div>
-    </section>
+    </HomePageSection>
   );
 }

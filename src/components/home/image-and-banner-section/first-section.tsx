@@ -7,12 +7,15 @@ export function FirstSection() {
   const { menuOptions } = useHeader();
 
   return (
-    <section className="relative mb-[22px]">
+    <section className="lg relative mb-[22px]">
       <div
-        className={`mx-4 h-[400px] rounded-xl bg-header-image_mobile bg-cover bg-center md:h-[936px] lg:h-[1080px] lg:bg-header-image lg:bg-cover`}
+        className={`mx-4 h-[400px] rounded-xl bg-header-image_mobile bg-cover bg-center md:h-[936px] lg:mx-0 lg:h-[890px] lg:rounded-none lg:bg-header-image lg:bg-cover xl:h-[1080px]`}
       >
-        <div className="hidden bg-k_green_dark p-4 text-white opacity-[75%] lg:block">
-          <menu className="flex w-full flex-row items-center justify-center gap-6 text-[28px] font-medium leading-[37.8px] text-white">
+        <div
+          className="hidden p-4 lg:block"
+          style={{ backgroundColor: "rgba(40, 54, 24, 0.5)" }}
+        >
+          <menu className="flex w-full flex-row items-center justify-center gap-6 font-medium leading-[37.8px] text-white opacity-[100%] lg:text-[20px] xl:text-[28px]">
             {menuOptions.map((option) => (
               <li key={option.label}>{option.label}</li>
             ))}

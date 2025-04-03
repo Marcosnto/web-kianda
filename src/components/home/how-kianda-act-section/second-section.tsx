@@ -12,6 +12,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { useRef } from "react";
+import HomePageSection from "@/components/home-page-section/home-page-section";
 
 export function SecondSection() {
   const { whatKiandaDoCards } = useSecondSection();
@@ -19,8 +20,8 @@ export function SecondSection() {
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
   return (
-    <section id="aboutKianda" className="mx-[16px]">
-      <ItalicTitle className="mb-[12px]" iconType="halfMoon" showDivider>
+    <HomePageSection id="aboutKianda" className="mb-14">
+      <ItalicTitle className="" iconType="halfMoon" showDivider>
         Como a Kianda atua
       </ItalicTitle>
 
@@ -60,6 +61,6 @@ export function SecondSection() {
           />
         ))}
       </div>
-    </section>
+    </HomePageSection>
   );
 }

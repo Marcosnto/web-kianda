@@ -3,6 +3,7 @@ import blog_1 from "@/../public/imgs/blog_1.png";
 import { useForthSection } from "./courses-and-classes.hook";
 import { Card } from "@/components/card";
 import { PostType } from "@/api/blog";
+import HomePageSection from "@/components/home-page-section/home-page-section";
 
 export function CoursesAndClasses() {
   const {
@@ -22,16 +23,16 @@ export function CoursesAndClasses() {
   }
 
   return (
-    <section className="mb-14 mt-[42px] flex flex-col items-center px-[16px] lg:hidden">
+    <HomePageSection className="flex flex-col items-center lg:hidden">
       <ItalicTitle
-        className="mb-[14px]"
+        className=""
         iconType="halfMoon"
         borderColor="black"
         showDivider
       >
         Cursos e Aulas
       </ItalicTitle>
-      <div className="flex flex-wrap gap-8 rounded-[29px] rounded-tr-none border-[1px] border-k_green_light px-[14px] py-[11px] md:mb-4 md:flex-row md:flex-nowrap md:justify-around md:border-0 md:p-0 lg:justify-around xl:justify-center xl:gap-12">
+      <div className="mb-14 flex flex-wrap gap-8 rounded-[29px] rounded-tr-none border-[1px] border-k_green_light px-[14px] py-[11px] md:mb-4 md:flex-row md:flex-nowrap md:justify-around md:border-0 md:p-0 lg:justify-around xl:justify-center xl:gap-12">
         {/*TODO: Create one copy of this to course  */}
         {posts.map((post: PostType, index: number) => (
           <Card
@@ -50,6 +51,6 @@ export function CoursesAndClasses() {
           />
         ))}
       </div>
-    </section>
+    </HomePageSection>
   );
 }

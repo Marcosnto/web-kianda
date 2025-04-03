@@ -38,24 +38,24 @@ export default function useHeader() {
 
   const menuOptions: OptionsTypes[] = [
     {
-      label: "Como a Kianda Atua",
+      label: "Como atuamos",
       path: "aboutKianda",
       isPage: false,
     },
     {
-      label: "Blog e Artigos",
-      path: "/posts",
-      isPage: true,
-    },
-    {
-      label: "Redes Sociais",
-      path: "socialMedias",
+      label: "Cursos e aulas",
+      path: "",
       isPage: false,
     },
     {
       label: "Sobre",
       path: "about",
       isPage: false,
+    },
+    {
+      label: "Artigos e Publicações",
+      path: "/posts",
+      isPage: true,
     },
     {
       label: "Contato",
