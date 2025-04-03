@@ -34,7 +34,7 @@ export default function StaticCard({
 
   return (
     <div
-      className={`max-w-[20rem] rounded-[0.7rem] rounded-t-[30px] md:max-w-[22rem] ${bgClass} md:mb-14 md:bg-transparent`}
+      className={`rounded-[0.7rem] rounded-t-[30px] ${bgClass} md:mb-14 md:bg-transparent`}
     >
       <Image
         className={`h-[309.19px] w-full rounded-[1.75rem] border-b-2 border-b-white object-cover md:mb-2 lg:mb-6 ${imageClassName}`.trim()}
@@ -44,14 +44,14 @@ export default function StaticCard({
         src={imageURL}
       />
       <div
-        className={`${bgClass} h-[26ch] rounded-b-[15px] pb-8 text-center md:rounded-[15px]`}
+        className={`${bgClass} rounded-b-[15px] pb-8 text-center md:rounded-[15px]`}
       >
         <h1
           className="pt-[10.23px] text-[1.57rem] font-medium text-white md:border-b-2 md:border-b-k_yellow_light md:py-2"
           dangerouslySetInnerHTML={{ __html: title }}
         />
         <p
-          className={`${bgClass} rounded-xl px-[22px] py-[7px] text-left text-[0.94rem] text-white md:py-[18px] lg:text-[1.313rem] lg:leading-[28.35px]`}
+          className={`${bgClass} h-[18ch] rounded-xl px-[22px] py-[7px] text-left text-[0.94rem] text-white md:py-[18px] lg:h-[33ch] lg:text-[1.313rem] lg:leading-[28.35px] xl:h-[25ch] 2xl:h-[18ch]`}
         >
           {summary}
         </p>

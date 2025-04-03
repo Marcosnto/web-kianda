@@ -22,7 +22,7 @@ export function CoursesAndClasses() {
   }
 
   return (
-    <section className="mb-14 mt-[42px] flex flex-col items-center px-[16px]">
+    <section className="mb-14 mt-[42px] flex flex-col items-center px-[16px] lg:hidden">
       <ItalicTitle
         className="mb-[14px]"
         iconType="halfMoon"

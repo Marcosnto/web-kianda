@@ -1,10 +1,19 @@
+"use client";
+
 import About from "@/../public/imgs/about.svg";
 
 import { ItalicTitle } from "@/components/general";
 import AboutImage from "@/../public/imgs/about-image.svg";
+import AboutImageMedium from "@/../public/imgs/about_image_medium.png";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export function ThirdSection() {
-  const isNotMobileScreen = window.innerWidth > 767;
+  const [isNotMobileScreen, setIsNotMobileScreen] = useState(false);
+
+  useEffect(() => {
+    setIsNotMobileScreen(window.innerWidth > 767);
+  }, []);
 
   return (
     <section
@@ -36,7 +45,13 @@ export function ThirdSection() {
               permanência.
             </i>
           </p>
-          <AboutImage style={{ height: "19rem", width: "fit-content" }} />
+          <AboutImage
+            className="hidden"
+            style={{ height: "19rem", width: "fit-content" }}
+          />
+          <span className="my-5 flex h-[431px] w-full justify-center">
+            <Image src={AboutImageMedium} alt="" className="h-full" />
+          </span>
           <br />
           <p>
             Por isso, a KIANDA foi criada para oferecer serviços que garantam a

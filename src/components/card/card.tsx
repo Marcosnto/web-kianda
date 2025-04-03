@@ -71,11 +71,13 @@ export function Card(props: CardType) {
           )}
         </span> */}
 
-        <span className="mb-[6px] text-[10px] italic">Coluna Raça</span>
+        <span className="mb-[6px] text-[10px] italic md:text-[14px]">
+          Coluna Raça
+        </span>
 
         <Link href={url}>
           <BoldTitle
-            className={`text-[20px] font-semibold lg:line-clamp-2 lg:text-[2.125rem] lg:leading-[2.869rem] ${titleClassName}`.trim()}
+            className={`text-[20px] font-semibold md:text-[26px] lg:line-clamp-2 lg:text-[2.125rem] lg:leading-[2.869rem] ${titleClassName}`.trim()}
           >
             {/* <h1>{label}</h1> */}
             <h1>Preto, padro ou branco?</h1>
@@ -83,7 +85,7 @@ export function Card(props: CardType) {
         </Link>
 
         <p
-          className={`line-clamp-3 text-[11px] font-semibold ${summaryClassName}`}
+          className={`line-clamp-3 text-[11px] font-semibold md:text-[20px] ${summaryClassName}`}
         >
           {summary}
         </p>

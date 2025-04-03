@@ -1,5 +1,3 @@
-import { Syne } from "next/font/google";
-
 type FooterTitleProps = {
   children: React.ReactNode;
   className?: string;

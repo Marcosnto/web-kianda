@@ -1,16 +1,20 @@
 import Link from "next/link";
+import React from "react";
+import { JSXElementConstructor, ReactElement } from "react";
 
 export default function SocialMediaIcon({
   link,
-  children,
+  icon,
 }: {
   link: string;
-  children: React.ReactNode;
+  icon: ReactElement<any, string | JSXElementConstructor<any>>;
 }) {
   return (
     <Link href={link}>
-      <span className="flex h-[29.24px] w-[29.24px] items-center justify-center gap-2 rounded-sm bg-k_green_light lg:h-[75px] lg:w-[75px] lg:bg-black">
-        {children}
+      <span className="flex h-[29.24px] w-[29.24px] items-center justify-center gap-2 rounded-sm bg-k_green_light md:h-[56.41px] md:w-[56.41px] lg:h-[75px] lg:w-[75px] lg:bg-black">
+        {React.cloneElement(icon, {
+          className: "h-[20px] w-[20px] md:h-[35px] md:w-[35px]",
+        })}
       </span>
     </Link>
   );

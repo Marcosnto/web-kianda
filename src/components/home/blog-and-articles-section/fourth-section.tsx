@@ -31,12 +31,12 @@ export function ForthSection() {
       >
         Artigos e Publicações
       </ItalicTitle>
-      <div className="flex flex-wrap gap-8 md:mb-4 md:justify-around lg:justify-around xl:justify-center xl:gap-12">
+      <div className="flex flex-wrap gap-8 md:mb-4 md:justify-start lg:justify-around xl:justify-center xl:gap-12">
         {posts.map((post: PostType, index: number) => (
           <Card
             className={``}
-            bodyClassName={`mt-[10px] lg:pl-[17.3px] lg:pr-[17.3px] lg:bg-${backgroundColors[index]} lg:${index === 2 ? "text-black" : "text-k_yellow_light"}`}
-            imageClassName="max-w-[144px] max-h-[134px] lg:max-h-[372.33px] lg:max-w-[569.56px]"
+            bodyClassName={`mt-[10px] md:mt-0 lg:pl-[17.3px] lg:pr-[17.3px] lg:bg-${backgroundColors[index]} lg:${index === 2 ? "text-black" : "text-k_yellow_light"}`}
+            imageClassName="max-w-[144px] max-h-[134px] md:max-h-[240px] md:max-w-[368px] lg:max-h-[372.33px] lg:max-w-[569.56px]"
             summaryClassName="text-[1.313rem]"
             key={post.id}
             label={post.title}

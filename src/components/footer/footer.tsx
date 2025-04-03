@@ -4,42 +4,61 @@ import Link from "next/link";
 import { BoldTitle, ItalicTitle } from "../general";
 import { NewsletterForm } from "./components/forms/newsletter/newsletterForm";
 import FooterSvg from "@/../public/imgs/footer.svg";
+import FooterPNG from "@/../public/imgs/footer_img.png";
 import SocialMediaIcon from "./components/socialIcons/socialMediaIcon";
 import { socialMediaInfos } from "./utils/socialMediaInfos";
+import { JSXElementConstructor, ReactElement } from "react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer id="contact">
+    <footer id="contact" className="md:px-[16px] md:pt-[0.5rem]">
+      <ItalicTitle
+        className="mb-[24px] hidden md:flex"
+        iconType="halfMoon"
+        showDivider={true}
+      />
+
       <div
-        className={`flex flex-col-reverse pb-0 text-k_yellow_light lg:grid lg:grid-cols-[55%_45%] lg:p-10 lg:text-k_brown`}
+        className={`mb-10 flex flex-col-reverse pb-0 text-k_yellow_light md:grid md:grid-cols-[55%_45%] lg:grid-cols-[55%_45%] lg:p-10 lg:text-k_brown`}
       >
-        <div className="mb-6 flex flex-col-reverse px-[12px] md:col-span-2 lg:col-span-1 lg:gap-4">
-          <FooterSvg />
+        <div className="mb-6 flex flex-col-reverse md:col-span-1 md:mb-0 md:flex-col lg:gap-4">
+          <span className="h-[275px] w-full md:flex md:h-[371px] md:justify-center">
+            {/* <FooterSvg /> */}
+            <Image src={FooterPNG} alt="" className="h-full" />
+          </span>
 
           <div className="">
-            <BoldTitle className="mb-1 mt-[10px] flex justify-start text-[13px] font-normal text-black lg:text-[36px] lg:leading-[48.6px]">
+            <BoldTitle className="mb-1 mt-[10px] flex justify-start text-[13px] font-normal text-black md:text-[16px] lg:text-[36px] lg:leading-[48.6px]">
               <h1>Receba nossos conteúdos por email:</h1>
             </BoldTitle>
             <NewsletterForm />
           </div>
         </div>
 
-        <div className="row-span-2 flex h-[254px] flex-col place-content-between bg-k_green_medium pb-[61px] pl-[29px] pr-[18px] pt-[22px]">
+        <div className="row-span-2 flex h-[254px] flex-col place-content-between bg-k_green_medium pb-[61px] pl-[29px] pr-[18px] pt-[22px] md:mr-[36px] md:h-auto md:items-end md:justify-between md:bg-transparent md:p-0 md:pl-[1rem] md:text-k_green_medium">
           <div className="flex flex-col items-start gap-2 lg:items-center lg:gap-4 lg:pt-[6.25rem]">
-            <BoldTitle className="text-[18px] font-medium lg:text-[36px] lg:leading-[48.6px]">
+            <BoldTitle className="text-[18px] font-medium md:text-[28px] md:font-semibold md:leading-none lg:text-[36px] lg:leading-[48.6px]">
               Canais para contato
             </BoldTitle>
 
-            <div className="mb-[10px] w-[28ch] text-xs">
+            <div className="mb-[10px] w-[28ch] text-xs md:w-[34ch] md:text-[14px]">
               Não perca nenhuma novidade! Acompanhe nossas últimas notícias e
               postagens.
             </div>
 
-            <div className="flex max-w-[19ch] flex-wrap gap-2">
+            <div className="flex max-w-[19ch] flex-wrap gap-2 md:max-w-[27ch]">
               {socialMediaInfos.map((icon) => (
-                <SocialMediaIcon key={icon.key} link={icon.link}>
-                  {icon.icon}
-                </SocialMediaIcon>
+                <SocialMediaIcon
+                  key={icon.key}
+                  link={icon.link}
+                  icon={
+                    icon.icon as ReactElement<
+                      any,
+                      string | JSXElementConstructor<any>
+                    >
+                  }
+                />
               ))}
             </div>
 
@@ -47,7 +66,7 @@ export default function Footer() {
               contato@kiandadiversidade.com
             </BoldTitle>
           </div>
-          <div className="flex flex-col items-end text-[10px] lg:text-[21px]">
+          <div className="flex flex-col items-end text-[10px] md:text-[16px] lg:text-[21px]">
             <span className="">Salvador, BA</span>
             <hr className="h-[2px] w-7 border-none bg-k_cinnamon" />
             <span>contato@kiandadiversidade.com</span>

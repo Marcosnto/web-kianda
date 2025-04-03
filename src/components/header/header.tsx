@@ -3,8 +3,7 @@ import useHeader from "./header.hook";
 import KiandaLogo from "@/../public/imgs/kianda_name.svg";
 import MenuHamburguer from "@/../public/imgs/menu_icon.svg";
 import MenuHamburguer_2 from "@/../public/imgs/menu_icon_2.svg";
-import { HiMenuAlt2 } from "react-icons/hi";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import {
   Drawer,
   DrawerClose,
@@ -14,8 +13,6 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import Image from "next/image";
-import { SearchInput } from ".";
 import Link from "next/link";
 
 export default function Header() {
@@ -23,7 +20,7 @@ export default function Header() {
 
   return (
     <div className="">
-      <div className="z-50 mb-[6px] flex h-[72px] items-center justify-between bg-k_green_dark pr-[21px] text-k_yellow_light md:h-[132px] md:pr-[41px] lg:hidden">
+      <div className="z-50 mb-[6px] flex h-[72px] items-center justify-between bg-k_green_dark pr-[21px] text-k_yellow_light md:mb-[14px] md:h-[132px] md:pr-[41px] lg:hidden">
         <span className="flex items-center justify-center md:h-[72px] md:w-[357px]">
           <KiandaLogo
             alt="imagem svg escrita Kianda"
@@ -34,7 +31,7 @@ export default function Header() {
           <DrawerTrigger asChild onClick={toggleMenu}>
             <span>
               <MenuHamburguer className="md:hidden" />
-              <MenuHamburguer_2 />
+              <MenuHamburguer_2 className="hidden md:block" />
             </span>
           </DrawerTrigger>
           <DrawerContent
