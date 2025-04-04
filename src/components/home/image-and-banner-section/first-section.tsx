@@ -1,6 +1,3 @@
-import Image from "next/image";
-import home_1 from "@/../public/imgs/home_1.png";
-import KiandaLogo from "@/../public/imgs/logo_2.svg";
 import useHeader from "@/components/header/header.hook";
 
 export function FirstSection() {

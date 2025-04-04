@@ -24,28 +24,29 @@ export function SecondSection() {
       <ItalicTitle className="" iconType="halfMoon" showDivider>
         Como a Kianda atua
       </ItalicTitle>
-
-      <Carousel
-        plugins={[plugin.current]}
-        className="mx-[11px] mb-[30px] w-full max-w-xs md:hidden"
-      >
-        <CarouselContent>
-          {whatKiandaDoCards.map((card) => (
-            <CarouselItem className="basis-full" key={card.id}>
-              <StaticCard
-                key={card.id}
-                imageAlt={card.imageAlt}
-                imageURL={card.imageURL}
-                imageHeigth={413}
-                imageWidth={413}
-                title={card.title}
-                summary={card.summary}
-                backgroundColor={card.backgroundColor}
-              />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-      </Carousel>
+      <div>
+        <Carousel
+          plugins={[plugin.current]}
+          className="mb-[30px] w-full md:hidden"
+        >
+          <CarouselContent>
+            {whatKiandaDoCards.map((card) => (
+              <CarouselItem className="basis-full sm:basis-1/2" key={card.id}>
+                <StaticCard
+                  key={card.id}
+                  imageAlt={card.imageAlt}
+                  imageURL={card.imageURL}
+                  imageHeigth={413}
+                  imageWidth={413}
+                  title={card.title}
+                  summary={card.summary}
+                  backgroundColor={card.backgroundColor}
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      </div>
 
       <div className="lg:grid-auto-rows-auto hidden grid-cols-2 gap-4 md:mx-auto md:grid lg:grid-cols-4">
         {whatKiandaDoCards.map((card) => (

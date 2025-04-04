@@ -26,7 +26,7 @@ export function useSecondSection() {
     },
     {
       id: "3",
-      title: "Acompanhamento</br>Psicológico",
+      title: "Acompanhamento</br>Psicoterapêutico",
       summary:
         "Auxílio individual nos processos mentais e emocionais, realizado por profissionais experientes em diversidade, com o objetivo de oferecer cuidado e acolhimento a diferentes grupos sociais.",
       imageURL: home_card_3,

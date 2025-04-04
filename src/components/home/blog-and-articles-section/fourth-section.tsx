@@ -58,7 +58,7 @@ export function ForthSection() {
           <Card
             className={`flex-col`}
             bodyClassName={`pl-[17.3px] pr-[17.3px] bg-${backgroundColors[index]} ${index === 2 ? "text-black" : "text-k_yellow_light"}`}
-            imageClassName="max-w-[144px] max-h-[134px] md:max-h-[240px] md:max-w-[368px] lg:h-[372.33px] lg:w-full"
+            imageClassName="max-w-full max-h-[134px] md:max-h-[240px]  lg:h-[372.33px] "
             key={post.id}
             label={post.title}
             summary={post.description}
