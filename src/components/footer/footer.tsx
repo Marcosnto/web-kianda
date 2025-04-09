@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { BoldTitle, ItalicTitle } from "../general";
 import { NewsletterForm } from "./components/forms/newsletter/newsletterForm";
-import FooterSvg from "@/../public/imgs/footer.svg";
 import FooterPNG from "@/../public/imgs/footer_img.png";
+import FooterPNGHD from "@/../public/imgs/footer_img-fullhd.png";
 import SocialMediaIcon from "./components/socialIcons/socialMediaIcon";
 import { socialMediaInfos } from "./utils/socialMediaInfos";
 import { JSXElementConstructor, ReactElement } from "react";
@@ -20,12 +20,14 @@ export default function Footer() {
       />
 
       <div
-        className={`mb-10 flex flex-col-reverse pb-0 text-k_yellow_light md:grid md:grid-cols-[55%_45%] lg:text-k_brown xl:p-10`}
+        className={`mb-10 flex flex-col-reverse pb-0 text-k_yellow_light md:grid md:grid-cols-[55%_45%] lg:text-k_brown`}
       >
-        <div className="mb-6 flex flex-col-reverse px-3 md:col-span-1 md:mb-0 md:flex-col lg:gap-4">
-          <span className="h-[275px] w-full md:flex md:h-[371px] md:justify-center">
-            {/* <FooterSvg /> */}
-            <Image src={FooterPNG} alt="" className="h-full" />
+        <div className="mb-6 flex flex-col-reverse px-3 md:col-span-1 md:mb-0 md:flex-col lg:gap-4 xl:max-w-[813px]">
+          <span className="h-[275px] w-full md:flex md:h-[371px] md:justify-center xl:hidden">
+            <Image src={FooterPNG} alt="" className="h-full object-contain" />
+          </span>
+          <span className="hidden h-[649px] w-full xl:flex">
+            <Image src={FooterPNGHD} alt="" className="h-full object-cover" />
           </span>
 
           <div className="">
@@ -36,13 +38,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="row-span-2 flex h-[254px] flex-col place-content-between bg-k_green_medium pb-[61px] pl-[29px] pr-[18px] pt-[22px] md:mr-[36px] md:h-auto md:items-end md:justify-between md:bg-transparent md:p-0 md:pl-[1rem] md:text-k_green_medium lg:mr-0">
-          <div className="flex flex-col items-start gap-2 lg:items-center lg:gap-4 lg:pr-10 xl:pt-[6.25rem]">
+        <div className="row-span-2 flex h-[254px] flex-col place-content-between bg-k_green_medium pb-[61px] pl-[29px] pr-[18px] pt-[22px] md:mr-[36px] md:h-auto md:items-end md:justify-between md:bg-transparent md:p-0 md:pl-[1rem] md:text-k_green_medium lg:mr-0 lg:text-black">
+          <div className="flex flex-col items-start gap-2 lg:items-start lg:gap-4 lg:pr-10 xl:items-center">
             <BoldTitle className="text-[18px] font-medium md:text-[28px] md:font-semibold md:leading-none lg:leading-[48.6px] xl:text-[36px]">
               Canais para contato
             </BoldTitle>
 
-            <div className="mb-[10px] w-[28ch] text-xs md:w-[34ch] md:text-[14px]">
+            <div className="mb-[10px] w-[28ch] text-xs md:w-[34ch] md:text-[14px] xl:hidden">
               Não perca nenhuma novidade! Acompanhe nossas últimas notícias e
               postagens.
             </div>
@@ -62,7 +64,7 @@ export default function Footer() {
               ))}
             </div>
 
-            <BoldTitle className="hidden flex-col items-center gap-7 font-medium leading-[40.5px] lg:flex xl:text-[30px]">
+            <BoldTitle className="hidden flex-col items-center gap-7 font-medium leading-[40.5px] lg:flex lg:w-full xl:text-[30px]">
               contato@kiandadiversidade.com
             </BoldTitle>
           </div>
