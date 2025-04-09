@@ -23,7 +23,10 @@ export function ForthSection() {
   }
 
   return (
-    <HomePageSection className="mb-10 flex flex-col items-center md:mb-14">
+    <HomePageSection
+      id="blog"
+      className="mb-10 flex flex-col items-center md:mb-14"
+    >
       <ItalicTitle
         className=""
         iconType="halfMoon"

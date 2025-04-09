@@ -23,7 +23,10 @@ export function CoursesAndClasses() {
   }
 
   return (
-    <HomePageSection className="flex flex-col items-center lg:hidden">
+    <HomePageSection
+      id="courses"
+      className="flex flex-col items-center lg:hidden"
+    >
       <ItalicTitle
         className=""
         iconType="halfMoon"

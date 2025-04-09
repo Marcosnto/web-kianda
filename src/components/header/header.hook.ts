@@ -1,6 +1,7 @@
 "use client";
 import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 type OptionsTypes = {
   label: string;
@@ -13,43 +14,60 @@ export default function useHeader() {
   const pathName = usePathname();
   const router = useRouter();
 
+  const searchParams = useSearchParams();
+
+  const scrollTo = searchParams.get("scrollTo");
+
+  useEffect(() => {
+    if (scrollTo) {
+      const el = document.getElementById(scrollTo);
+      el?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [scrollTo]);
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  function moveToEspecificElementOnPage(id: string, time: number = 400) {
+  function moveToEspecificElementOnPage(
+    id: string,
+    time: number = 400,
+    event?: React.MouseEvent,
+  ) {
     setTimeout(() => {
       const element = document.getElementById(id);
       element?.scrollIntoView({ behavior: "smooth" });
     }, time);
   }
 
-  function moveToSection(id: string) {
-    toggleMenu();
+  function moveToSection(
+    id: string,
+    isMobile: boolean,
+    event?: React.MouseEvent,
+  ) {
+    if (isMobile) toggleMenu();
 
     if (pathName !== "/") {
-      router.push("/");
-
-      moveToEspecificElementOnPage(id);
+      router.push(`/?scrollTo=${id}`);
 
       return;
     }
 
-    moveToEspecificElementOnPage(id);
+    moveToEspecificElementOnPage(id, undefined, event);
   }
 
   const menuOptions: OptionsTypes[] = [
     {
       label: "Como atuamos",
-      path: "aboutKianda",
+      path: "#howKiandaAct",
       isPage: false,
     },
     {
       label: "Cursos e aulas",
-      path: "",
+      path: "#courses",
       isPage: false,
     },
     {
       label: "Sobre",
-      path: "about",
+      path: "#about",
       isPage: false,
     },
     {
@@ -59,7 +77,7 @@ export default function useHeader() {
     },
     {
       label: "Contato",
-      path: "contact",
+      path: "#contact",
       isPage: false,
     },
   ];
@@ -69,5 +87,6 @@ export default function useHeader() {
     isOpen,
     toggleMenu,
     moveToSection,
+    moveToEspecificElementOnPage,
   };
 }

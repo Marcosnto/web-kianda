@@ -3,7 +3,6 @@ import { useSecondSection } from "./second-section.hook";
 import StaticCard from "@/components/card/static-card/static-card";
 import Autoplay from "embla-carousel-autoplay";
 
-// import { Card, CardContent } from "@/components/ui";
 import {
   Carousel,
   CarouselContent,
@@ -20,7 +19,7 @@ export function SecondSection() {
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
   return (
-    <HomePageSection id="aboutKianda" className="mb-14">
+    <HomePageSection id="howKiandaAct" className="mb-14">
       <ItalicTitle className="" iconType="halfMoon" showDivider>
         Como a Kianda atua
       </ItalicTitle>

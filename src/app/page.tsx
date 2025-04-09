@@ -10,7 +10,7 @@ import {
 export default function Home() {
   return (
     <main className="">
-      <FirstSection />
+      {/* <FirstSection /> */}
       <SecondSection />
       <CoursesAndClasses />
       <ThirdSection />
