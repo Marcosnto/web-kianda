@@ -12,7 +12,7 @@ export default function Home() {
     <main className="">
       <FirstSection />
       <SecondSection />
-      <CoursesAndClasses />
+      {/* <CoursesAndClasses /> */}
       <ThirdSection />
       <ForthSection />
     </main>
