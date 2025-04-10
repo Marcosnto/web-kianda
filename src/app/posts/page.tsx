@@ -28,7 +28,6 @@ export default function Posts() {
 
   return (
     <section>
-      <IntraPageHeader name="Blog" />
       <div className="grid grid-cols-blogCards gap-10 px-3 py-6 sm:gap-10 sm:px-6 lg:px-32 lg:py-16">
         {posts.length > 0 &&
           posts.map((post: PostType) => (
