@@ -4,7 +4,7 @@ export function FirstSection() {
   const { menuOptions, moveToSection } = useHeader();
 
   return (
-    <section className="mb-7 lg:relative lg:mb-[22px]">
+    <section className="mb-7 lg:relative lg:mb-0">
       <div
         className={`mx-4 h-[400px] rounded-xl bg-header-image_mobile bg-cover bg-center md:h-[936px] lg:mx-0 lg:h-[890px] lg:rounded-none lg:bg-header-image lg:bg-cover xl:h-[1080px]`}
       >
