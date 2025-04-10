@@ -1,6 +1,5 @@
 "use client";
 import {
-  FirstSection,
   ForthSection,
   SecondSection,
   ThirdSection,
@@ -10,7 +9,6 @@ import {
 export default function Home() {
   return (
     <main className="">
-      {/* <FirstSection /> */}
       <SecondSection />
       <CoursesAndClasses />
       <ThirdSection />

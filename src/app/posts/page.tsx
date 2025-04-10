@@ -12,7 +12,7 @@ export default function Posts() {
 
   if (isGetPostsLoading) {
     return (
-      <div className="grid-cols-blogCards grid gap-10 px-3 py-6 sm:gap-10 sm:px-6 lg:px-32 lg:py-16">
+      <div className="grid grid-cols-blogCards gap-10 px-3 py-6 sm:gap-10 sm:px-6 lg:px-32 lg:py-16">
         <h1>Carregando...</h1>
       </div>
     );
@@ -20,7 +20,7 @@ export default function Posts() {
 
   if (isGetPostsError) {
     return (
-      <div className="grid-cols-blogCards grid gap-10 px-3 py-6 sm:gap-10 sm:px-6 lg:px-32 lg:py-16">
+      <div className="grid grid-cols-blogCards gap-10 px-3 py-6 sm:gap-10 sm:px-6 lg:px-32 lg:py-16">
         <h1>Algo de errado aconteceu!</h1>
       </div>
     );
@@ -29,7 +29,7 @@ export default function Posts() {
   return (
     <section>
       <IntraPageHeader name="Blog" />
-      <div className="grid-cols-blogCards grid gap-10 px-3 py-6 sm:gap-10 sm:px-6 lg:px-32 lg:py-16">
+      <div className="grid grid-cols-blogCards gap-10 px-3 py-6 sm:gap-10 sm:px-6 lg:px-32 lg:py-16">
         {posts.length > 0 &&
           posts.map((post: PostType) => (
             <Card

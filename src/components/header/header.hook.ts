@@ -11,12 +11,17 @@ type OptionsTypes = {
 
 export default function useHeader() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrollTo, setScrollTo] = useState<string | null>(null);
   const pathName = usePathname();
   const router = useRouter();
 
-  const searchParams = useSearchParams();
-
-  const scrollTo = searchParams.get("scrollTo");
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const scrollToParam = params.get("scrollTo");
+      setScrollTo(scrollToParam);
+    }
+  }, []);
 
   useEffect(() => {
     if (scrollTo) {
