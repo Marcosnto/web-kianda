@@ -21,7 +21,7 @@ export default function Header() {
   const { menuOptions, isOpen, toggleMenu, moveToSection } = useHeader();
 
   return (
-    <section className="lg:relative lg:mb-[22px]">
+    <section className="lg:hidden">
       <div className="z-50 mb-[6px] flex h-[72px] items-center justify-between bg-k_green_dark pr-[21px] text-k_yellow_light md:mb-[14px] md:h-[132px] md:pr-[41px] lg:hidden">
         <span className="flex items-center justify-center md:h-[72px] md:w-[357px]">
           <KiandaLogo
