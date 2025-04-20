@@ -12,7 +12,7 @@ export function FirstSection() {
           className="hidden p-4 lg:block"
           style={{ backgroundColor: "rgba(40, 54, 24, 0.5)" }}
         >
-          <nav className="flex w-full flex-row items-center justify-center gap-6 font-medium leading-[37.8px] text-white opacity-[100%] lg:text-[20px] xl:text-[28px]">
+          <nav className="flex w-full flex-row items-center justify-center gap-6 font-medium text-white opacity-[100%] lg:text-[20px] xl:text-[28px]">
             {menuOptions.map((option) => (
               <a
                 href={option.path}

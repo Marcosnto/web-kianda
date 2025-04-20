@@ -31,7 +31,7 @@ export default function Footer() {
           </span>
 
           <div className="">
-            <BoldTitle className="mb-1 mt-[10px] flex justify-start text-[13px] font-normal text-black md:text-[16px] lg:text-[28px] lg:leading-[48.6px] xl:text-[36px]">
+            <BoldTitle className="mb-1 mt-[10px] flex justify-start text-[13px] font-normal text-black md:text-[16px] lg:text-[28px] xl:text-[36px]">
               <h1>Receba nossos conteúdos por email:</h1>
             </BoldTitle>
             <NewsletterForm />
@@ -40,7 +40,7 @@ export default function Footer() {
 
         <div className="row-span-2 flex h-[254px] flex-col place-content-between bg-k_green_medium pb-[61px] pl-[29px] pr-[18px] pt-[22px] md:mr-[36px] md:h-auto md:items-end md:justify-between md:bg-transparent md:p-0 md:pl-[1rem] md:text-k_green_medium lg:mr-0 lg:text-black">
           <div className="flex flex-col items-start gap-2 lg:items-start lg:gap-4 lg:pr-10 xl:items-center">
-            <BoldTitle className="text-[18px] font-medium md:text-[28px] md:font-semibold md:leading-none lg:leading-[48.6px] xl:text-[36px]">
+            <BoldTitle className="text-[18px] font-medium md:text-[28px] md:font-semibold xl:text-[36px]">
               Canais para contato
             </BoldTitle>
 
@@ -64,7 +64,7 @@ export default function Footer() {
               ))}
             </div>
 
-            <BoldTitle className="hidden flex-col items-center gap-7 font-medium leading-[40.5px] lg:flex lg:w-full xl:text-[30px]">
+            <BoldTitle className="hidden flex-col items-center gap-7 font-medium lg:flex lg:w-full xl:text-[30px]">
               contato@kiandadiversidade.com
             </BoldTitle>
           </div>

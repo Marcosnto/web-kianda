@@ -51,7 +51,7 @@ export default function StaticCard({
           dangerouslySetInnerHTML={{ __html: title }}
         />
         <p
-          className={`${bgClass} h-[18ch] rounded-xl px-[22px] py-[7px] text-left text-[0.94rem] text-white md:py-[18px] lg:h-[33ch] lg:text-[1.313rem] lg:leading-[28.35px] xl:h-[25ch] 2xl:h-[18ch]`}
+          className={`${bgClass} h-[18ch] rounded-xl px-[22px] py-[7px] text-left text-[0.94rem] text-white md:py-[18px] lg:h-[33ch] lg:text-[1.313rem] xl:h-[25ch] 2xl:h-[18ch]`}
         >
           {summary}
         </p>
