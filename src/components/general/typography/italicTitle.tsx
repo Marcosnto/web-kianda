@@ -14,7 +14,7 @@ export function ItalicTitle({ children, className, showDivider, borderColor = "b
   const borderSelectedColor = `border-${borderColor}`;
   return (
     <div
-      className={`flex w-full justify-between ${hasDivider} ${borderSelectedColor} text-start font-normal italic ${className}`.trim()}
+      className={`flex w-full justify-between text-[18px] md:text-[24px] ${hasDivider} ${borderSelectedColor} text-start font-normal italic ${className}`.trim()}
     >
       <span className="flex w-full justify-between">
         <span className="mt-[6px] text-[18px] md:text-[24px] lg:text-[34px]">{children}</span>

@@ -10,8 +10,8 @@ export default function HomePageSection({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className={`px-[16px] ${className}`.trim()}>
-      {children}
+    <section id={id} className={`px-[16px] 2xl:flex 2xl:justify-center 2xl:px-[83px] ${className}`.trim()}>
+      <div className="max-w-[1741px]">{children}</div>
     </section>
   );
 }

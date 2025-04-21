@@ -6,13 +6,7 @@ import { PostType } from "@/api/blog";
 import HomePageSection from "@/components/home-page-section/home-page-section";
 
 export function ForthSection() {
-  const {
-    posts,
-    isGetPostsLoading,
-    isGetPostsError,
-    currentPath,
-    backgroundColors,
-  } = useForthSection();
+  const { posts, isGetPostsLoading, isGetPostsError, currentPath, backgroundColors } = useForthSection();
 
   if (isGetPostsLoading) {
     return <h1>carregando...</h1>;
@@ -23,19 +17,11 @@ export function ForthSection() {
   }
 
   return (
-    <HomePageSection
-      id="blog"
-      className="mb-10 flex flex-col items-center md:mb-14"
-    >
-      <ItalicTitle
-        className=""
-        iconType="halfMoon"
-        borderColor="black"
-        showDivider
-      >
+    <HomePageSection id="blog" className="mb-10 flex flex-col items-center md:mb-14">
+      <ItalicTitle className="" iconType="halfMoon" borderColor="black" showDivider>
         Artigos e Publicações
       </ItalicTitle>
-      {/* TODO: Try to do this withou duplicate */}
+      {/* TODO: Try to do this without duplicate */}
       <div className="flex flex-wrap gap-2 md:mb-4 md:justify-start">
         {posts.map((post: PostType, index: number) => (
           <Card
