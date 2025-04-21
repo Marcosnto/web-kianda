@@ -49,7 +49,7 @@ export function Card(props: CardType) {
         alt={imageAlt}
         src={imageURL}
       />
-      <span
+      <div
         className={`lg:pb flex flex-col justify-center md:mt-[6px] md:max-w-[673px] md:justify-start lg:pt-4 ${bodyClassName} lg:rounded-[1.4rem]`.trim()}
       >
         {/* <span className="mb-[1.938rem] flex">
@@ -69,17 +69,17 @@ export function Card(props: CardType) {
           )}
         </span> */}
 
-        <span className="mb-[6px] text-[10px] font-light italic md:text-[14px]">Coluna Raça</span>
+        <div className="mb-[6px] text-[10px] font-light italic md:text-[14px] xl:mb-[31px]">Coluna Raça</div>
 
         <Link href={url}>
-          <BoldTitle className={`text-[20px] font-semibold md:text-[36px] xl:text-[2.125rem] ${titleClassName}`.trim()}>
+          <BoldTitle className={`text-[20px] font-semibold md:text-[36px] 2xl:text-[41.82px] ${titleClassName}`.trim()}>
             {/* <h1>{label}</h1> */}
             <h1>Preto, Pardo ou Branco?</h1>
           </BoldTitle>
         </Link>
 
         <p className={`text-[11px] font-semibold md:text-[20px] ${summaryClassName} xl:text-[1.313rem]`}>{summary}</p>
-      </span>
+      </div>
     </div>
   );
 }

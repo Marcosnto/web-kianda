@@ -33,9 +33,9 @@ export default function StaticCard({
   const bgClass = colorMap[backgroundColor];
 
   return (
-    <div className="w-full max-w-[396px]">
+    <div className="w-full max-w-[396px] md:w-[350px]">
       <Image
-        className={`mb-[6px] h-[294px] max-h-[362px] rounded-[1.75rem] object-cover sm:h-[362px] md:mb-2 lg:mb-6 ${imageClassName}`.trim()}
+        className={`mb-[6px] h-[294px] max-h-[362px] rounded-[1.75rem] object-cover sm:h-[362px] md:mb-2 md:h-[320px] lg:mb-6 ${imageClassName}`.trim()}
         width={imageWidth}
         height={imageHeigth}
         alt={imageAlt}

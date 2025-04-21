@@ -20,7 +20,7 @@ export const NewsletterForm = () => {
                 <Input
                   {...field}
                   placeholder="exemplo@email.com"
-                  className="h-[17px] w-full rounded-md border-black bg-white text-black placeholder:text-[10px] placeholder:font-normal placeholder:italic placeholder:text-[#AAAAAA] md:h-[32px] lg:h-12 lg:placeholder:text-[21px]"
+                  className="h-[17px] w-full rounded-md border-black bg-white text-black placeholder:text-[10px] placeholder:font-normal placeholder:italic placeholder:text-[#AAAAAA] md:h-[32px] md:rounded-lg md:placeholder:text-[16px] lg:h-12 lg:placeholder:text-[21px] xl:rounded-[17px]"
                 />
               </FormControl>
               <FormMessage />
@@ -30,7 +30,7 @@ export const NewsletterForm = () => {
 
         <Button
           type="submit"
-          className="h-[17px] w-[25%] flex-grow-0 rounded-md bg-k_green_dark text-[12px] text-k_yellow_light md:h-[31px] md:text-[19px] lg:h-12 lg:text-[28.39px]"
+          className="h-[17px] w-[25%] flex-grow-0 rounded-md bg-k_green_dark text-[12px] font-medium text-k_yellow_light md:h-[31px] md:rounded-lg md:text-[19px] lg:h-12 lg:text-[28.39px] xl:rounded-[17px]"
         >
           Assinar
         </Button>

@@ -9,14 +9,15 @@ import SocialMediaIcon from "./components/socialIcons/socialMediaIcon";
 import { socialMediaInfos } from "./utils/socialMediaInfos";
 import { JSXElementConstructor, ReactElement } from "react";
 import Image from "next/image";
+import HomePageSection from "../home-page-section/home-page-section";
 
 export default function Footer() {
   return (
-    <footer id="contact" className="md:px-[16px] md:pt-[0.5rem]">
-      <ItalicTitle className="mb-[24px] hidden md:flex" iconType="halfMoon" showDivider={true} />
+    <HomePageSection id="contact" className="md:px-[16px] md:pt-[0.5rem]">
+      <ItalicTitle className="hidden md:flex" iconType="halfMoon" showDivider={true} />
 
       <div
-        className={`mb-10 flex flex-col-reverse pb-0 text-k_yellow_light md:grid md:grid-cols-[55%_45%] lg:text-k_brown`}
+        className={`mb-10 flex flex-col-reverse pb-0 text-k_yellow_light md:grid md:grid-cols-[55%_45%] lg:text-k_brown 2xl:mb-14`}
       >
         <div className="mb-6 flex flex-col-reverse px-3 md:col-span-1 md:mb-0 md:flex-col lg:gap-4 xl:max-w-[813px]">
           <div className="relative h-[275px] w-full md:flex md:h-[371px] md:justify-center xl:hidden">
@@ -36,7 +37,7 @@ export default function Footer() {
 
         <div className="row-span-2 flex h-[254px] flex-col place-content-between bg-k_green_medium pb-[61px] pl-[29px] pr-[18px] pt-[22px] md:mr-[36px] md:h-auto md:items-end md:justify-between md:bg-transparent md:p-0 md:pl-[1rem] md:text-k_green_medium lg:mr-0 lg:text-black">
           <div className="flex flex-col items-start gap-2 lg:items-start lg:gap-4 lg:pr-10 xl:items-center">
-            <BoldTitle className="text-[18px] font-semibold md:text-[28px] xl:text-[36px]">
+            <BoldTitle className="text-center text-[18px] font-medium md:text-[28px] xl:text-[36px]">
               Canais para contato
             </BoldTitle>
 
@@ -67,6 +68,10 @@ export default function Footer() {
       </div>
 
       <div className="flex flex-col items-center justify-center text-sm md:col-span-3">
+        <ItalicTitle className="hidden xl:flex" iconType="completeMoon" showDivider={true} italic={false}>
+          2025
+        </ItalicTitle>
+
         <div className="flex gap-3 md:col-span-3">
           <Link href="/privacy-police">Política de Privicidade</Link>
           <Link href="/cookies-police">Política de Cookies</Link>
@@ -78,6 +83,6 @@ export default function Footer() {
           </Link>
         </p>
       </div>
-    </footer>
+    </HomePageSection>
   );
 }

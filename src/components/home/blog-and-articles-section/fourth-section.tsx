@@ -30,7 +30,7 @@ export function ForthSection() {
       <div className="flex flex-wrap gap-2 md:mb-4 md:justify-start">
         {posts.map((post: PostType, index: number) => (
           <Card
-            className={`xl:hidden`}
+            className={`2xl:hidden`}
             bodyClassName={`pl-4 pr-5 md:ml-[21px] md:mr-0`}
             imageClassName="w-[151px] h-[140px] md:h-[240px] md:w-[368px] "
             summaryClassName="text-[1.313rem]"
@@ -47,12 +47,12 @@ export function ForthSection() {
       </div>
 
       {/* Screen >= XL */}
-      <div className="hidden justify-center gap-[23px] xl:flex">
+      <div className="hidden flex-wrap justify-center gap-[23px] 2xl:flex [@media(min-width:1920px)]:flex-nowrap">
         {posts.map((post: PostType, index: number) => (
           <Card
             className={`flex-col xl:w-[569.56px]`}
-            bodyClassName={`pl-[17.3px] xl:w-[569.56px] pr-[17.3px] bg-${backgroundColors[index]} ${index === 2 ? "text-black" : "text-k_yellow_light"}`}
-            imageClassName="h-[372.33px]"
+            bodyClassName={`pl-[17.3px] xl:pl-[43px] xl:pt-[21px] xl:h-[191px] 2xl:w-[569.56px] pr-[17.3px] bg-${backgroundColors[index]} ${index === 2 ? "text-black" : "text-k_yellow_light"}`}
+            imageClassName="xl:h-[372.33px]"
             key={post.id}
             label={post.title}
             summary={post.description}
