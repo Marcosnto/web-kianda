@@ -31,7 +31,7 @@ export function ForthSection() {
         {posts.map((post: PostType, index: number) => (
           <Card
             className={`xl:hidden`}
-            bodyClassName={`ml-4 mr-5 md:ml-[21px] md:mr-0`}
+            bodyClassName={`pl-4 pr-5 md:ml-[21px] md:mr-0`}
             imageClassName="w-[151px] h-[140px] md:h-[240px] md:w-[368px] "
             summaryClassName="text-[1.313rem]"
             key={post.id}

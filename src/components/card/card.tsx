@@ -43,14 +43,14 @@ export function Card(props: CardType) {
   return (
     <div className={`${className} flex w-full text-k_green_light hover:text-k_cinnamon`.trim()}>
       <Image
-        className={`object-cover lg:pr-0 ${imageClassName} rounded-[1.30rem] lg:rounded-[1.4rem] lg:pb-1`.trim()}
+        className={`flex-shrink-0 object-cover lg:pr-0 ${imageClassName} rounded-[1.30rem] lg:rounded-[1.4rem] lg:pb-1`.trim()}
         width={imageWidth}
         height={imageHeigth}
         alt={imageAlt}
         src={imageURL}
       />
       <span
-        className={`flex flex-col justify-center md:mt-[6px] md:max-w-[673px] md:justify-start lg:justify-start lg:pb-[51px] lg:pl-[40px] lg:pt-[21px] ${bodyClassName} lg:rounded-[1.4rem]`.trim()}
+        className={`lg:pb flex flex-col justify-center md:mt-[6px] md:max-w-[673px] md:justify-start lg:pt-4 ${bodyClassName} lg:rounded-[1.4rem]`.trim()}
       >
         {/* <span className="mb-[1.938rem] flex">
           {author && (
