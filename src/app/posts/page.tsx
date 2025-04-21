@@ -1,10 +1,10 @@
 "use client";
 import { Card } from "@/components/card";
 import blog_1 from "@/../public/imgs/blog_1.png";
-import { IntraPageHeader } from "@/components/general";
 import { usePathname } from "next/navigation";
 import { usePosts } from "./posts.hook";
 import { PostType } from "@/api/blog";
+import HomePageSection from "@/components/home-page-section/home-page-section";
 
 export default function Posts() {
   const { posts, isGetPostsLoading, isGetPostsError } = usePosts();
@@ -27,13 +27,13 @@ export default function Posts() {
   }
 
   return (
-    <section>
-      <div className="grid grid-cols-blogCards gap-10 px-3 py-6 sm:gap-10 sm:px-6 lg:px-32 lg:py-16">
+    <HomePageSection id="posts">
+      <div className="grid grid-cols-blogCards gap-10 sm:gap-10 sm:px-6 lg:px-32 lg:py-16">
         {posts.length > 0 &&
           posts.map((post: PostType) => (
             <Card
               className="row-[span_3] grid grid-rows-subgrid gap-1 border-b-2 border-gray-100"
-              titleClassName="text-lg"
+              titleClassName="font-medium"
               imageClassName="h-[234px] w-full"
               bodyClassName="max-w-full"
               url={`${currentPath + "/" + post.id}`}
@@ -48,6 +48,6 @@ export default function Posts() {
             />
           ))}
       </div>
-    </section>
+    </HomePageSection>
   );
 }
