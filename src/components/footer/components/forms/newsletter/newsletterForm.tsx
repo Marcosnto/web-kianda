@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useNewsletter } from "./newsletter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,10 +10,7 @@ export const NewsletterForm = () => {
 
   return (
     <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="mb-[1rem] flex w-full justify-between md:mb-0 md:gap-0"
-      >
+      <form onSubmit={form.handleSubmit(onSubmit)} className="mb-[1rem] flex w-full justify-between md:mb-0 md:gap-0">
         <FormField
           control={form.control}
           name="email"
@@ -30,7 +20,7 @@ export const NewsletterForm = () => {
                 <Input
                   {...field}
                   placeholder="exemplo@email.com"
-                  className="h-[17px] w-full rounded-md border-black bg-white placeholder:font-normal placeholder:italic placeholder:text-[#AAAAAA] md:h-[32px] lg:h-12 lg:placeholder:text-[21px]"
+                  className="h-[17px] w-full rounded-md border-black bg-white text-black placeholder:text-[10px] placeholder:font-normal placeholder:italic placeholder:text-[#AAAAAA] md:h-[32px] lg:h-12 lg:placeholder:text-[21px]"
                 />
               </FormControl>
               <FormMessage />

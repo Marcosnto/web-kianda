@@ -72,7 +72,7 @@ export function Card(props: CardType) {
         <span className="mb-[6px] text-[10px] font-light italic md:text-[14px]">Coluna Raça</span>
 
         <Link href={url}>
-          <BoldTitle className={`text-[20px] md:text-[36px] xl:text-[2.125rem] ${titleClassName}`.trim()}>
+          <BoldTitle className={`text-[20px] font-semibold md:text-[36px] xl:text-[2.125rem] ${titleClassName}`.trim()}>
             {/* <h1>{label}</h1> */}
             <h1>Preto, Pardo ou Branco?</h1>
           </BoldTitle>

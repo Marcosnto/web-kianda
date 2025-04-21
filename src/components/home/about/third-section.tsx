@@ -5,14 +5,14 @@ import About from "@/../public/imgs/about.svg";
 import { ItalicTitle } from "@/components/general";
 import AboutImage from "@/../public/imgs/about-image.svg";
 import AboutImageMedium from "@/../public/imgs/about_image_medium.png";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import Image from "next/image";
 import HomePageSection from "@/components/home-page-section/home-page-section";
 
 export function ThirdSection() {
   const [isMobileScreen, setIsMobileScreen] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setIsMobileScreen(window.innerWidth < 767);
   }, []);
 
