@@ -22,22 +22,22 @@ export function ThirdSection() {
       className="mb-14 bg-k_green_light md:bg-transparent"
     >
       <ItalicTitle
-        className="justify-self-center text-k_yellow_light md:text-[24px] md:text-k_green_dark"
+        className="justify-self-center text-k_yellow_light md:text-[18px] md:text-k_green_dark"
         iconType="halfMoon"
         showDivider={isNotMobileScreen}
       >
         Sobre
       </ItalicTitle>
       <div className="grid items-center bg-k_green_light pb-14 md:flex md:grid-cols-[38%_62%] md:rounded-xl lg:rounded-2xl lg:px-[50px] 2xl:p-[5.8rem]">
-        <section className="lg:grid-about-area-layout text-justify text-[16px] font-normal text-k_yellow_light md:px-[13px] md:pt-[37px] md:text-[22.69px] md:text-white lg:gap-x-10 lg:pt-[50px] xl:text-[36px]">
+        <section className="lg:grid-about-area-layout text-justify text-[16px] font-light text-k_yellow_light md:px-[13px] md:pt-[37px] md:text-[22.69px] md:text-white lg:gap-x-10 lg:pt-[50px] xl:text-[36px]">
           <p className="lg:area-text">
-            A <b>KIANDA</b> é uma empresa comprometida em tornar os ambientes
-            empresariais e educacionais mais{" "}
-            <b>diversos, inclusivos e saudáveis.</b> Em um contexto de
-            retrocessos nas políticas sociais, diversas instituições têm buscado
-            implementar programas de equidade e inclusão para pessoas negras,
-            indígenas, pessoas com deficiência e outros grupos minoritários. No
-            entanto,{" "}
+            A <b className="font-semibold">KIANDA</b> é uma empresa comprometida
+            em tornar os ambientes empresariais e educacionais mais{" "}
+            <b className="font-semibold">diversos, inclusivos e saudáveis.</b>{" "}
+            Em um contexto de retrocessos nas políticas sociais, diversas
+            instituições têm buscado implementar programas de equidade e
+            inclusão para pessoas negras, indígenas, pessoas com deficiência e
+            outros grupos minoritários. No entanto,{" "}
             <i>
               garantir o acesso nem sempre é suficiente para assegurar a
               permanência.
