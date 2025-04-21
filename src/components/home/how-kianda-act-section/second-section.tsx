@@ -42,7 +42,7 @@ export function SecondSection() {
         </Carousel>
       </div>
 
-      <div className="hidden w-full flex-wrap gap-6 md:flex md:justify-center md:justify-items-center 2xl:gap-[54px]">
+      <div className="hidden w-full flex-wrap gap-6 md:flex md:justify-center md:justify-items-center 2xl:gap-9">
         {whatKiandaDoCards.map((card) => (
           <StaticCard
             key={card.id}

@@ -18,16 +18,21 @@ export function ForthSection() {
 
   return (
     <HomePageSection id="blog" className="mb-10 flex flex-col items-center md:mb-14">
-      <ItalicTitle className="" iconType="halfMoon" borderColor="black" showDivider>
+      <ItalicTitle
+        className="mb-[15px] pl-[13.5px] md:pb-[28px] md:pl-0"
+        iconType="halfMoon"
+        borderColor="black"
+        showDivider
+      >
         Artigos e Publicações
       </ItalicTitle>
       {/* TODO: Try to do this without duplicate */}
       <div className="flex flex-wrap gap-2 md:mb-4 md:justify-start">
         {posts.map((post: PostType, index: number) => (
           <Card
-            className={`lg:hidden`}
-            bodyClassName={`mt-[10px] md:mt-0 lg:pl-[17.3px] lg:pr-[17.3px] lg:bg-${backgroundColors[index]} lg:${index === 2 ? "text-black" : "text-k_yellow_light"}`}
-            imageClassName="max-w-[144px] max-h-[134px] md:max-h-[240px] md:max-w-[368px] lg:h-[372.33px] lg:w-full"
+            className={`xl:hidden`}
+            bodyClassName={`ml-4 mr-5 md:ml-[21px] md:mr-0`}
+            imageClassName="w-[151px] h-[140px] md:h-[240px] md:w-[368px] "
             summaryClassName="text-[1.313rem]"
             key={post.id}
             label={post.title}
@@ -41,13 +46,13 @@ export function ForthSection() {
         ))}
       </div>
 
-      {/* Screen >= LG */}
-      <div className="hidden w-full grid-cols-3 gap-3 lg:grid">
+      {/* Screen >= XL */}
+      <div className="hidden justify-center gap-[23px] xl:flex">
         {posts.map((post: PostType, index: number) => (
           <Card
-            className={`flex-col`}
-            bodyClassName={`pl-[17.3px] pr-[17.3px] bg-${backgroundColors[index]} ${index === 2 ? "text-black" : "text-k_yellow_light"}`}
-            imageClassName="max-w-full max-h-[134px] md:max-h-[240px]  lg:h-[372.33px] "
+            className={`flex-col xl:w-[569.56px]`}
+            bodyClassName={`pl-[17.3px] xl:w-[569.56px] pr-[17.3px] bg-${backgroundColors[index]} ${index === 2 ? "text-black" : "text-k_yellow_light"}`}
+            imageClassName="h-[372.33px]"
             key={post.id}
             label={post.title}
             summary={post.description}
