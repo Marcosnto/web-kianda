@@ -1,29 +1,23 @@
 import { ItalicTitle } from "@/components/general";
 import { useSecondSection } from "./second-section.hook";
 import StaticCard from "@/components/card/static-card/static-card";
-import Autoplay from "embla-carousel-autoplay";
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { useRef } from "react";
 import HomePageSection from "@/components/home-page-section/home-page-section";
 
 export function SecondSection() {
-  const { whatKiandaDoCards } = useSecondSection();
-
-  const plugin = useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true, stopOnFocusIn: true, jump: false, playOnInit: true }),
-  );
+  const { whatKiandaDoCards, plugin } = useSecondSection();
 
   return (
     <HomePageSection id="howKiandaAct" className="mb-5 2xl:mb-[209px]">
-      <ItalicTitle className="mb-4 2xl:mb-[28px]" iconType="halfMoon" showDivider>
+      <ItalicTitle className="" iconType="halfMoon" showDivider>
         Como a Kianda atua
       </ItalicTitle>
       <div className="relative">
         <Carousel plugins={[plugin.current]} className="md:hidden" opts={{ loop: true }}>
           <CarouselContent className="flex">
             {whatKiandaDoCards.map((card) => (
-              <CarouselItem className="basis-full sm:basis-1/2" key={card.id}>
+              <CarouselItem className="flex basis-full justify-center sm:basis-1/2" key={card.id}>
                 <StaticCard
                   key={card.id}
                   imageAlt={card.imageAlt}

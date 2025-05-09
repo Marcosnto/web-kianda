@@ -2,12 +2,7 @@ import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-  ],
+  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
     container: {
@@ -20,7 +15,8 @@ const config = {
     extend: {
       backgroundImage: {
         "header-image": "url(/imgs/menu_image.png)",
-        "header-image_mobile": "url(/imgs/home_mobile.png)",
+        "header-image_medium": "url(/imgs/menu_image_medium.png)",
+        "header-image_mobile": "url(/imgs/mobile_1.png)",
       },
       gridTemplateColumns: {
         blogCards: "repeat(auto-fit, minmax(300px, 1fr))",

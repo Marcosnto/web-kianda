@@ -17,13 +17,8 @@ export function ForthSection() {
   }
 
   return (
-    <HomePageSection id="blog" className="mb-10 flex flex-col items-center md:mb-14">
-      <ItalicTitle
-        className="mb-[15px] pl-[13.5px] md:pb-[28px] md:pl-0"
-        iconType="halfMoon"
-        borderColor="black"
-        showDivider
-      >
+    <HomePageSection id="blog" className="mb-[22px] flex flex-col items-center md:mb-14">
+      <ItalicTitle className="pl-[13.5px] md:pl-0" iconType="halfMoon" borderColor="black" showDivider>
         Artigos e Publicações
       </ItalicTitle>
       {/* TODO: Try to do this without duplicate */}

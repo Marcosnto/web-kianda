@@ -33,21 +33,21 @@ export default function StaticCard({
   const bgClass = colorMap[backgroundColor];
 
   return (
-    <div className="w-full max-w-[396px] md:w-[350px]">
+    <div className="w-[321px] md:w-[350px] lg:w-[396px]">
       <Image
-        className={`mb-[6px] h-[294px] max-h-[362px] rounded-[1.75rem] object-cover sm:h-[362px] md:mb-2 md:h-[320px] lg:mb-6 ${imageClassName}`.trim()}
+        className={`mb-[6px] h-[294px] rounded-[1.75rem] object-cover sm:h-[362px] md:mb-2 md:h-[320px] lg:mb-6 lg:h-[362px] ${imageClassName}`.trim()}
         width={imageWidth}
         height={imageHeigth}
         alt={imageAlt}
         src={imageURL}
       />
-      <div className={`${bgClass} rounded-[15px] text-center md:rounded-[15px]`}>
+      <div className={`${bgClass} h-[270px] rounded-[15px] text-center md:rounded-[15px] lg:h-[321px]`}>
         <h1
-          className="border-b-2 border-b-k_yellow_light py-2 pt-[10.23px] text-[1.57rem] font-medium leading-7 text-white"
+          className="border-b-2 border-b-k_yellow_light pb-[12.5px] pt-[11.77px] text-[25px] font-medium leading-[30px] text-white md:text-[36.55px] md:leading-[40px]"
           dangerouslySetInnerHTML={{ __html: title }}
         />
         <p
-          className={`${bgClass} h-[18ch] rounded-xl px-[22px] py-[7px] text-left text-[0.94rem] font-normal text-white sm:h-[20ch] md:py-[18px] lg:h-[21ch] lg:text-[1.313rem] 2xl:h-[22ch]`}
+          className={`${bgClass} rounded-xl px-[15px] py-[7px] text-left text-[0.94rem] font-normal leading-[27px] text-white md:py-[18px] lg:text-[21.5px]`}
         >
           {summary}
         </p>

@@ -3,6 +3,8 @@ import home_card_2 from "@/../public/imgs/home_card_2.png";
 import home_card_3 from "@/../public/imgs/home_card_3.png";
 import home_card_4 from "@/../public/imgs/home_card_4.jpeg";
 import { StaticCardType } from "@/components/card/static-card/static-card";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 
 export function useSecondSection() {
   const whatKiandaDoCards: StaticCardType[] = [
@@ -44,7 +46,12 @@ export function useSecondSection() {
     },
   ];
 
+  const plugin = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true, stopOnFocusIn: true, jump: false, playOnInit: true }),
+  );
+
   return {
+    plugin,
     whatKiandaDoCards,
   };
 }

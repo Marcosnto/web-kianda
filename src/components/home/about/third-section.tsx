@@ -17,9 +17,9 @@ export function ThirdSection() {
   }, []);
 
   return (
-    <HomePageSection id="about" className="mb-14 bg-k_green_light md:bg-transparent">
+    <HomePageSection id="about" className="mb-[22.5px] bg-k_green_light md:bg-transparent">
       <ItalicTitle
-        className="justify-self-center pb-4 pl-4 text-k_yellow_light md:pb-7 md:pl-0 md:text-k_green_dark xl:mb-[87px]"
+        className="justify-self-center pb-4 pl-4 text-k_yellow_light md:pb-0 md:pl-0 md:text-k_green_dark"
         iconType="halfMoon"
         showDivider={!isMobileScreen}
       >
@@ -39,10 +39,11 @@ export function ThirdSection() {
           </span>
           <br />
           <p className="lg:area-text2">
-            Por isso, a KIANDA foi criada para oferecer serviços que garantam a permanência e o desenvolvimento desses
-            grupos, promovendo cuidado, saúde mental e bem-estar. Nossos serviços incluem consultorias e treinamentos,
-            eventos e workshops, atendimentos psicoterapêuticos e grupos terapêuticos, com foco em instituições públicas
-            e privadas, além de profissionais de diferentes áreas do mercado de trabalho.
+            Por isso, a <b className="font-semibold">KIANDA</b> foi criada para oferecer serviços que garantam a
+            permanência e o desenvolvimento desses grupos, promovendo cuidado, saúde mental e bem-estar. Nossos serviços
+            incluem consultorias e treinamentos, eventos e workshops, atendimentos psicoterapêuticos e grupos
+            terapêuticos, com foco em instituições públicas e privadas, além de profissionais de diferentes áreas do
+            mercado de trabalho.
           </p>
         </section>
       </div>
