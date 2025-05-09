@@ -9,7 +9,7 @@ export function SecondSection() {
   const { whatKiandaDoCards, plugin } = useSecondSection();
 
   return (
-    <HomePageSection id="howKiandaAct" className="mb-5 2xl:mb-[209px]">
+    <HomePageSection id="howKiandaAct" className="mb-5">
       <ItalicTitle className="" iconType="halfMoon" showDivider>
         Como a Kianda atua
       </ItalicTitle>
@@ -36,7 +36,7 @@ export function SecondSection() {
         </Carousel>
       </div>
 
-      <div className="hidden w-full flex-wrap gap-6 md:flex md:justify-center md:justify-items-center 2xl:gap-9">
+      <div className="mb-[87.5px] hidden w-full flex-wrap gap-x-3 gap-y-[58px] md:flex md:justify-center md:justify-items-center 2xl:gap-9 [@media(min-width:810px)]:gap-x-[34px]">
         {whatKiandaDoCards.map((card) => (
           <StaticCard
             key={card.id}

@@ -25,7 +25,7 @@ export function ForthSection() {
       <div className="flex flex-wrap gap-2 md:mb-4 md:justify-start">
         {posts.map((post: PostType, index: number) => (
           <Card
-            className={`2xl:hidden`}
+            className={`2xl:hidden ${index === 3 && "hidden"}`}
             bodyClassName={`pl-4 pr-5 md:ml-[21px] md:mr-0`}
             imageClassName="w-[151px] h-[140px] md:h-[240px] md:w-[368px] "
             summaryClassName="text-[1.313rem]"
@@ -45,7 +45,7 @@ export function ForthSection() {
       <div className="hidden flex-wrap justify-center gap-[23px] 2xl:flex [@media(min-width:1920px)]:flex-nowrap">
         {posts.map((post: PostType, index: number) => (
           <Card
-            className={`flex-col xl:w-[569.56px]`}
+            className={`flex-col xl:w-[569.56px] ${index === 3 && "hidden [@media(min-width:1536px)]:block [@media(min-width:1920px)]:hidden"}`}
             bodyClassName={`pl-[17.3px] xl:pl-[43px] xl:pt-[21px] xl:h-[191px] 2xl:w-[569.56px] pr-[17.3px] bg-${backgroundColors[index]} ${index === 2 ? "text-black" : "text-k_yellow_light"}`}
             imageClassName="xl:h-[372.33px]"
             key={post.id}

@@ -37,9 +37,7 @@ export default function Footer() {
 
         <div className="row-span-2 flex h-[254px] flex-col place-content-between bg-k_green_medium pb-[61px] pl-[29px] pr-[18px] pt-[22px] md:mr-[36px] md:h-auto md:items-end md:justify-between md:bg-transparent md:p-0 md:pl-[1rem] md:text-k_green_medium lg:mr-0 lg:text-black">
           <div className="flex flex-col items-start gap-2 lg:items-start lg:gap-4 lg:pr-10 xl:items-center">
-            <BoldTitle className="text-center text-[18px] font-medium md:text-[28px] xl:text-[36px]">
-              Canais para contato
-            </BoldTitle>
+            <BoldTitle className="text-[18px] font-medium md:text-[28px] xl:text-[36px]">Canais para contato</BoldTitle>
 
             <div className="mb-[10px] w-[28ch] text-[12px] font-normal md:w-[34ch] md:text-[14px] xl:hidden">
               Não perca nenhuma novidade! Acompanhe nossas últimas notícias e postagens.

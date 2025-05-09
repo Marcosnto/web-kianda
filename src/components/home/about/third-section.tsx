@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import About from "@/../public/imgs/about.svg";
@@ -34,8 +35,10 @@ export function ThirdSection() {
             inclusão para pessoas negras, indígenas, pessoas com deficiência e outros grupos minoritários. No entanto,{" "}
             <i>garantir o acesso nem sempre é suficiente para assegurar a permanência.</i>
           </p>
-          <span className="area-figure my-5 flex h-[431px] w-full justify-center">
-            <Image src={AboutImageMedium} alt="" className="h-full" />
+          <span className="area-figure flex w-full justify-center">
+            <img alt="img img" className="sm:hidden" src="/imgs/about_mobile.svg" />
+            <img alt="img img" className="mt-5 hidden sm:block lg:hidden" src="/imgs/about_middle.svg" />
+            <img alt="img img" className="mt-5 hidden lg:block" src="/imgs/about_full.svg" />
           </span>
           <br />
           <p className="lg:area-text2">

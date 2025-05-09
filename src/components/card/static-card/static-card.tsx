@@ -43,7 +43,7 @@ export default function StaticCard({
       />
       <div className={`${bgClass} h-[270px] rounded-[15px] text-center md:rounded-[15px] lg:h-[321px]`}>
         <h1
-          className="border-b-2 border-b-k_yellow_light pb-[12.5px] pt-[11.77px] text-[25px] font-medium leading-[30px] text-white md:text-[36.55px] md:leading-[40px]"
+          className="border-b-2 border-b-k_yellow_light pb-[12.5px] pt-[11.77px] text-[25px] font-medium leading-[30px] text-white md:text-[30px] md:leading-[40px] xl:text-[36.55px]"
           dangerouslySetInnerHTML={{ __html: title }}
         />
         <p

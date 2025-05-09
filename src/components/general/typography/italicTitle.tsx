@@ -1,6 +1,4 @@
-import CompleteMoon from "@/../public/imgs/complete_moon.svg";
-import HalfMoon from "@/../public/imgs/half_moon.svg";
-
+/* eslint-disable @next/next/no-img-element */
 type FooterTitleProps = {
   children?: React.ReactNode;
   iconType?: "completeMoon" | "halfMoon";
@@ -24,19 +22,18 @@ export function ItalicTitle({
 
   return (
     <div
-      className={`mb-[28px] flex w-full justify-between text-[18px] md:text-[24px] ${hasDivider} ${borderSelectedColor} text-start font-normal ${isItalic} ${className}`.trim()}
+      className={`mb-[15px] flex w-full justify-between text-[18px] md:text-[24px] ${hasDivider} ${borderSelectedColor} text-start font-normal ${isItalic} ${className}`.trim()}
     >
       <span className="flex w-full justify-between">
         <span className="mt-[6px] text-[18px] md:text-[24px] lg:text-[34px]">{children}</span>
-        <span className="mr-[6px] mt-[8px]">
+        <span className="mt-[8px]">
           {iconType === "completeMoon" ? (
-            <CompleteMoon />
+            <img alt="half moon" src="/imgs/complete_moon.svg" />
           ) : (
-            <HalfMoon
-              className="h-[12px] w-[23px] 2xl:h-[16px] 2xl:w-[29px]"
-              viewBox="0 0 29 16"
-              xmlns="http://www.w3.org/2000/svg"
-            />
+            <span>
+              <img className="md:hidden" alt="half moon" src="/imgs/half_moon_mobile.svg" />
+              <img className="hidden xl:block" alt="half moon" src="/imgs/half_moon.svg" />
+            </span>
           )}
         </span>
       </span>
