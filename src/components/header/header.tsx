@@ -2,7 +2,6 @@
 import useHeader from "./header.hook";
 import KiandaLogo from "@/../public/imgs/kianda_name.svg";
 import MenuHamburguer from "@/../public/imgs/menu_icon.svg";
-import MenuHamburguer_2 from "@/../public/imgs/menu_icon_2.svg";
 import { AiOutlineClose } from "react-icons/ai";
 import {
   Drawer,

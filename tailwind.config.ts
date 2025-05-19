@@ -16,7 +16,7 @@ const config = {
       backgroundImage: {
         "header-image": "url(/imgs/menu_image.png)",
         "header-image_medium": "url(/imgs/menu_image_medium.png)",
-        "header-image_mobile": "url(/imgs/mobile_1.png)",
+        "header-image_mobile": "url(/imgs/home_mobile.png)",
       },
       gridTemplateColumns: {
         blogCards: "repeat(auto-fit, minmax(300px, 1fr))",

@@ -8,7 +8,7 @@ export function FirstSection() {
     <>
       <HomePageSection className="mb-[21px] lg:hidden 2xl:hidden">
         <div
-          className={`md:bg-header-image_medium h-[510px] w-full rounded-[30px] bg-header-image_mobile bg-cover bg-center sm:h-[836px] sm:max-w-[600px] md:h-[936px] md:max-w-full`}
+          className={`h-[510px] w-full rounded-[30px] bg-header-image_mobile bg-cover bg-center sm:h-[836px] sm:max-w-[600px] md:h-[936px] md:max-w-full md:bg-header-image_medium`}
         />
       </HomePageSection>
       <section className="mb-10 hidden justify-center lg:relative lg:flex">
