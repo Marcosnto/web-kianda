@@ -4,9 +4,10 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useNewsletter } from "./newsletter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Loader2 } from "lucide-react";
 
 export const NewsletterForm = () => {
-  const { form, onSubmit } = useNewsletter();
+  const { form, onSubmit, isNewsletterSucess, isNewsletterPending, hasNewsletterError } = useNewsletter();
 
   return (
     <Form {...form}>
@@ -29,12 +30,16 @@ export const NewsletterForm = () => {
         />
 
         <Button
+          disabled={isNewsletterPending}
           type="submit"
           className="h-[17px] w-[25%] flex-grow-0 rounded-md bg-k_green_dark text-[12px] font-medium text-k_yellow_light md:h-[31px] md:rounded-lg md:text-[19px] lg:h-12 lg:text-[28.39px] xl:rounded-[17px]"
         >
           Assinar
+          {isNewsletterPending && <Loader2 className="w-9 animate-spin" size={40} />}
         </Button>
       </form>
+      {hasNewsletterError && <p>Ocorreu um erro na inscrição</p>}
+      {isNewsletterSucess && <p>Assinatura realizada!</p>}
     </Form>
   );
 };
