@@ -41,7 +41,7 @@ body {
     }
 
     video {
-      @apply w-full max-w-[400px] bg-black;
+      @apply block mx-auto w-full max-w-[560px] aspect-video;
     }
 
     video::-internal-media-controls-download-button,
