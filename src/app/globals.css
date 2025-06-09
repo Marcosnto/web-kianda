@@ -33,7 +33,13 @@ body {
     grid-area: text;
   }
 
-  .content-post iframe {
+
+
+  .content-post {
+    iframe {
+      @apply block mx-auto w-full max-w-[560px] aspect-video;
+    }
+
     video {
       @apply w-full max-w-[400px] bg-black;
     }
@@ -51,7 +57,6 @@ body {
       display: none;
     }
 
-    @apply block mx-auto w-full max-w-[560px] aspect-video;
   }
 }
 
