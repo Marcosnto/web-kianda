@@ -29,10 +29,7 @@ export function useGetPosts(limit?: number) {
   } = useQuery({
     queryKey: ["posts"],
     staleTime: 0,
-    queryFn: () =>
-      axios
-        .get(`${BASE_API_URL}/articles${limit ? "?_limit=" + limit : ""}`)
-        .then(({ data }) => data),
+    queryFn: () => axios.get(`${BASE_API_URL}/articles${limit ? "?_limit=" + limit : ""}`).then(({ data }) => data),
   });
 
   return { posts, isGetPostsLoading, isGetPostsError };
@@ -46,11 +43,7 @@ export function useGetPost(articleID: string | undefined) {
   } = useQuery({
     queryKey: ["currentPost"],
     staleTime: 0,
-    // gcTime: 0,
-    queryFn: () =>
-      axios
-        .get(`${BASE_API_URL}/article/${articleID}`)
-        .then(({ data }) => data),
+    queryFn: () => axios.get(`${BASE_API_URL}/article/${articleID}`).then(({ data }) => data),
   });
 
   return { post, isGetPostLoading, isGetPostError };

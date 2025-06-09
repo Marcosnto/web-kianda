@@ -20,13 +20,43 @@ body {
       "figure text_2"
       "figure text_2";
   }
-  .area-figure { grid-area: figure; }
-  .area-text { grid-area: text; }
-  .area-text_2 { grid-area: text; }
+
+  .area-figure {
+    grid-area: figure;
+  }
+
+  .area-text {
+    grid-area: text;
+  }
+
+  .area-text_2 {
+    grid-area: text;
+  }
+
+  .content-post iframe {
+    video {
+      @apply w-full max-w-[400px] bg-black;
+    }
+
+    video::-internal-media-controls-download-button,
+    video::-webkit-media-controls-enclosure {
+      display: none !important;
+    }
+
+    video {
+      pointer-events: auto;
+    }
+
+    video::cue {
+      display: none;
+    }
+
+    @apply block mx-auto w-full max-w-[560px] aspect-video;
+  }
 }
 
 @layer base {
-  
+
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
@@ -60,13 +90,13 @@ body {
     --color-green-olive-light-kianda: 96 108 56;
     --color-green-olive-medium-kianda: 75 83 49;
     --color-amber-kianda: 220 160 94;
-    --color-yellow-light: 254 250 224; 
+    --color-yellow-light: 254 250 224;
     --color-bronze-kianda: 201 139 49;
     --color-cinnamon-kianda: 187 108 37;
     --color-orange-kianda: 255 183 3;
     --color-vivid-orange-kianda: 249 165 40;
     --color-off-white-kianda: 243 241 228;
-  } 
+  }
 
   .dark {
     --background: 0 0% 3.9%;
@@ -106,9 +136,9 @@ body {
 @font-face {
   font-family: "Georgia";
   src: url('/fonts/georgia.ttf') format('ttf'),
-       url('/fonts/georgiab.ttf') format('ttf'),
-       url('/fonts/georgiai.ttf') format('ttf'),
-       url('/fonts/georgiaz.ttf') format('ttf');
+    url('/fonts/georgiab.ttf') format('ttf'),
+    url('/fonts/georgiai.ttf') format('ttf'),
+    url('/fonts/georgiaz.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }

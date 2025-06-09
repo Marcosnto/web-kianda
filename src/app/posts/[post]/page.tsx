@@ -68,7 +68,6 @@ export default function Post({ params }: ParamsTypes) {
           </div>
           <BoldTitle className="font-semibold lg:text-[1.75rem] xl:text-[2.3rem] 2xl:text-[60px]">
             {post?.title}
-            {/* Preto, pardo ou branco? afinal qual o meu lugar? */}
           </BoldTitle>
           <div className="flex flex-col text-[1rem] font-normal italic text-black lg:text-[1.1rem]">
             {post?.author && <span className={``.trim()}>Por: {post.author} &nbsp;</span>}
