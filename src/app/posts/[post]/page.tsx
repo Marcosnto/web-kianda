@@ -57,15 +57,17 @@ export default function Post({ params }: ParamsTypes) {
     <HomePageSection id="blog-post">
       <div className={`mb-4 grid px-2 lg:px-4 lg:py-4 xl:mx-[45px] xl:my-[69px] xl:grid-cols-[40%_60%] xl:px-0`}>
         <div className="mb-4 xl:mb-0 xl:pr-[40px] [@media(min-width:1920px)]:w-[686px]">
-          <div className="relative mb-[1rem] flex w-full lg:h-[448px]">
-            <Image
-              src={post.main_image.url}
-              alt=""
-              fill
-              className="rounded-xl object-cover"
-              sizes="(max-width: 1024px) 100vw, 1024px"
-            />
-          </div>
+          {post.main_image.url && (
+            <div className="relative mb-[1rem] flex h-[187px] w-full lg:h-[448px]">
+              <Image
+                src={post.main_image.url}
+                alt=""
+                fill
+                className="rounded-xl object-cover"
+                sizes="(max-width: 1024px) 100vw, 1024px"
+              />
+            </div>
+          )}
           <BoldTitle className="font-semibold lg:text-[1.75rem] xl:text-[2.3rem] 2xl:text-[60px]">
             {post?.title}
           </BoldTitle>
@@ -78,7 +80,7 @@ export default function Post({ params }: ParamsTypes) {
             )}
           </div>
         </div>
-        <div className="h-[50vh] w-full overflow-y-auto rounded-xl bg-k_green_light text-white lg:h-[987px]">
+        <div className="h-[550px] w-full overflow-y-auto rounded-xl bg-k_green_light text-white lg:h-[987px]">
           <div className="flex w-full px-4 py-4 text-justify text-[1rem] font-normal lg:px-[33px] lg:py-[17px] lg:text-[1.2rem] 2xl:max-w-[1044px] 2xl:text-[34px]">
             <p
               className="content-post text-[1.125rem]"
