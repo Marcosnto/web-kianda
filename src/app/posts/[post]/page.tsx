@@ -57,7 +57,7 @@ export default function Post({ params }: ParamsTypes) {
     <HomePageSection id="blog-post">
       <div className={`mb-4 grid px-2 lg:px-4 lg:py-4 xl:mx-[45px] xl:my-[69px] xl:grid-cols-[40%_60%] xl:px-0`}>
         <div className="mb-4 xl:mb-0 xl:pr-[40px] [@media(min-width:1920px)]:w-[686px]">
-          {post.main_image.url && (
+          {post.main_image?.url && (
             <div className="relative mb-[1rem] flex h-[187px] w-full lg:h-[448px]">
               <Image
                 src={post.main_image.url}
@@ -68,13 +68,16 @@ export default function Post({ params }: ParamsTypes) {
               />
             </div>
           )}
-          <BoldTitle className="font-semibold lg:text-[1.75rem] xl:text-[2.3rem] 2xl:text-[60px]">
-            {post?.title}
-          </BoldTitle>
-          <div className="flex flex-col text-[1rem] font-normal italic text-black lg:text-[1.1rem]">
+          {post?.columnType && (
+            <span className="mb-1 flex flex-col text-[12px] font-normal italic text-black lg:text-[14px]">
+              {post.columnType}
+            </span>
+          )}
+          <BoldTitle className="text-[20px] font-semibold lg:text-[1.75rem]">{post?.title}</BoldTitle>
+          <div className="flex flex-col text-[12px] font-normal italic text-black lg:text-[14px]">
             {post?.author && <span className={``.trim()}>Por: {post.author} &nbsp;</span>}
             {date && (
-              <time dateTime="2022-10-10" className="not-italic">
+              <time dateTime="2022-10-10">
                 {String(date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear())}
               </time>
             )}
