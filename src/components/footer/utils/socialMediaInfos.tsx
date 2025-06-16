@@ -1,10 +1,5 @@
-import {
-  AiOutlineInstagram,
-  AiFillYoutube,
-  AiOutlineWhatsApp,
-  AiOutlineTikTok,
-} from "react-icons/ai";
-import { FaThreads, FaFacebookF } from "react-icons/fa6";
+import { AiOutlineInstagram, AiFillYoutube, AiOutlineWhatsApp, AiOutlineTikTok } from "react-icons/ai";
+import { FaThreads, FaFacebookF, FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 
 type SocialMediaInfosType = {
@@ -53,7 +48,7 @@ export const socialMediaInfos: SocialMediaInfosType[] = [
   },
   {
     link: "https://www.instagram.com/kiandadiversidade/",
-    icon: <AiOutlineInstagram color="white" />,
+    icon: <FaXTwitter color="white" />,
     key: "x",
   },
 ];

@@ -32,7 +32,7 @@ export function ItalicTitle({
           ) : (
             <span>
               <img className="md:hidden" alt="half moon" src="/imgs/half_moon_mobile.svg" />
-              <img className="hidden xl:block" alt="half moon" src="/imgs/half_moon.svg" />
+              <img className="hidden md:block" alt="half moon" src="/imgs/half_moon.svg" />
             </span>
           )}
         </span>
