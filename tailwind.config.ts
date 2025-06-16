@@ -34,6 +34,8 @@ const config = {
         vs: "320px",
         //medium-small
         ms: "400px",
+        //full-hd
+        fullHD: "120rem",
       },
       colors: {
         transparent: "transparent",
