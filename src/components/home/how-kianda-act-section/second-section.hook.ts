@@ -1,7 +1,7 @@
 import home_card_1 from "@/../public/imgs/home_card_1.png";
 import home_card_2 from "@/../public/imgs/home_card_2.png";
 import home_card_3 from "@/../public/imgs/home_card_3.png";
-import home_card_4 from "@/../public/imgs/home_card_4.jpeg";
+import home_card_4 from "@/../public/imgs/home_card_4.png";
 import { StaticCardType } from "@/components/card/static-card/static-card";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
