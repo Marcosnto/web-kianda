@@ -106,6 +106,16 @@ const config = {
       },
     },
   },
+  safelist: [
+    "ql-font-arial",
+    "ql-font-helvetica",
+    "ql-font-verdana",
+    "ql-font-georgia",
+    "ql-font-times-new-roman",
+    "ql-font-courier-new",
+    "ql-font-roboto",
+    "ql-font-monospace",
+  ],
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/forms")],
 } satisfies Config;
 

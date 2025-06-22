@@ -33,8 +33,6 @@ body {
     grid-area: text;
   }
 
-
-
   .content-post {
     iframe {
       @apply block mx-auto w-full max-w-[560px] aspect-video;
@@ -56,7 +54,46 @@ body {
     video::cue {
       display: none;
     }
+  }
 
+  .ql-font-arial {
+    @apply font-sans;
+    font-family: Arial, sans-serif;
+  }
+
+  .ql-font-helvetica {
+    @apply font-sans;
+    font-family: Helvetica, sans-serif;
+  }
+
+  .ql-font-verdana {
+    @apply font-sans;
+    font-family: Verdana, sans-serif;
+  }
+
+  .ql-font-georgia {
+    @apply font-serif;
+    font-family: Georgia, serif;
+  }
+
+  .ql-font-times-new-roman {
+    @apply font-serif;
+    font-family: 'Times New Roman', serif;
+  }
+
+  .ql-font-courier-new {
+    @apply font-mono;
+    font-family: 'Courier New', monospace;
+  }
+
+  .ql-font-roboto {
+    @apply font-sans;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .ql-font-monospace {
+    @apply font-mono;
+    font-family: monospace;
   }
 }
 
