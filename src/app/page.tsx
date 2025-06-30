@@ -1,20 +1,17 @@
 "use client";
-import {
-  ForthSection,
-  SecondSection,
-  ThirdSection,
-  CoursesAndClasses,
-  FirstSection,
-} from "@/components/home";
+import { ForthSection, SecondSection, ThirdSection, CoursesAndClasses, FirstSection } from "@/components/home";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
-    <main className="">
-      <FirstSection />
-      <SecondSection />
-      {/* <CoursesAndClasses /> */}
-      <ThirdSection />
-      <ForthSection />
-    </main>
+    <Suspense>
+      <main className="">
+        <FirstSection />
+        <SecondSection />
+        {/* <CoursesAndClasses /> */}
+        <ThirdSection />
+        <ForthSection />
+      </main>
+    </Suspense>
   );
 }

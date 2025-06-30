@@ -5,7 +5,6 @@ import { BoldTitle } from "@/components/general";
 import "./styles.css";
 import { usePost } from "./post.hook";
 import Image from "next/image";
-import exampleImage from "@/../public/imgs/blog_1.png";
 import HomePageSection from "@/components/home-page-section/home-page-section";
 
 export type ParamsTypes = {

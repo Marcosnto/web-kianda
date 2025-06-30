@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/drawer";
 
 import Link from "next/link";
-import { useEffect } from "react";
 
 export default function Header() {
   const { menuOptions, isOpen, toggleMenu, moveToSection } = useHeader();
