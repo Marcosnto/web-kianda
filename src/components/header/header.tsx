@@ -70,15 +70,16 @@ export default function Header() {
                 }
 
                 return (
-                  <a
+                  <button
                     style={{ cursor: "pointer" }}
-                    onClick={(e) => moveToSection(option.path, true, e)}
                     key={option.path}
+                    type="button"
+                    onClick={() => moveToSection(option.path, true)}
                   >
                     <DrawerDescription className="hover:bg-k_brown_light w-auto text-base text-k_brown">
                       {option.label}
                     </DrawerDescription>
-                  </a>
+                  </button>
                 );
               })}
             </div>

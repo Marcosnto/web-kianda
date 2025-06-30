@@ -1,8 +1,9 @@
+import DesktopMenu from "@/components/general/desktop-menu";
 import useHeader from "@/components/header/header.hook";
 import HomePageSection from "@/components/home-page-section/home-page-section";
 
 export function FirstSection() {
-  const { menuOptions, moveToSection } = useHeader();
+  const { menuOptions } = useHeader();
 
   return (
     <>
@@ -16,9 +17,7 @@ export function FirstSection() {
           <div className="hidden p-4 lg:block" style={{ backgroundColor: "rgba(40, 54, 24, 0.5)" }}>
             <nav className="flex w-full flex-row items-center justify-center gap-6 font-normal text-white opacity-[100%] lg:text-[20px] xl:text-[28px]">
               {menuOptions.map((option) => (
-                <a href={option.path} key={option.path} onClick={(e) => moveToSection(option.path, false, e)}>
-                  {option.label}
-                </a>
+                <DesktopMenu key={option.path} path={option.path} label={option.label} />
               ))}
             </nav>
           </div>

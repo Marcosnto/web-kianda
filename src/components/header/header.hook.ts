@@ -1,7 +1,6 @@
 "use client";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
 
 type OptionsTypes = {
   label: string;
@@ -11,80 +10,46 @@ type OptionsTypes = {
 
 export default function useHeader() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrollTo, setScrollTo] = useState<string | null>(null);
   const pathName = usePathname();
   const router = useRouter();
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const params = new URLSearchParams(window.location.search);
-      const scrollToParam = params.get("scrollTo");
-      setScrollTo(scrollToParam);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (scrollTo) {
-      const el = document.getElementById(scrollTo);
-      el?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [scrollTo]);
+  const searchParams = useSearchParams();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  function moveToEspecificElementOnPage(
-    id: string,
-    time: number = 400,
-    event?: React.MouseEvent,
-  ) {
+  function moveToEspecificElementOnPage(id: string, delay: number = 400) {
     setTimeout(() => {
       const element = document.getElementById(id);
-      element?.scrollIntoView({ behavior: "smooth" });
-    }, time);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, delay);
   }
 
-  function moveToSection(
-    id: string,
-    isMobile: boolean,
-    event?: React.MouseEvent,
-  ) {
+  function moveToSection(pathID: string, isMobile: boolean) {
     if (isMobile) toggleMenu();
-
-    if (pathName !== "/") {
-      router.push(`/?scrollTo=${id}`);
-
-      return;
+    console.log("pathIDName", pathID[0]);
+    if (pathID[0] === "/") {
+      router.replace(`${pathID}`);
+    } else {
+      router.replace(`/?scrollTo=${pathID}`);
+      moveToEspecificElementOnPage(pathID);
     }
-
-    moveToEspecificElementOnPage(id, undefined, event);
   }
+
+  useEffect(() => {
+    const target = searchParams.get("scrollTo");
+    if (target && pathName === "/") {
+      const el = document.getElementById(target);
+      el?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [pathName, searchParams]);
 
   const menuOptions: OptionsTypes[] = [
-    {
-      label: "Como atuamos",
-      path: "#howKiandaAct",
-      isPage: false,
-    },
-    {
-      label: "Cursos e aulas",
-      path: "#courses",
-      isPage: false,
-    },
-    {
-      label: "Sobre",
-      path: "#about",
-      isPage: false,
-    },
-    {
-      label: "Artigos e Publicações",
-      path: "/posts",
-      isPage: true,
-    },
-    {
-      label: "Contato",
-      path: "#contact",
-      isPage: false,
-    },
+    { label: "Como atuamos", path: "howKiandaAct", isPage: false },
+    // { label: "Cursos e aulas", path: "courses", isPage: false },
+    { label: "Sobre", path: "about", isPage: false },
+    { label: "Artigos e Publicações", path: "/posts", isPage: true },
+    { label: "Contato", path: "contact", isPage: false },
   ];
 
   return {
