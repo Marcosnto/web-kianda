@@ -41,13 +41,13 @@ export default function StaticCard({
         alt={imageAlt}
         src={imageURL}
       />
-      <div className={`${bgClass} h-[270px] rounded-[15px] text-center md:rounded-[15px] lg:h-[321px]`}>
+      <div className={`${bgClass} h-[226px] rounded-[15px] text-center md:rounded-[15px] lg:h-[299px]`}>
         <h1
-          className="border-b-2 border-b-k_yellow_light pb-[12.5px] pt-[11.77px] text-[25px] font-normal leading-[30px] text-white md:text-[30px] md:leading-[40px] xl:text-[36.55px]"
+          className="] border-b-2 border-b-k_yellow_light pb-[12.5px] pt-[11.77px] text-[25px]/[25px] font-normal text-white md:text-[30px]/[35px] xl:text-[36.55px]"
           dangerouslySetInnerHTML={{ __html: title }}
         />
         <p
-          className={`${bgClass} rounded-xl px-[15px] py-[7px] text-left text-[0.94rem] font-light leading-[27px] text-white md:py-[18px] lg:text-[21.5px]`}
+          className={`${bgClass} rounded-xl px-[15px] py-[7px] text-left text-[0.94rem] font-light text-white md:py-[18px] lg:text-[21.5px]`}
         >
           {summary}
         </p>

@@ -18,7 +18,7 @@ export function ForthSection() {
 
   return (
     <HomePageSection id="blog" className="mb-[22px] flex flex-col items-center md:mb-14">
-      <ItalicTitle className="pl-[13.5px] md:pl-0" iconType="halfMoon" borderColor="black" showDivider>
+      <ItalicTitle className="pl-[13.5px] md:pl-0" iconType="halfMoon" showDivider>
         Artigos e Publicações
       </ItalicTitle>
       {/* TODO: Try to do this without duplicate */}
@@ -28,7 +28,6 @@ export function ForthSection() {
             className={`2xl:hidden ${index === 3 && "hidden"}`}
             bodyClassName={`pl-4 pr-5 md:ml-[21px] md:mr-0`}
             imageClassName="w-[151px] h-[140px] md:h-[240px] md:w-[368px] "
-            summaryClassName="text-[1.313rem]"
             key={post.id}
             label={post.title}
             summary={post.description}

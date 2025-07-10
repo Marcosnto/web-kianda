@@ -6,6 +6,7 @@ export type CardType = {
   id?: string;
   label: string;
   author?: string;
+  columnType?: string;
   summary: string;
   imageURL: string | StaticImageData;
   imageAlt: string;
@@ -27,6 +28,7 @@ export function Card(props: CardType) {
     label,
     author,
     summary,
+    columnType,
     imageAlt,
     imageURL,
     url = "",
@@ -50,34 +52,19 @@ export function Card(props: CardType) {
         src={imageURL}
       />
       <div
-        className={`lg:pb flex flex-col justify-center md:mt-[6px] md:max-w-[673px] md:justify-start lg:pt-4 ${bodyClassName} lg:rounded-[1.4rem]`.trim()}
+        className={`flex flex-col justify-center md:mt-[6px] md:max-w-[673px] md:justify-start lg:pt-4 ${bodyClassName} lg:rounded-[1.4rem]`.trim()}
       >
-        {/* <span className="mb-[1.938rem] flex">
-          {author && (
-            <span className={`hidden`.trim()}>Por {author} em&nbsp;</span>
-          )}
-          {createdData && (
-            <time dateTime="2022-10-10" className={`hidden`.trim()}>
-              {String(
-                createdData.getDate() +
-                  "/" +
-                  createdData.getMonth() +
-                  "/" +
-                  createdData.getFullYear(),
-              )}
-            </time>
-          )}
-        </span> */}
-
-        <div className="mb-[6px] text-[10px] font-light italic md:text-[14px] xl:mb-[31px]">Coluna Raça</div>
+        {columnType && <div className="text-[14px] font-light italic md:text-[16px]">{columnType}</div>}
 
         <Link href={url}>
-          <BoldTitle className={`text-[20px] font-semibold md:text-[36px] 2xl:text-[41.82px] ${titleClassName}`.trim()}>
+          <BoldTitle className={`text-[18px] font-semibold md:text-[28px] 2xl:text-[32px] ${titleClassName}`.trim()}>
             <h1>{label}</h1>
           </BoldTitle>
         </Link>
 
-        <p className={`text-[11px] font-semibold md:text-[20px] ${summaryClassName} xl:text-[1.313rem]`}>{summary}</p>
+        {summary && (
+          <p className={`text-[11px] font-semibold md:text-[20px] ${summaryClassName} xl:text-[1.313rem]`}>{summary}</p>
+        )}
       </div>
     </div>
   );

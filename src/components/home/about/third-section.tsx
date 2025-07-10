@@ -1,28 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import About from "@/../public/imgs/about.svg";
-
 import { ItalicTitle } from "@/components/general";
-import AboutImage from "@/../public/imgs/about-image.svg";
-import AboutImageMedium from "@/../public/imgs/about_image_medium.png";
-import { useLayoutEffect, useState } from "react";
-import Image from "next/image";
 import HomePageSection from "@/components/home-page-section/home-page-section";
 
 export function ThirdSection() {
-  const [isMobileScreen, setIsMobileScreen] = useState(false);
-
-  useLayoutEffect(() => {
-    setIsMobileScreen(window.innerWidth < 767);
-  }, []);
-
   return (
-    <HomePageSection id="about" className="mb-[22.5px] bg-k_green_light md:bg-transparent">
+    <HomePageSection id="about" className="mb-[22.5px] bg-k_green_light pt-[22.5px] md:bg-transparent">
       <ItalicTitle
         className="justify-self-center pb-4 pl-4 text-k_yellow_light md:pb-0 md:pl-0 md:text-k_green_dark"
         iconType="halfMoon"
-        showDivider={!isMobileScreen}
+        borderColor="border-k_yellow_light md:border-black"
+        showDivider={true}
       >
         Sobre
       </ItalicTitle>

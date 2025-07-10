@@ -13,7 +13,7 @@ import HomePageSection from "../home-page-section/home-page-section";
 
 export default function Footer() {
   return (
-    <HomePageSection id="contact" className="md:px-[16px] md:pt-[0.5rem]">
+    <HomePageSection id="contact" className="md:px-[16px] md:pt-[0.5rem]" mobilePadding="px-0">
       <ItalicTitle className="hidden md:flex" iconType="halfMoon" showDivider={true} />
 
       <div

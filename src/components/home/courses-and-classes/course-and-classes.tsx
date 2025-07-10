@@ -6,13 +6,7 @@ import { PostType } from "@/api/blog";
 import HomePageSection from "@/components/home-page-section/home-page-section";
 
 export function CoursesAndClasses() {
-  const {
-    posts,
-    isGetPostsLoading,
-    isGetPostsError,
-    currentPath,
-    backgroundColors,
-  } = useForthSection();
+  const { posts, isGetPostsLoading, isGetPostsError, currentPath, backgroundColors } = useForthSection();
 
   if (isGetPostsLoading) {
     return <h1>carregando...</h1>;
@@ -23,16 +17,8 @@ export function CoursesAndClasses() {
   }
 
   return (
-    <HomePageSection
-      id="courses"
-      className="flex flex-col items-center lg:hidden"
-    >
-      <ItalicTitle
-        className=""
-        iconType="halfMoon"
-        borderColor="black"
-        showDivider
-      >
+    <HomePageSection id="courses" className="flex flex-col items-center lg:hidden">
+      <ItalicTitle className="" iconType="halfMoon" showDivider>
         Cursos e Aulas
       </ItalicTitle>
       <div className="mb-14 flex flex-wrap gap-8 rounded-[29px] rounded-tr-none border-[1px] border-k_green_light px-[14px] py-[11px] md:mb-4 md:flex-row md:flex-nowrap md:justify-around md:border-0 md:p-0 lg:justify-around xl:justify-center xl:gap-12">

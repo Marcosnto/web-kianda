@@ -34,6 +34,7 @@ const config = {
         vs: "320px",
         //medium-small
         ms: "400px",
+        "3xl": "1700px",
         //full-hd
         fullHD: "120rem",
       },
