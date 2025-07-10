@@ -2,6 +2,7 @@
 import useHeader from "./header.hook";
 import KiandaLogo from "@/../public/imgs/kianda_name.svg";
 import MenuHamburguer from "@/../public/imgs/menu_icon.svg";
+import { GoDotFill } from "react-icons/go";
 import { AiOutlineClose } from "react-icons/ai";
 import {
   Drawer,
@@ -14,9 +15,19 @@ import {
 } from "@/components/ui/drawer";
 
 import Link from "next/link";
+import { OptionIcon } from "lucide-react";
 
 export default function Header() {
   const { menuOptions, isOpen, toggleMenu, moveToSection } = useHeader();
+
+  const OptionIcon = ({ label }: { label: string }) => {
+    return (
+      <DrawerDescription className="hover:bg-k_brown_light flex w-auto items-center gap-2 text-base text-k_brown">
+        <GoDotFill color="#FFB703" />
+        {label}
+      </DrawerDescription>
+    );
+  };
 
   return (
     <section className="mb-[21px] lg:hidden">
@@ -56,14 +67,12 @@ export default function Header() {
               <DrawerDescription>Escolha uma sessão</DrawerDescription>
             </DrawerHeader>
 
-            <div className="flex flex-col gap-10 p-5">
+            <div className="flex flex-col items-start gap-10 p-5">
               {menuOptions.map((option) => {
                 if (option.isPage) {
                   return (
                     <Link href={option.path} onClick={toggleMenu} key={option.path}>
-                      <DrawerDescription className="hover:bg-k_brown_light w-auto text-base text-k_brown">
-                        {option.label}
-                      </DrawerDescription>
+                      <OptionIcon label={option.label} />
                     </Link>
                   );
                 }
@@ -76,7 +85,7 @@ export default function Header() {
                     onClick={() => moveToSection(option.path, true)}
                   >
                     <DrawerDescription className="hover:bg-k_brown_light w-auto text-base text-k_brown">
-                      {option.label}
+                      <OptionIcon label={option.label} />
                     </DrawerDescription>
                   </button>
                 );
