@@ -11,6 +11,7 @@ export type PostType = {
   author: string;
   content: string;
   description: string;
+  columnType?: string;
   main_image: {
     id: string | number;
     url: string;

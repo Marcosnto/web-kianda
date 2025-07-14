@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { BoldTitle } from "../general";
+import { getArticleColumn } from "@/utils/getArticleColumn";
 
 export type CardType = {
   id?: string;
@@ -54,7 +55,9 @@ export function Card(props: CardType) {
       <div
         className={`flex flex-col justify-center md:mt-[6px] md:max-w-[673px] md:justify-start lg:pt-4 ${bodyClassName} lg:rounded-[1.4rem]`.trim()}
       >
-        {columnType && <div className="text-[14px] font-light italic md:text-[16px]">{columnType}</div>}
+        {columnType && (
+          <div className="text-[14px] font-light italic md:text-[16px]">{getArticleColumn(columnType)}</div>
+        )}
 
         <Link href={url}>
           <BoldTitle className={`text-[18px] font-semibold md:text-[28px] 2xl:text-[32px] ${titleClassName}`.trim()}>

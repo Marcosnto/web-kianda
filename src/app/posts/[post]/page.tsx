@@ -6,6 +6,7 @@ import "./styles.css";
 import { usePost } from "./post.hook";
 import Image from "next/image";
 import HomePageSection from "@/components/home-page-section/home-page-section";
+import { getArticleColumn } from "@/utils/getArticleColumn";
 
 export type ParamsTypes = {
   params: {
@@ -36,8 +37,6 @@ export type Article = {
 function createMarkup(content: string) {
   return { __html: content };
 }
-
-const questrialFont = Questrial({ weight: "400", subsets: ["latin"] });
 
 export default function Post({ params }: ParamsTypes) {
   const { post, isGetPostLoading, isGetPostError, date } = usePost(params.post);
@@ -71,7 +70,7 @@ export default function Post({ params }: ParamsTypes) {
           <div className="ml-[1rem] flex flex-col gap-1">
             {post?.columnType && (
               <span className="flex flex-col text-[14px] font-normal italic text-black lg:text-[16px]">
-                {post?.columnType}
+                {getArticleColumn(post?.columnType)}
               </span>
             )}
             <BoldTitle className="text-[26px] font-semibold lg:text-[28px] 2xl:text-[54px]/[59px]">

@@ -42,6 +42,7 @@ function PostsContent() {
               label={post.title}
               author={post.author}
               createdData={new Date(post.createdData)}
+              columnType={post.columnType}
               summary={post.description}
               imageURL={post.main_image.url ? post.main_image.url : blog_1}
               imageAlt={post.imageDescription}
